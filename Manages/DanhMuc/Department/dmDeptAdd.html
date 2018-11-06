@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    
+    <link href="../../../content/css/zp_css_1.css" rel="stylesheet" />
+    <link href="../../../content/css/zp_css_2.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="modal popRgtModel PopSsModel PopSgModel in" role="dialog" data-keyboard="false" id="zp_addedit_record_467269000000035681">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="headerParent">
+                <div class="modal-header" id="zp_form_header">
+                    <div class="zp-back" onclick="ZPForm.Field.closeconfmsg()"><i class="IC-ar-lft"></i></div>
+                    <div class="ssp-profmin" id="zp_form_headerdisp">
+                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Department</span>
+                    </div>
+                    <!--<div class="ssp-profrht">
+                        <span class="FL MR10 ">
+                            <div id="zp_cbutton" class="divcustact dropdown cust-dm FR ZPCusDrs MR30 DN">
+                                <button type="button" id="zpcbnbtn" class="btn btn-default FR"></button>
+                                <i id="zpcbnbtn_vmore" data-toggle="dropdown" class="icocust IC-ar-dwn Iarw dropdown-toggle CP" aria-expanded="false"></i><ul id="zp_cbutton_list" class="dropdown-menu"></ul>
+                            </div>
+                        </span><div class="zp-recordsts zp_dyn" id="headerApprovalBtn"><span class="msg"></span><a id="zp_appproval_comment_btn" onclick="ZPApprovals.getApprovalDetails()">View</a></div>
+                        <span onclick="ZPTasks.getChecklistsForRecord()" id="headerTaskBtn" class="btn btn-default btn-min zp_dyn"><i class="CR-checklist"></i></span>
+                        <span class="btn btn-default btn-min DN" id="zp_form_editin_singlerec">
+                            <i class="CR-edit"></i>
+                        </span>
+                        <span class="btn btn-min dropdown ZPcusPos1 ZPCusDrs DN">
+                            <i class="CR-info" data-toggle="dropdown" id="zp_form_createinfo"></i>
+                            <ul class="dropdown-menu info-drop ZPCmn-Arrow top rt gray">
+                                <li><p class="S12">Created By</p></li>
+                                <li id="zp_form_createdby">
+                                    <a>
+                                        <img src="" class="Usrimg FL">
+                                        <div class="ZPUsrDt"><span class="DB MB8 ZPElips" name="username"></span><span class="DIB dgry MR5" name="time"></span></div>
+                                    </a>
+                                </li>
+                                <li><p class="S12">Modified By</p></li>
+                                <li id="zp_form_modifiedby">
+                                    <a>
+                                        <img src="" class="Usrimg FL"><div class="ZPUsrDt">
+                                            <span class="DB MB8 ZPElips" name="username"></span>
+                                            <span class="DIB dgry MR5" name="time"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </span>
+                        <span id="ZP_Form_MoreOpt" onclick="ZPView.Actions.showEsigninform();" class="btn btn-min dropdown ZPcusPos1 ZPCusDrs DN" style="display: none;">
+                            <i class="IC-more  S18 gry CP" data-toggle="dropdown" aria-expanded="false"></i><ul class="dropdown-menu zp-recdrop bullet pull-right">
+                                <li onclick="ZPForm.Record.getAuditHistoryForRecord()" class="DN" id="zp_form_audithistory"><a><i class="CR-audit"></i>Audit History</a></li>
+                                <li onclick="ZPForm.printForm()" class="DN" id="zp_form_header_PrintBtn"><a><i class="CR-print"></i>Print</a></li>
+                                <li class="bTop DN" id="download_grp"><a><span class="dgry">Download</span></a></li>
+                                <li id="li_downloadAsPDF" onclick="ZPForm.downloadAsPDF()"><a><i class="IC-imprt"></i>Record Template</a></li>
+                                <li id="mailmerge_download"><a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Download&quot;)"><i class="IC-imprt"></i>Mail Merge Template</a></li>
+                                <li id="esigndivider" class="divider" style="display : none"></li>
+                                <li class="bTop" id="esignature_header" style="display : none"><a><span class="dgry">Electronic Signature<span></span></span></a></li>
+                                <li id="send_document_form" style="display : none"><a onclick="ZPView.sendForSignDocs('zsign', 'true');" data-toggle="modal" title="Send Document"><span class="IC-zohosign DIB gry MR10" ;=""></span>Send Document</a></li>
+                                <li id="viewsigndocument" style="display : none"><a id="viewdoconclick" data-toggle="modal" title="Document Details"><span class="DIB gry MR20" ;=""></span>Document Details</a> </li>
+                            </ul>
+                        </span>
+                    </div>-->
+                    <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
+                </div>
+                <div class="modal-body P0I" id="zp_form_outer_container">
+                    <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
+                        <h3 issec="true" id="467269000000036007" class="zpcont-title">
+                            <span class="ZPbold">Department Details</span>
+                        </h3><div class="row" id="zp_section_fields_467269000000036007" secid="467269000000036007" row="1" istabular="false" isgrid="false">
+                            <div class="col-sm-6">
+                                <div class="zp-label  Matry" isallowed="false">
+                                    <label class="zplt-label">Department Name</label><div folabel="Department" fieldtype="1" id="zp_field_outer_467269000000036121" class="zprt-label" relateddata="false" isfielddependent="false">
+                                        <input multi="false" fcid="467269000000036121" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036121" value="" type="text" name="Department" class="form-control zptxt-edit">
+                                    </div>
+                                </div>
+                                <div class="zp-label  " isallowed="false">
+                                    <label class="zplt-label">Mail Alias</label><div folabel="MailAlias" fieldtype="4" id="zp_field_outer_467269000000036123" class="zprt-label" relateddata="false" isfielddependent="false">
+                                        <input multi="false" fcid="467269000000036123" fieldtype="4" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036123" value="" type="text" name="MailAlias" class="form-control zptxt-edit">
+                                    </div>
+                                </div>
+                                <div class="zp-label  " isallowed="false">
+                                    <label class="zplt-label">Department Lead</label><div folabel="Department_Lead" fieldtype="26" displaytype="100" id="zp_field_outer_467269000000036125" class="zprt-label" relateddata="false" isfielddependent="false">
+                                        <div class="select2-container" id="s2id_zp_field_467269000000036125"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>Select</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input multi="false" fcid="467269000000036125" fieldtype="26" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036125" value="-Select-" type="text" name="Department_Lead" class="select2-offscreen" tabindex="-1">
+                                    </div>
+                                </div><div class="zp-label  " isallowed="false"><label class="zplt-label">Parent Department</label><div folabel="Parent_Department" fieldtype="26" displaytype="100" id="zp_field_outer_467269000000036127" class="zprt-label" relateddata="false" isfielddependent="false"><div class="ZPActIcn"><a class="IC-add-form" fcid="467269000000036127" onclick="ZPForm.Field.quickFormFields(this)"></a></div><div class="select2-container" id="s2id_zp_field_467269000000036127"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>Select</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen4"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><input multi="false" fcid="467269000000036127" fieldtype="26" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036127" value="-Select-" type="text" name="Parent_Department" class="select2-offscreen" tabindex="-1"></div></div>
+                            </div><div class="col-sm-6"></div>
+                        </div>
+                        <input type="hidden" value="P_Department" name="zp_tableName">
+                        <input type="hidden" value="676969451" name="loginUserZUID">
+                        <input type="hidden" value="c91197d1034b143eef4fddd1196e3cd3782d3fa73653e0576582d1dd91736e58fc06fdda92839719f663de179ee60bfe8b2df1906584fd1779e2abec0dcb155a" name="conreqcsr">
+                        <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">
+                    </form>
+                </div>
+                <div class="modal-footer text-left">
+                    <button type="button" id="zp_forms_draft_btn" onclick="Appraisal.Reviewer.savelocally(this.form,this);" class="btn btn-primary DN">Save Draft</button>
+                    <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
+                    <button type="button" id="zp_forms_addnew_btn" onclick="ZPForm.IS_SUBMITNEW=true;ZPForm.Record.validateAndSubmit();" class="btn btn-default">Submit and New</button>
+                    <button type="button" id="zp_forms_savedraft_btn" class="btn btn-default DN" onclick="ZPForm.Record.saveasdraft()">Save Draft</button>
+                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="ZPForm.Field.closeconfmsg()">Cancel</button>
+                    <button type="button" class="btn btn-default btn-md FR DN" acttype="1" id="zp_forms_next_btn">Next</button>
+                    <button type="button" id="zp_forms_prev_btn" acttype="0" class="btn btn-default btn-md MR10 FR DN">Previous</button>
+                </div>
+            </div>
+        </div>
+        <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<!--
+Template Name: HR_TSG - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: v1
+-->
+
+<html lang="en">
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>HR-TSG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="/content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="/content/css/daterangepicker.min.css" rel="stylesheet" />
+    <link href="/content/css/morris.css" rel="stylesheet" />
+    <link href="/content/css/fullcalendar.min.css" rel="stylesheet" />
+    <link href="/content/css/jqvmap.css" rel="stylesheet" />
+
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <!-- <link href="/content/css/zp_css_1.css" rel="stylesheet" />-->
+    <link href="/content/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="/content/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/zp_css_2.css" rel="stylesheet" />
+    <link href="/content/css/zpfont.css" rel="stylesheet" />
+    <link href="/content/css/Style.css" rel="stylesheet" />
+    <!--   <link href="../../../content/css/zp.css" rel="stylesheet" />-->
+    <!-- END THEME LAYOUT STYLES -->
+    <!-- <link rel="shortcut icon" href="favicon.ico" />-->
+</head>
+<!-- END HEAD -->
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="index.html">
+                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
+                </a>
+                <div class="menu-toggler sidebar-toggler">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN PAGE ACTIONS -->
+            <!-- END PAGE ACTIONS -->
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                <!-- BEGIN HEADER SEARCH BOX -->
+                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
+                    <!--<div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
+                        <span class="input-group-btn">
+                            <a href="javascript:;" class="btn submit">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </span>
+                    </div>-->
+
+                    <div class="ZPSpanel" id="zpeople_search">
+                        <div class="ZPTbox">
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
+                            <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
+                        </div>
+                    </div>
+                </form>
+                <!-- END HEADER SEARCH BOX -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN NOTIFICATION DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
+                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
+                        <!-- END NOTIFICATION DROPDOWN -->
+                        <!-- BEGIN INBOX DROPDOWN -->
+                        <!-- END INBOX DROPDOWN -->
+                        <!-- BEGIN TODO DROPDOWN -->
+                        <!-- END TODO DROPDOWN -->
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle" src="" />
+                                <span class="username username-hide-on-mobile"> Admin </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- END SIDEBAR -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <div class="page-sidebar navbar-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <li class="nav-item start active open">
+                        <a href="/Manages/Index.html" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="title">Home</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+                        <!--<ul class="sub-menu">
+                            <li class="nav-item start active open">
+                                <a href="index.html" class="nav-link ">
+                                      <i class="icon-bar-chart"></i>
+                                    <span class="title">Dashboard 1</span>
+                                    <span class="selected"></span>
+                                </a>
+                            </li>
+
+                        </ul>-->
+                    </li>
+
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-docs"></i>
+                            <span class="title">Organization</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="Employee.html" class="nav-link ">
+                                    <!-- <i class="icon-clock"></i>-->
+                                    <span class="title">Employee</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="Department.html" class="nav-link ">
+                                    <!-- <i class="icon-check"></i>-->
+                                    <span class="title">Department</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="OrganizationTree.html" class="nav-link ">
+                                    <!--  <i class="icon-envelope"></i>-->
+                                    <span class="title">Organization Tree</span>
+                                </a>
+                            </li>
+                            <!--<li class="nav-item  ">
+                                <a href="app_calendar.html" class="nav-link ">
+                                    <i class="icon-calendar"></i>
+                                    <span class="title">Calendar</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="app_ticket.html" class="nav-link ">
+                                    <i class="icon-notebook"></i>
+                                    <span class="title">Support</span>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-settings"></i>
+                            <span class="title">System</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="dmDepartmentAdd.html" class="nav-link ">
+                                    <span class="title">Departments</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="dmDesignation.html" class="nav-link ">
+                                    <span class="title">Designations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="dmLocation.html" class="nav-link " target="_blank">
+                                    <span class="title">Locations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="dmRole.html" class="nav-link ">
+                                    <span class="title">Roles</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="dmPermission.html" class="nav-link " target="_blank">
+                                    <span class="title">Permissions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="User.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>
+                            <!--<li class="nav-item  ">
+                                <a href="page_system_500_1.html" class="nav-link ">
+                                    <span class="title">500 Page 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content  " style="min-height: 1434px;">
+
+                <div class="ZPcontwrap dvToppos" id="admin-organization-Designations">
+                    <!--Danh sách-->
+                    <div class="deptsettings divDS " id="deptParent" >
+                        <div class="mainhead">
+                            <div class="row">
+                                <div class="col-md-6"><div class="col-md-12 PT5">Designation View</div></div>
+                                <div class="col-md-6 text-right">
+                                    <div class="col-md-12" id="headeOptns">
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Designation')">Add Designation </a>
+                                        </div>
+                                        <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
+                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Designation </a>-->
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--tìm kiếm-->
+                        <div class="filter-popup parnel-filter top60 DN " id="filter">
+                            <div class="filter-header">
+                                <h6 class="addPopTitle">Filter</h6>
+                                <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Designation name</label>
+                                        <input type="text" class="form-control" id="usernickname" value="" name="nickname">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <label>Mail Alias</label>
+                                        <input type="text" class="form-control" id="useraboutme" value="" name="aboutme">
+                                    </div>
+                                </div>
+                                <div class="filter-footer">
+                                    <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
+                                    <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="filter-popup parnel-filter DN" id="filter">
+                            <div class="filter-header">
+                                <h6 class="addPopTitle">Filter</h6>
+                                <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
+                            </div>
+                            <div class="filter-search">
+                                <input id="search_field" placeholder="Search" class="form-control" type="search" onkeyup="ZPView.Search.searchSuggestion(false);">
+                            </div>
+                            <div class="filter-section" id="filter_section">
+                                <div class="ctable hide" id="no_fields">
+                                    <div class="ctcell">
+                                        <i class=""></i>
+                                        <div>No fields present</div>
+                                    </div>
+                                </div>
+                                <ul class="filter-lists" id="filterlist">
+                                    <li id="approval_status" class="DN">
+                                        <div class="filter-head"><span>Approval Status</span></div>
+                                        <select class="select2-container" id="zp_views_approvaltype"><option value="all">All Requests</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="pending">Pending</option><option value="notsubmitted">Drafts</option><option value="cancelled">Cancelled</option></select>
+                                    </li>
+                                    <li id="emplyoee_status" class="DN">
+                                        <div class="filter-head"><span>Employee Status</span></div>
+                                        <select class="select2-container" id="zp_views_employeestatus"><option value="all">All Requests</option><option value="activeemprecord" selected="selected">All Active Employee Requests</option><option value="exitemprecord">Ex-Employee Requests</option></select>
+                                    </li>
+                                    <li id="fields_head"><div class="filter-head"><span>Fields</span></div></li>
+                                    <li id="" class="filter-check" value="Designation">
+                                        <label id="checkbox_name" class="checkbox" value="" onclick="frm.fnCheckFilter()">Designation Name<span></span></label>
+                                        <div id="" class="filter-details ">
+                                            <div class="form-group">
+                                                <select id="search_options_467269000000036121">
+                                                    <option value="18">Is</option>
+                                                    <option value="19">Is Not</option>
+                                                    <option value="24">Starts with</option>
+                                                    <option value="25">Ends With</option>
+                                                    <option value="26" selected="selected">Contains</option>
+                                                    <option value="27">Not Contains</option>
+                                                    <option value="28">Like</option>
+                                                    <option value="29">Is Empty</option>
+                                                    <option value="30">Is Not Empty</option>
+                                                </select>
+                                                <div id="zp_search_viewinp" isenc="false" ftype="1" formcomid="467269000000036121" dispname="Designation Name" labelname="Designation">
+                                                    <div class="DN divName">
+                                                        <input class="form-control" searchenb="true" type="text" id="search_name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="search_error" class="zp-err-msg"></div>
+                                        </div>
+                                    </li>
+                                    <li id="" class="filter-check" value="MailAlias">
+                                        <label id="checkbox_finder" class="checkbox" value="" onclick="ZPView.Search.showfilteroptions(this);">Mail Alias<span></span></label>
+                                        <div id="" class="filter-details DN">
+                                            <div class="form-group">
+                                                <select id="search_options_467269000000036123">
+                                                    <option value="18">Is</option>
+                                                    <option value="19">Is Not</option>
+                                                    <option value="24">Starts with</option>
+                                                    <option value="25">Ends With</option>
+                                                    <option value="26" selected="selected">Contains</option>
+                                                    <option value="27">Not Contains</option>
+                                                    <option value="28">Like</option>
+                                                    <option value="29">Is Empty</option>
+                                                    <option value="30">Is Not Empty</option>
+                                                </select>
+                                                <div id="zp_search_viewinp" isenc="false" ftype="4" formcomid="467269000000036123" dispname="Mail Alias" labelname="MailAlias">
+                                                    <div>
+                                                        <input class="form-control" searchenb="true" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="search_error" class="zp-err-msg DN">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-footer">
+                                <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
+                                <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                            </div>
+                        </div>-->
+                        <!--end tìm kiếm-->
+                        <div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
+
+                            <div id="dvListview" class="dvListview " style="display: block;">
+                                <!--Tạo bảng-->
+                                <table id="listOf_Designations" class="table table-hover table-responsive tbldepart">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" width="2%"></th>
+                                            <th width="25%"><span class="CP ZPbold">Designation Name</span></th>
+                                            <!--<th width="15%"><span>Number of employees</span></th>-->
+                                            <th><span class="ZPbold">Mail alias</span></th>
+                                            
+                                            <th width="12%"><span class="ZPbold">Actions</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr recpkid="467269000000136133" formid="467269000000035681">
+                                            <td class="text-center"></td>
+                                            <td>
+                                                <div>Trưởng phòng</div>
+                                            </td>
+                                            
+                                            <td><div></div></td>
+                                            
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Designation')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr recpkid="467269000000136213" formid="467269000000035681">
+                                            <td class="text-center"></td>
+                                            <td>
+                                                <div>Phó phòng</div>
+                                            </td>
+                                            <!--<td><a class="ML10" onclick="ZPUsers.showDeptById(&quot;467269000000136213&quot;)">1</a></td>-->
+                                            <td><div>ha2@gmail.com</div></td>
+                                            <td><div class="dvlist-action ">
+												<a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
+                                        </tr>
+                                        <tr recpkid="467269000000136137" formid="467269000000035681">
+                                            <td class="text-center"></td>
+                                            <td><div>Nhân viên</div></td>
+                                            <td><div></div></td>
+                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
+                                        </tr>
+                                     
+                                    </tbody>
+                                </table>
+                                <!--end Tạo bảng-->
+                            </div>
+                        </div>
+                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
+                            <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>
+                          <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
+                        </div>
+                    </div>
+                    <!--end Danh sách-->
+                    <!--thêm| sửa bản ghi-->
+                    <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none" role="dialog" data-keyboard="false" id="zp_addedit_record_467269000000035681">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content" id="headerParent">
+                                <div class="modal-header" id="zp_form_header">
+                                    <div class="zp-back" onclick="frm.showForm('ds')"><i class="IC-ar-lft"></i></div>
+                                    <div class="ssp-profmin" id="zp_form_headerdisp">
+                                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Designation</span>
+                                    </div>
+
+                                    <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
+                                </div>
+                                <div class="modal-body P0I" id="zp_form_outer_container">
+                                    <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
+                                        <h3 issec="true" id="467269000000036007" class="zpcont-title">
+                                            <span class="ZPbold">Designation Details</span>
+                                        </h3>
+                                        <div class="row" id="" row="1" istabular="false" isgrid="false">
+                                            <div class="col-sm-6">
+                                                <div class="zp-label  Matry" isallowed="false">
+                                                    <label class="zplt-label">Designation Name</label>
+                                                    <div folabel="Designation" class="zprt-label">
+                                                        <input multi="false" id="" value="" type="text" name="Designation" class="form-control zptxt-edit">
+                                                    </div>
+                                                </div>
+                                                <div class="zp-label  " isallowed="false">
+                                                    <label class="zplt-label">Mail Alias</label>
+                                                    <div folabel="MailAlias" id="" class="zprt-label">
+                                                        <input multi="false" id="" value="" type="text" name="MailAlias" class="form-control zptxt-edit">
+                                                    </div>
+                                                </div>
+
+                                               
+                                            </div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                        <!--<input type="hidden" value="P_Department" name="zp_tableName">
+                                        <input type="hidden" value="676969451" name="loginUserZUID">
+                                        <input type="hidden" value="c91197d1034b143eef4fddd1196e3cd3782d3fa73653e0576582d1dd91736e58fc06fdda92839719f663de179ee60bfe8b2df1906584fd1779e2abec0dcb155a" name="conreqcsr">
+                                        <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">-->
+                                    </form>
+                                </div>
+                                <div class="modal-footer text-left divButtomAdd DN">
+                                    <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
+                                    <button type="button" id="zp_forms_addnew_btn" onclick="ZPForm.IS_SUBMITNEW=true;ZPForm.Record.validateAndSubmit();" class="btn btn-default btn-addnew">Submit and New</button>
+                                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
+                                </div>
+                                <div class="modal-footer text-left divButtomEdit DN">
+                                    <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
+                                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
+                    </div>
+                    <!--end thêm| sửa bản ghi-->
+                </div>
+
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
+
+        <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="/content/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/content/js/js.cookie.min.js" type="text/javascript"></script>
+    <script src="/content/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/content/js/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="/content/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="/content/js/moment.min.js" type="text/javascript"></script>
+    <script src="/content/js/daterangepicker.min.js" type="text/javascript"></script>
+    <!--<script src="../assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/horizontal-timeline/horizontal-timeline.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>-->
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="/content/js/app.min.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <!-- <script src="../assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>-->
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="/content/js/layout.min.js" type="text/javascript"></script>
+    <!-- <script src="../assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>-->
+    <!--<script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>-->
+    <!--<script src="/content/js/tp.1.min.js"></script>
+    <script src="/content/js/form.1.min.js"></script>
+    <script src="/content/js/form.2.min.js"></script>
+    <script src="/content/js/I18N_en.js"></script>-->
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script src="../../../content/js/form.js"></script>
+    <script>
+        var frm = new Manager();
+        $(document).ready(function () {
+            frm.InitForm();
+            //$('.divDS').show();
+            //$('.divAdd').hide();
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+
+
+        })
+    </script>
+
+</body>
+</html>
