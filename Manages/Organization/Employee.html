@@ -130,7 +130,7 @@ Version: v1
                 <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
                 <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                     <li class="nav-item start active open">
-                        <a href="/Manages/Index.html" class="nav-link nav-toggle">
+                        <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-home"></i>
                             <span class="title">Home</span>
                             <span class="selected"></span>
@@ -138,6 +138,7 @@ Version: v1
                         </a>
 
                     </li>
+
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-docs"></i>
@@ -146,19 +147,19 @@ Version: v1
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a href="Employee.html" class="nav-link ">
+                                <a href="/Manages/Organization/Employee.html" class="nav-link ">
                                     <!-- <i class="icon-clock"></i>-->
                                     <span class="title">Employee</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="Department.html" class="nav-link ">
+                                <a href="/Manages/Organization/Department.html" class="nav-link ">
                                     <!-- <i class="icon-check"></i>-->
                                     <span class="title">Department</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="OrganizationTree.html" class="nav-link ">
+                                <a href="/Manages/Organization/EmployeeTree.html" class="nav-link ">
                                     <!--  <i class="icon-envelope"></i>-->
                                     <span class="title">Organization Tree</span>
                                 </a>
@@ -169,53 +170,86 @@ Version: v1
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-settings"></i>
+                            <span class="title">Category</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmDepartment.html" class="nav-link ">
+                                    <span class="title">Departments</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmDesignation.html" class="nav-link ">
+                                    <span class="title">Designations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmLocation.html" class="nav-link " target="_blank">
+                                    <span class="title">Locations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmEmployeeStatus.html" class="nav-link ">
+                                    <span class="title">Employee Status</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmEmployeeType.html" class="nav-link " target="_blank">
+                                    <span class="title">Employee Type</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-settings"></i>
                             <span class="title">System</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a href="dmDepartmentAdd.html" class="nav-link ">
-                                    <span class="title">Departments</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="dmDesignation.html" class="nav-link ">
-                                    <span class="title">Designations</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="dmLocation.html" class="nav-link " target="_blank">
-                                    <span class="title">Locations</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="dmRole.html" class="nav-link ">
+                                <a href="/Manages/System/Role.html" class="nav-link ">
                                     <span class="title">Roles</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="dmPermission.html" class="nav-link " target="_blank">
+                                <a href="/Manages/System/Permission.html" class="nav-link ">
                                     <span class="title">Permissions</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="User.html" class="nav-link " target="_blank">
-                                    <span class="title">Users</span>
-                                </a>
-                            </li>
-                            <!--<li class="nav-item  ">
-                                <a href="page_system_500_1.html" class="nav-link ">
-                                    <span class="title">500 Page 1</span>
+                                <a href="/Manages/System/FunctionGroup.html" class="nav-link " target="_blank">
+                                    <span class="title">Function Groups</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                                <a href="/Manages/System/Functions.html" class="nav-link ">
+                                    <span class="title">Functions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/Users.html" class="nav-link " target="_blank">
                                     <span class="title">Users</span>
                                 </a>
-                            </li>-->
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/FunctionPermissions.html" class="nav-link " target="_blank">
+                                    <span class="title">Function Permissions</span>
+                                </a>
+                            </li>
+                            <!--<li class="nav-item  ">
+                        <a href="page_system_500_1.html" class="nav-link ">
+                            <span class="title">500 Page 1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                            <span class="title">Users</span>
+                        </a>
+                    </li>-->
                         </ul>
                     </li>
-
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>
