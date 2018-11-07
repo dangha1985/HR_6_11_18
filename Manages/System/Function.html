@@ -269,16 +269,16 @@ Version: v1
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content  " style="min-height: 1434px;">
 
-                <div class="ZPcontwrap dvToppos" id="admin-organization-FunctionGroup">
+                <div class="ZPcontwrap dvToppos" id="admin-organization-Function">
                     <!--Danh sách-->
                     <div class="deptsettings divDS " id="deptParent" >
                         <div class="mainhead">
                             <div class="row">
-                                <div class="col-md-6"><div class="col-md-12 PT5">Function Group View</div></div>
+                                <div class="col-md-6"><div class="col-md-12 PT5">Function View</div></div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
                                         <div class="btn-group">
-                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','FunctionGroup')">Add Function Group </a>
+                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','FunctionGroup')">Add Function</a>
                                         </div>
                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
                                             <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add FunctionGroup </a>-->
@@ -297,7 +297,7 @@ Version: v1
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Function Group name</label>
+                                        <label>Function Name</label>
                                         <input type="text" class="form-control" id="txtFunctionGroupName_fil" value="" name="nickname">
                                     </div>
                                 </div>
@@ -318,7 +318,7 @@ Version: v1
                                     <thead>
                                         <tr>
                                             <th class="text-center" width="2%"></th>
-                                            <th width="25%"><span class="CP ZPbold">Function Group Name</span></th>
+                                            <th width="25%"><span class="CP ZPbold">Function Name</span></th>
                                             <th><span class="ZPbold">Description</span></th>
                                             
                                             <th width="12%"><span class="ZPbold">Actions</span></th>
@@ -328,10 +328,10 @@ Version: v1
                                         <tr recpkid="467269000000136133" formid="467269000000035681">
                                             <td class="text-center"></td>
                                             <td>
-                                                <div>System</div>
+                                                <div>Employee</div>
                                             </td>
                                             
-                                            <td><div>Hệ thống</div></td>
+                                            <td><div></div></td>
                                             
                                             <td>
                                                 <div class="dvlist-action ">
@@ -343,17 +343,17 @@ Version: v1
                                         <tr recpkid="467269000000136213" formid="467269000000035681">
                                             <td class="text-center"></td>
                                             <td>
-                                                <div>Category</div>
+                                                <div>Department</div>
                                             </td>
-                                            <td><div>Danh mục</div></td>
+                                            <td><div></div></td>
                                             <td><div class="dvlist-action ">
 												<a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
 												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
                                         </tr>
                                         <tr >
                                             <td class="text-center"></td>
-                                            <td><div>Organization</div></td>
-                                            <td><div>Tổ chức</div></td>
+                                            <td><div>Organization Tree</div></td>
+                                            <td><div></div></td>
                                             <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
 												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
                                         </tr>
@@ -385,12 +385,12 @@ Version: v1
                                 <div class="modal-body P0I" id="zp_form_outer_container">
                                     <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
                                         <h3 issec="true" id="467269000000036007" class="zpcont-title">
-                                            <span class="ZPbold">Function Group Details</span>
+                                            <span class="ZPbold">Function Details</span>
                                         </h3>
                                         <div class="row" id="" row="1" istabular="false" isgrid="false">
                                             <div class="col-sm-6">
                                                 <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Function Group Name</label>
+                                                    <label class="zplt-label">Function Name</label>
                                                     <div folabel="FunctionGroup" class="zprt-label">
                                                         <input multi="false" id="txtFunctionGroupName" value="" type="text" name="FunctionGroup" class="form-control zptxt-edit">
                                                     </div>
@@ -399,6 +399,17 @@ Version: v1
                                                     <label class="zplt-label">Path</label>
                                                     <div folabel="FunctionGroup" class="zprt-label">
                                                         <input multi="false" id="txtFunctionGroupName" value="" type="text" name="FunctionGroup" class="form-control zptxt-edit">
+                                                    </div>
+                                                </div>
+                                                <div class="zp-label " isallowed="false">
+                                                    <label class="zplt-label">Function Group</label>
+                                                    <div class="zprt-label">
+                                                        <select class="select1">
+                                                            <option value="-Select-" selected="selected">Select</option>
+                                                            <option value="1">Systems</option>
+                                                            <option value="2">Category</option>
+                                                            <option value="2">Organization</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="zp-label Matry" isallowed="false">
