@@ -203,7 +203,7 @@ Version: v1
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a href="dmDepartment.html" class="nav-link ">
+                                <a href="dmDepartmentAdd.html" class="nav-link ">
                                     <span class="title">Departments</span>
                                 </a>
                             </li>
@@ -256,72 +256,58 @@ Version: v1
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content  " style="min-height: 1434px;">
 
-                <div class="ZPcontwrap dvToppos" id="admin-organization-departments">
+                <div class="ZPcontwrap dvToppos" id="admin-organization-Role">
                     <!--Danh sách-->
-                    <div class="deptsettings divDS" id="" style="display:none">
+                    <div class="deptsettings divDS " id="deptParent" >
                         <div class="mainhead">
                             <div class="row">
-                                <div class="col-md-6"><div class="col-md-12 PT5">Department View</div></div>
+                                <div class="col-md-6"><div class="col-md-12 PT5">Role View</div></div>
                                 <div class="col-md-6 text-right">
-
-
-
                                     <div class="col-md-12" id="headeOptns">
                                         <div class="btn-group">
-                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add')">Add Department </a>
+                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Role')">Add Role </a>
                                         </div>
-
                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
-                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Department </a>-->
-                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="ZPView.Search.actionsearch(true);" title="Search"></i>
+                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Role </a>-->
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--tìm kiếm-->
-                        <div class="filter-popup" id="filter">
+                        <div class="filter-popup parnel-filter top60 DN " id="filter">
                             <div class="filter-header">
                                 <h6 class="addPopTitle">Filter</h6>
                                 <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
-                            </div><div class="filter-search"><input id="search_field" placeholder="Search" class="form-control" type="search" onkeyup="ZPView.Search.searchSuggestion(false);"></div><div class="filter-section" id="filter_section">
-                                <div class="ctable hide" id="no_fields">
-                                    <div class="ctcell">
-                                        <i class=""></i>
-                                        <div>No fields present</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Role name</label>
+                                        <input type="text" class="form-control" id="txtRoleName_fil" value="" name="nickname">
                                     </div>
-                                </div><ul class="filter-lists" id="filterlist">
-                                    <li id="approval_status" class="DN">
-                                        <div class="filter-head"><span>Approval Status</span></div>
-                                        <select class="select2-container" id="zp_views_approvaltype"><option value="all">All Requests</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="pending">Pending</option><option value="notsubmitted">Drafts</option><option value="cancelled">Cancelled</option></select>
-                                    </li>
-                                    <li id="emplyoee_status" class="DN">
-                                        <div class="filter-head"><span>Employee Status</span></div>
-                                        <select class="select2-container" id="zp_views_employeestatus"><option value="all">All Requests</option><option value="activeemprecord" selected="selected">All Active Employee Requests</option><option value="exitemprecord">Ex-Employee Requests</option></select>
-                                    </li>
-                                    <li id="fields_head"><div class="filter-head"><span>Fields</span></div></li>
-                                    <li id="filter_field_467269000000036121" class="filter-check" value="Department"><label id="checkbox_finder" class="checkbox" value="467269000000036121" onclick="ZPView.Search.showfilteroptions(this);">Department Name<span></span></label><div id="filter_options_467269000000036121" class="filter-details DN"><div class="form-group"><select id="search_options_467269000000036121"><option value="18">Is</option><option value="19">Is Not</option><option value="24">Starts with</option><option value="25">Ends With</option><option value="26" selected="selected">Contains</option><option value="27">Not Contains</option><option value="28">Like</option><option value="29">Is Empty</option><option value="30">Is Not Empty</option></select><div id="zp_search_viewinp" isenc="false" ftype="1" formcomid="467269000000036121" dispname="Department Name" labelname="Department"><div><input class="form-control" searchenb="true" type="text"></div></div></div><div id="search_error" class="zp-err-msg DN"></div></div></li>
-                                    <li id="filter_field_467269000000036123" class="filter-check" value="MailAlias"><label id="checkbox_finder" class="checkbox" value="467269000000036123" onclick="ZPView.Search.showfilteroptions(this);">Mail Alias<span></span></label><div id="filter_options_467269000000036123" class="filter-details DN"><div class="form-group"><select id="search_options_467269000000036123"><option value="18">Is</option><option value="19">Is Not</option><option value="24">Starts with</option><option value="25">Ends With</option><option value="26" selected="selected">Contains</option><option value="27">Not Contains</option><option value="28">Like</option><option value="29">Is Empty</option><option value="30">Is Not Empty</option></select><div id="zp_search_viewinp" isenc="false" ftype="4" formcomid="467269000000036123" dispname="Mail Alias" labelname="MailAlias"><div><input class="form-control" searchenb="true" type="text"></div></div></div><div id="search_error" class="zp-err-msg DN"></div></div></li>
-                                </ul>
-                            </div><div class="filter-footer">
-                                <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
-                                <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                                </div>
+                                
+                                <div class="filter-footer">
+                                    <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
+                                    <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                                </div>
                             </div>
                         </div>
+                     
                         <!--end tìm kiếm-->
                         <div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
 
-                            <div id="dvListview" class="dvListview DN" style="display: block;">
+                            <div id="dvListview" class="dvListview " style="display: block;">
                                 <!--Tạo bảng-->
-                                <table id="listOf_departments" class="table table-hover table-responsive tbldepart">
+                                <table id="listOf_Roles" class="table table-hover table-responsive tbldepart">
                                     <thead>
                                         <tr>
                                             <th class="text-center" width="2%"></th>
-                                            <th width="20%"><span class="CP ZPbold">Department Name</span></th>
-                                            <!--<th width="15%"><span>Number of employees</span></th>-->
-                                            <th><span class="ZPbold">Department mail alias</span></th>
-                                            <th width="22%"><span class="ZPbold">Department head</span></th>
+                                            <th width="25%"><span class="CP ZPbold">Role Name</span></th>
+                                            <th><span class="ZPbold">Description</span></th>
+                                            
                                             <th width="12%"><span class="ZPbold">Actions</span></th>
                                         </tr>
                                     </thead>
@@ -329,63 +315,77 @@ Version: v1
                                         <tr recpkid="467269000000136133" formid="467269000000035681">
                                             <td class="text-center"></td>
                                             <td>
-                                                <div><a class="ulnk" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;467269000000136133&quot;,false,&quot;VIEW&quot;,false)">Phòng GĐ</a></div>
+                                                <div>Admin</div>
                                             </td>
-                                            <!--<td><a class="ML10" onclick="ZPUsers.showDeptById(&quot;467269000000136133&quot;)">1</a></td>-->
+                                            
                                             <td><div></div></td>
-                                            <td><div>trangnth</div></td>
+                                            
                                             <td>
                                                 <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="User.getRecordPage('467269000000035681',$(this).closest('tr').attr('recPkID'),false,'EDIT',false,'gridview')"></a>
-                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick="Organization.ManageOrgs.deleteConfirmPopUp(this,'list','P_Department')"></a>
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Role')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr recpkid="467269000000136213" formid="467269000000035681">
                                             <td class="text-center"></td>
                                             <td>
-                                                <div><a class="ulnk" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;467269000000136213&quot;,false,&quot;VIEW&quot;,false)">Phòng HC</a></div>
+                                                <div>Team member</div>
                                             </td>
-                                            <!--<td><a class="ML10" onclick="ZPUsers.showDeptById(&quot;467269000000136213&quot;)">1</a></td>-->
-                                            <td><div>ha2@gmail.com</div></td>
-                                            <td><div>dang2</div></td>
-                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="User.getRecordPage('467269000000035681',$(this).closest('tr').attr('recPkID'),false,'EDIT',false,'gridview')"></a><a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick="Organization.ManageOrgs.deleteConfirmPopUp(this,'list','P_Department')"></a></div></td>
+                                            <td><div>Thành viên trong đội</div></td>
+                                            <td><div class="dvlist-action ">
+												<a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
                                         </tr>
-                                        <tr recpkid="467269000000136137" formid="467269000000035681">
+                                        <tr >
                                             <td class="text-center"></td>
-                                            <td><div><a class="ulnk" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;467269000000136137&quot;,false,&quot;VIEW&quot;,false)">Phong LT</a></div></td>
-                                            <!--<td>
-                                                <a class="ML10" onclick="ZPUsers.showDeptById(&quot;467269000000136137&quot;)">4</a>
-                                            </td>-->
-                                            <td><div></div></td>
-                                            <td><div>dang3</div></td>
-                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="User.getRecordPage('467269000000035681',$(this).closest('tr').attr('recPkID'),false,'EDIT',false,'gridview')"></a><a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick="Organization.ManageOrgs.deleteConfirmPopUp(this,'list','P_Department')"></a></div></td>
+                                            <td><div>Director</div></td>
+                                            <td><div>Giám đốc</div></td>
+                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
                                         </tr>
-                                        <tr recpkid="467269000000138001" formid="467269000000035681">
+                                        <tr>
                                             <td class="text-center"></td>
-                                            <td><div><a class="ulnk" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;467269000000138001&quot;,false,&quot;VIEW&quot;,false)">Phòng phó GĐ</a></div></td>
-                                            <!--<td>
-                                                <a class="ML10" onclick="ZPUsers.showDeptById(&quot;467269000000138001&quot;)">0</a>
-                                            </td>-->
-                                            <td><div></div></td>
-                                            <td><div>dang1</div></td>
-                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="User.getRecordPage('467269000000035681',$(this).closest('tr').attr('recPkID'),false,'EDIT',false,'gridview')"></a><a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick="Organization.ManageOrgs.deleteConfirmPopUp(this,'list','P_Department')"></a></div></td>
+                                            <td><div>Manager</div></td>
+                                            <td><div>Quản lý</div></td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
                                         </tr>
+                                        <tr>
+                                            <td class="text-center"></td>
+                                            <td><div>Team Incharge</div></td>
+                                            <td><div>Đội phụ trách</div></td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                                 <!--end Tạo bảng-->
                             </div>
                         </div>
+                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
+                            <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>
+                          <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
+                        </div>
                     </div>
                     <!--end Danh sách-->
                     <!--thêm| sửa bản ghi-->
-                    <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none " role="dialog" data-keyboard="false" id="">
+                    <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none" role="dialog" data-keyboard="false" id="zp_addedit_record_467269000000035681">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content" id="headerParent">
                                 <div class="modal-header" id="zp_form_header">
                                     <div class="zp-back" onclick="frm.showForm('ds')"><i class="IC-ar-lft"></i></div>
                                     <div class="ssp-profmin" id="zp_form_headerdisp">
-                                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Department</span>
+                                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Role</span>
                                     </div>
 
                                     <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
@@ -393,57 +393,24 @@ Version: v1
                                 <div class="modal-body P0I" id="zp_form_outer_container">
                                     <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
                                         <h3 issec="true" id="467269000000036007" class="zpcont-title">
-                                            <span class="ZPbold">Department Details</span>
+                                            <span class="ZPbold">Role Details</span>
                                         </h3>
-                                        <div class="row" id="zp_section_fields_467269000000036007" secid="467269000000036007" row="1" istabular="false" isgrid="false">
+                                        <div class="row" id="" row="1" istabular="false" isgrid="false">
                                             <div class="col-sm-6">
                                                 <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Department Name</label>
-                                                    <div folabel="Department" fieldtype="1" id="zp_field_outer_467269000000036121" class="zprt-label" relateddata="false" isfielddependent="false">
-                                                        <input multi="false" fcid="467269000000036121" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036121" value="" type="text" name="Department" class="form-control zptxt-edit">
+                                                    <label class="zplt-label">Role Name</label>
+                                                    <div folabel="Role" class="zprt-label">
+                                                        <input multi="false" id="txtRoleName" value="" type="text" name="Role" class="form-control zptxt-edit">
                                                     </div>
                                                 </div>
                                                 <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Mail Alias</label><div folabel="MailAlias" fieldtype="4" id="zp_field_outer_467269000000036123" class="zprt-label" relateddata="false" isfielddependent="false">
-                                                        <input multi="false" fcid="467269000000036123" fieldtype="4" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036123" value="" type="text" name="MailAlias" class="form-control zptxt-edit">
+                                                    <label class="zplt-label">Description</label>
+                                                    <div folabel="MailAlias" id="" class="zprt-label">
+                                                        <textarea rows="3" id="txtDescription" value="" type="text" name="Description" class="form-control zptxtarea-edit"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Department Lead</label>
-                                                    <div folabel="Department_Lead" fieldtype="26" displaytype="100" id="zp_field_outer_467269000000036125" class="zprt-label" relateddata="false" isfielddependent="false">
-                                                        <div class="select2-container" id="s2id_zp_field_467269000000036125">
-                                                            <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
-                                                                <span>Select</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>
-                                                                <div><b></b></div>
-                                                            </a>
-                                                            <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3">
-                                                            <div class="select2-drop select2-with-searchbox" style="display:none">
-                                                                <div class="select2-search">
-                                                                    <input type="text" autocomplete="off" class="select2-input">
-                                                                </div>
-                                                                <ul class="select2-results">   </ul>
-                                                            </div>
-                                                        </div>
-                                                        <input multi="false" fcid="467269000000036125" fieldtype="26" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036125" value="-Select-" type="text" name="Department_Lead" class="select2-offscreen" tabindex="-1">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Parent Department</label>
-                                                    <div folabel="Parent_Department" fieldtype="26" displaytype="100" id="zp_field_outer_467269000000036127" class="zprt-label" relateddata="false" isfielddependent="false">
-                                                        <div class="ZPActIcn"><a class="IC-add-form" fcid="467269000000036127" onclick="ZPForm.Field.quickFormFields(this)"></a></div>
-                                                        <div class="select2-container" id="s2id_zp_field_467269000000036127">
-                                                            <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
-                                                                <span>Select</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div>
-                                                            </a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen4">
-                                                            <div class="select2-drop select2-with-searchbox" style="display:none">
-                                                                <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>
-                                                                <ul class="select2-results">   </ul>
-                                                            </div>
-                                                        </div>
-                                                        <select></select>
-                                                        <input multi="false" fcid="467269000000036127" fieldtype="26" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036127" value="-Select-" type="text" name="Parent_Department" class="select2-offscreen" tabindex="-1">
-                                                    </div>
-                                                </div>
+
+                                               
                                             </div>
                                             <div class="col-sm-6"></div>
                                         </div>
@@ -453,10 +420,14 @@ Version: v1
                                         <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">-->
                                     </form>
                                 </div>
-                                <div class="modal-footer text-left">
+                                <div class="modal-footer text-left divButtomAdd DN">
                                     <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
-                                    <button type="button" id="zp_forms_addnew_btn" onclick="ZPForm.IS_SUBMITNEW=true;ZPForm.Record.validateAndSubmit();" class="btn btn-default">Submit and New</button>
-                                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="ZPForm.Field.closeconfmsg()">Cancel</button>
+                                    <button type="button" id="zp_forms_addnew_btn" onclick="ZPForm.IS_SUBMITNEW=true;ZPForm.Record.validateAndSubmit();" class="btn btn-default btn-addnew">Submit and New</button>
+                                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
+                                </div>
+                                <div class="modal-footer text-left divButtomEdit DN">
+                                    <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
+                                    <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +508,7 @@ Version: v1
     <script>
         var frm = new Manager();
         $(document).ready(function () {
-             frm.InitForm();
+            frm.InitForm();
             //$('.divDS').show();
             //$('.divAdd').hide();
             $('#clickmewow').click(function () {

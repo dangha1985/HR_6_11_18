@@ -237,101 +237,50 @@ Version: v1
 
                 <div class="ZPcontwrap dvToppos" id="">
 
-
                     <!-- menu top1 -->
                     <div class="cont-wrap" id="zp-contwrap-organization-department">
                         <nav id="zp-tlevel-organization-department" class="navbar navbar-default ZPSnav">
                             <div class="container-fluid">
                                 <ul class="nav navbar-nav">
-                                    <li id="zp_subtab_organization_department" tab="true">
-                                        <a href="/Manages/Organization/Department.html">Department</a>
+                                    <li id="zp_subtab_organization_department" tab="true" class="active">
+                                        <a href="/Manages/Organization/EmployeeTree.html">Employee Tree</a>
                                     </li>
-                                    <li id="zp_subtab_organization_department_searchdepts" tab="true" class="active">
-                                        <a href="/Manages/Organization/DepartmentSearch.html">Directory</a>
+                                    <li id="zp_subtab_organization_department_searchdepts" tab="true">
+                                        <a href="/Manages/Organization/DepartmentTree.html">Department Tree</a>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                     <!-- menu top1 -->
-                    <!--  -->
-                    <div class="main-wrp" id="organization-department-searchdepts">
 
-                        <div class="ZPTscrlcont top40 " id="page_content">
-                            <div class="DPview">
-                                <div class="LT">
-                                    <div class="fil">
-                                        <div id="ZPsearch" class="ZPsearch FL MT8">
-                                            <div class="dvsearch Dropdown FR PR">
-                                                <span zptitle="Search Category" class="ZPico-search FL MT7 ML5 ZPtooltip IC-lens S16" onclick="ZPUsers.Department.deptSearchFrmButton(this)"></span>
-                                            </div>
-                                            <input type="search" name="Search" placeholder="Search Department" id="deptsearchbox" class="ZPselect" onkeyup="ZPUsers.Department.searchDepartmentByKey(event, this)">
-                                        </div>
-                                    </div>
-                                    <div class="mnus">
-                                        <ul id="deptlist" class="tree dstree">
-                                            <li id="467269000000136133" class="branch subDept active">
-                                                <div deptid="467269000000136133" id="dept_name" class="ZPbold">
-                                                    <i class="treeicon IC-arrow-r-s" onclick="ZPUsers.Department.toggleDeptTree(this)" >
-                                                    </i>Phòng GĐ<span><span class="" Tcnt">(1)</span></span>
+                    <!-- content -->
+                    <div class="ZPTscrlcont top40" style="overflow: hidden;">
+                        <i class="IC-ar-top ZPemptop" style="display: none; left: 160px;"></i>
+                        <div class="ZPemptree">
+                            <div class="ZPet" tree="true" id="zp_org_tree" loaded="true">
+                                <div class="emtdiv ETexp" id="zp_tree_level_1" level="1">
+                                    <div class="abdiv">
+                                        <ul>
+                                            <li id="tree_content_467269000000133005" parentid="" subcount="0" class="sel">
+                                                <div class="conta" user="true" hover="false">
+                                                    <img class="" id="zp_emptree_oripho" src="viewPhoto?filename=6325165000000015003">
+                                                    <div class="det"><b>trangnth</b><span>Trưởng phòng</span></div>
                                                 </div>
-                                                <ul>
-                                                    <li id="467269000000138001" style="display: none;" parentdeptid="467269000000136133">
-                                                        <div deptid="467269000000138001" id="dept_name">
-                                                            <i class="treeicon IC-arrow-r-s" onclick="ZPUsers.Department.toggleDeptTree(this)" "=" "></i>Phòng phó GĐ<span><span class="Tcnt">(2)</span></span>
-                                                        </div>
-                                                        <ul>
-                                                            <li id="467269000000136213" style="display: none;" parentdeptid="467269000000138001">
-                                                                <div deptid="467269000000136213" id="dept_name">
-                                                                    <i class="treeicon" ></i>Phòng HC
-                                                                </div>
-                                                            </li>
-                                                            <li id=" 467269000000136137" style="display: none;" parentdeptid="467269000000138001">
-                                                                <div deptid="467269000000136137" id="dept_name"><i class="treeicon" "=" "></i>Phong LT</div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
+                                                <div class="lin"></div>
+                                                <div class="Hlinetop"></div>
+                                                <div class="Hlinebot"></div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="RT">
-                                    <div class="ZPpage-3lvl">
-                                        <div class="Fdet FL"><div class="IC-team S16 gry"></div><b id="activedeptname">Phòng GĐ</b></div>
-                                        <div class="Fdet FL"><div class="RPmana"><img src="viewPhoto?filename=6325165000000014003" id="activedeptphoto"></div><b id="activedeptleadname">trangnth</b></div>
-                                        <div class="Fdet FR"><b id="activedeptmembercount">1</b>&nbsp;Member(s)</div>
-                                    </div>
-                                    <div class="ZPDUSre" scroll="enabled" start="1">
-                                        <div class="ZPDUList" id="zp_common_userlisting">
-                                            <div class="ZPUbox">
-                                                <div class="UPdiv">
-                                                    <div class="upic"><img src="viewPhoto?filename=6325165000000015003"></div>
-                                                    <div class="unam"><a href="#selfservice/user/profile-id:467269000000133005">1 - <b>trangnth</b></a><!--<span class="red ML10">Out</span>-->
-                                                    </div>
-                                                    <div class="upos"><a>Trưởng phòng</a></div>
-                                                    <!--<div class="IC-more gry ZPFullDt"></div>-->
-                                                </div>
-                                                <div class="uinfo">
-                                                    <div class="itms">
-                                                        <div class="IC-usr-grp"></div><span>Phòng GĐ</span>
-                                                    </div>
-                                                    <div class="itms">
-                                                    <div class="IC-mail2"></div>
-                                                    <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a></div><div class="itms">
-                                                        <div class="IC-exten">
-                                                        </div><span>-</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        <i class="IC-ar-dwn ZPempdwn" style="display: none; left: 160px;"></i>
                     </div>
-                    <!--  -->
+                    <!-- end content -->
                 </div>
+
             </div>
             <!-- END CONTENT BODY -->
         </div>
@@ -375,7 +324,7 @@ Version: v1
     <script>
         var frm = new Manager();
         $(document).ready(function () {
-            // frm.InitForm();
+            frm.InitForm();
             //$('.divDS').show();
             //$('.divAdd').hide();
             $('#clickmewow').click(function () {

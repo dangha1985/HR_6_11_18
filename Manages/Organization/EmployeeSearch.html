@@ -237,101 +237,138 @@ Version: v1
 
                 <div class="ZPcontwrap dvToppos" id="">
 
-
                     <!-- menu top1 -->
-                    <div class="cont-wrap" id="zp-contwrap-organization-department">
-                        <nav id="zp-tlevel-organization-department" class="navbar navbar-default ZPSnav">
+                    <div class="cont-wrap" id="">
+                        <nav id="zp-tlevel-organization-employee" class="navbar navbar-default ZPSnav ">
                             <div class="container-fluid">
                                 <ul class="nav navbar-nav">
-                                    <li id="zp_subtab_organization_department" tab="true">
-                                        <a href="/Manages/Organization/Department.html">Department</a>
+                                    <li id="zp_subtab_organization_employee" tab="true">
+                                        <a href="/Manages/Organization/Employee.html">Employee</a>
                                     </li>
-                                    <li id="zp_subtab_organization_department_searchdepts" tab="true" class="active">
-                                        <a href="/Manages/Organization/DepartmentSearch.html">Directory</a>
+                                    <li id="zp_subtab_organization_employee_search" tab="true" class="active">
+                                        <a href="/Manages/Organization/EmployeeSearch.html">Directory</a>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
-                    <!-- menu top1 -->
-                    <!--  -->
-                    <div class="main-wrp" id="organization-department-searchdepts">
+                    <!--end menu top1 -->
+                    <!-- menu top2-->
+                    <div class="main-wrp mainhead">
 
-                        <div class="ZPTscrlcont top40 " id="page_content">
-                            <div class="DPview">
-                                <div class="LT">
-                                    <div class="fil">
-                                        <div id="ZPsearch" class="ZPsearch FL MT8">
-                                            <div class="dvsearch Dropdown FR PR">
-                                                <span zptitle="Search Category" class="ZPico-search FL MT7 ML5 ZPtooltip IC-lens S16" onclick="ZPUsers.Department.deptSearchFrmButton(this)"></span>
-                                            </div>
-                                            <input type="search" name="Search" placeholder="Search Department" id="deptsearchbox" class="ZPselect" onkeyup="ZPUsers.Department.searchDepartmentByKey(event, this)">
-                                        </div>
-                                    </div>
-                                    <div class="mnus">
-                                        <ul id="deptlist" class="tree dstree">
-                                            <li id="467269000000136133" class="branch subDept active">
-                                                <div deptid="467269000000136133" id="dept_name" class="ZPbold">
-                                                    <i class="treeicon IC-arrow-r-s" onclick="ZPUsers.Department.toggleDeptTree(this)" >
-                                                    </i>Phòng GĐ<span><span class="" Tcnt">(1)</span></span>
-                                                </div>
-                                                <ul>
-                                                    <li id="467269000000138001" style="display: none;" parentdeptid="467269000000136133">
-                                                        <div deptid="467269000000138001" id="dept_name">
-                                                            <i class="treeicon IC-arrow-r-s" onclick="ZPUsers.Department.toggleDeptTree(this)" "=" "></i>Phòng phó GĐ<span><span class="Tcnt">(2)</span></span>
-                                                        </div>
-                                                        <ul>
-                                                            <li id="467269000000136213" style="display: none;" parentdeptid="467269000000138001">
-                                                                <div deptid="467269000000136213" id="dept_name">
-                                                                    <i class="treeicon" ></i>Phòng HC
-                                                                </div>
-                                                            </li>
-                                                            <li id=" 467269000000136137" style="display: none;" parentdeptid="467269000000138001">
-                                                                <div deptid="467269000000136137" id="dept_name"><i class="treeicon" "=" "></i>Phong LT</div>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="FL MT10 MR20" id="zp_mem_cnt">Found <b>1</b> Matching Member(s)</div>
+                                <!--<ul class="nav nav-pills ZPSFtrm" id="usersearchfiltertags">
+                                    <li class="active">
+                                        <a href="javascript:void(0)" filter="department">
+                                            Department<span class="badge">Phòng GĐ</span>
+                                            <div class="IC-cls gry S12"></div>
+                                        </a>
+                                    </li>
+                                </ul>-->
+                            </div>
+                            <div class="col-md-2 ">
+                                <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
+                                    <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Department </a>-->
+                                    <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- filter -->
+                        <div class="filter-popup top100 parnel-filter DN " id="filter">
+                            <div class="filter-header">
+                                <h6 class="addPopTitle">Filter</h6>
+                                <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" class="form-control" id="usernickname" value="" name="nickname">
                                     </div>
                                 </div>
-                                <div class="RT">
-                                    <div class="ZPpage-3lvl">
-                                        <div class="Fdet FL"><div class="IC-team S16 gry"></div><b id="activedeptname">Phòng GĐ</b></div>
-                                        <div class="Fdet FL"><div class="RPmana"><img src="viewPhoto?filename=6325165000000014003" id="activedeptphoto"></div><b id="activedeptleadname">trangnth</b></div>
-                                        <div class="Fdet FR"><b id="activedeptmembercount">1</b>&nbsp;Member(s)</div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" id="usernickname" value="" name="nickname">
                                     </div>
-                                    <div class="ZPDUSre" scroll="enabled" start="1">
-                                        <div class="ZPDUList" id="zp_common_userlisting">
-                                            <div class="ZPUbox">
-                                                <div class="UPdiv">
-                                                    <div class="upic"><img src="viewPhoto?filename=6325165000000015003"></div>
-                                                    <div class="unam"><a href="#selfservice/user/profile-id:467269000000133005">1 - <b>trangnth</b></a><!--<span class="red ML10">Out</span>-->
-                                                    </div>
-                                                    <div class="upos"><a>Trưởng phòng</a></div>
-                                                    <!--<div class="IC-more gry ZPFullDt"></div>-->
-                                                </div>
-                                                <div class="uinfo">
-                                                    <div class="itms">
-                                                        <div class="IC-usr-grp"></div><span>Phòng GĐ</span>
-                                                    </div>
-                                                    <div class="itms">
-                                                    <div class="IC-mail2"></div>
-                                                    <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a></div><div class="itms">
-                                                        <div class="IC-exten">
-                                                        </div><span>-</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <label>Email ID</label>
+                                        <input type="text" class="form-control" id="useraboutme" value="" name="aboutme">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Department</label>
+                                        <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                            <option value="-1">--Select--</option>
+                                            <option value="Phòng GĐ">Phòng GĐ</option>
+                                            <option value="Phòng GĐ">Phòng PGĐ</option>
+                                            <option value="Phòng GĐ">Phòng HC</option>
+                                            <option value="Phòng GĐ">Phòng LT</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Tilte</label>
+                                        <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                            <option value="-Select-" selected="selected">Select</option>
+                                            <option value="Direct">Trưởng phòng</option>
+                                            <option value="Referral">Phó phòng</option>
+                                            <option value="Web">Nhân viên</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="filter-footer">
+                                    <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
+                                    <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end filter -->
+                    </div>
+                    <!-- menu top2 -->
+                    <!-- danh sách -->
+                    <div class="ZPTscrlcont top100" scroll="enabled" start="25">
+                        <div class="zp_SUsr_list">
+                            <div class="ZPUbox">
+                                <div class="UPdiv">
+                                    <div class="upic">
+                                        <img src="viewPhoto?filename=6325165000000015003">
+                                      <!--  <i cstus="true" uid="676969451" ischat="true" onclick="ZPeople.initUserChat(event,&quot;676969451&quot;)"></i>-->
+                                    </div>
+                                    <div class="unam">
+                                        <a style="display:initial" href="#selfservice/user/profile-id:467269000000133005">1 - <b>trangnth</b></a>
+                                        <!--<span class="red ML10">Out</span>-->
+                                    </div>
+                                    <div class="upos"><a>Trưởng phòng</a></div>
+                                    <!--<div class="IC-more gry ZPFullDt"></div>-->
+                                </div>
+                                <div class="uinfo">
+                                    <div class="itms"><div class="IC-usr-grp"></div><span>
+                                        <a href="#organization/department/searchdepts-deptId:467269000000136133">Phòng GĐ</a></span></div>
+                                    <div class="itms">
+                                        <div class="IC-mail2"></div>
+                                        <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a>
+                                    </div>
+                                    <div class="itms">
+                                        <div class="IC-exten"></div>
+                                        <span>-</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--  -->
+                    <!-- end danh sách -->
+
                 </div>
+
+
             </div>
             <!-- END CONTENT BODY -->
         </div>
@@ -375,7 +412,7 @@ Version: v1
     <script>
         var frm = new Manager();
         $(document).ready(function () {
-            // frm.InitForm();
+            frm.InitForm();
             //$('.divDS').show();
             //$('.divAdd').hide();
             $('#clickmewow').click(function () {
