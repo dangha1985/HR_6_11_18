@@ -34,7 +34,9 @@
     width: 300px;
     height: 45px !important;
 }
-
+.page-sidebar-menu.page-sidebar-menu-hover-submenu>li:hover>.sub-menu{
+    margin-left:80px;
+}
 .page-header.navbar .search-form .input-group .form-control {
     width: 300px;
     height: 45px;
