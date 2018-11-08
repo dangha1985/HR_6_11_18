@@ -159,6 +159,43 @@
     border-bottom: 1px solid #e3e3e3;
     height: 60px;
 }
+.recordCreate .selPerm {
+    color: #30363e;
+    font-size: 35px;
+    width: 48px;
+    display: inline-block;
+    height: 48px;
+    border-radius: 50%!important;
+    border: 2px solid #eee;
+    text-align: center;
+    background-color: #fff;
+    line-height: 44px;
+}
+
+.MB0 {
+    margin-bottom: 0;
+}
+ol, ul {
+    list-style: none;
+}
+.S13 {
+    font-size: 13px;
+}
+.securesettings .perlevels li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    min-width: 100px;
+}
+.recordCreate .selPerm .nodata:before {
+    content: "";
+}
+.securesettings .perlevels li .control-label {
+    margin-top: 3px;
+    display: block;
+    margin-bottom: 0;
+}
 /*end menu stop*/
 #page-wrapper.Nbar2 .Scrcont {
     top: 100px;
@@ -345,7 +382,9 @@ modal-header .close {
 .S18 {
     font-size: 18px;
 }
-
+.tbl_check input[type="checkbox"] {
+    vertical-align: middle;
+}
 .ZPcontwrap.dvToppos {
     top: 0px;
 }
@@ -399,14 +438,39 @@ th {
     text-align: left;
     font-weight: bold;
 }
+.table-bordered>thead>tr>th {
+    border: 1px solid #e7ecf1!important;
+}
+.tblpermission .tbllnk {
+    color: #000;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
 
+.txttrim {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    display: block;
+    word-wrap: break-word;
+}
+.tblpermission td {
+    vertical-align: middle !important;
+}
+.tblpermission td, .tblpermission th {
+    font-size: 35px;
+}
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th {
     font-family: latobold;
     height: 40px;
     vertical-align: middle;
     font-weight: bold;
 }
-
+.PL20 {
+    padding-left: 20px;
+}
 .well {
     min-height: 20px;
     border: 1px solid #e3e3e3;

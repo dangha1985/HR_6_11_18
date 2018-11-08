@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<!--
+Template Name: HR_TSG - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.7
+Version: v1
+-->
+
+<html lang="en">
+
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>HR-TSG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="/content/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="/content/css/daterangepicker.min.css" rel="stylesheet" />
+    <link href="/content/css/morris.css" rel="stylesheet" />
+    <link href="/content/css/fullcalendar.min.css" rel="stylesheet" />
+    <link href="/content/css/jqvmap.css" rel="stylesheet" />
+
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <!-- <link href="/content/css/zp_css_1.css" rel="stylesheet" />-->
+    <link href="/content/css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="/content/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/content/css/zp_css_2.css" rel="stylesheet" />
+    <link href="/content/css/zpfont.css" rel="stylesheet" />
+    <link href="/content/css/Style.css" rel="stylesheet" />
+    <!--   <link href="../../../content/css/zp.css" rel="stylesheet" />-->
+    <!-- END THEME LAYOUT STYLES -->
+    <!-- <link rel="shortcut icon" href="favicon.ico" />-->
+</head>
+<!-- END HEAD -->
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+    <!-- BEGIN HEADER -->
+    <div class="page-header navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner ">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <a href="index.html">
+                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
+                </a>
+                <div class="menu-toggler sidebar-toggler">
+                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                </div>
+            </div>
+            <!-- END LOGO -->
+            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+            <!-- END RESPONSIVE MENU TOGGLER -->
+            <!-- BEGIN PAGE ACTIONS -->
+            <!-- END PAGE ACTIONS -->
+            <!-- BEGIN PAGE TOP -->
+            <div class="page-top">
+                <!-- BEGIN HEADER SEARCH BOX -->
+                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
+                    <!--<div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
+                        <span class="input-group-btn">
+                            <a href="javascript:;" class="btn submit">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </span>
+                    </div>-->
+
+                    <div class="ZPSpanel" id="zpeople_search">
+                        <div class="ZPTbox">
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
+                            <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
+                        </div>
+                    </div>
+                </form>
+                <!-- END HEADER SEARCH BOX -->
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <!-- BEGIN NOTIFICATION DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
+                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
+                        <!-- END NOTIFICATION DROPDOWN -->
+                        <!-- BEGIN INBOX DROPDOWN -->
+                        <!-- END INBOX DROPDOWN -->
+                        <!-- BEGIN TODO DROPDOWN -->
+                        <!-- END TODO DROPDOWN -->
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <img alt="" class="img-circle" src="" />
+                                <span class="username username-hide-on-mobile"> Admin </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar-wrapper">
+            <!-- END SIDEBAR -->
+            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+            <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+            <div class="page-sidebar navbar-collapse collapse">
+                <!-- BEGIN SIDEBAR MENU -->
+                <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                    <li class="nav-item start active open">
+                        <a href="Index.html" class="nav-link nav-toggle">
+                            <i class="icon-home"></i>
+                            <span class="title">Home</span>
+                            <span class="selected"></span>
+                            <span class="arrow open"></span>
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-docs"></i>
+                            <span class="title">Organization</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="/Manages/Organization/Employee.html" class="nav-link ">
+                                    <!-- <i class="icon-clock"></i>-->
+                                    <span class="title">Employee</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Organization/Department.html" class="nav-link ">
+                                    <!-- <i class="icon-check"></i>-->
+                                    <span class="title">Department</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Organization/EmployeeTree.html" class="nav-link ">
+                                    <!--  <i class="icon-envelope"></i>-->
+                                    <span class="title">Organization Tree</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-settings"></i>
+                            <span class="title">Category</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmDepartment.html" class="nav-link ">
+                                    <span class="title">Departments</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmDesignation.html" class="nav-link ">
+                                    <span class="title">Designations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmLocation.html" class="nav-link " target="_blank">
+                                    <span class="title">Locations</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmEmployeeStatus.html" class="nav-link ">
+                                    <span class="title">Employee Status</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/Category/dmEmployeeType.html" class="nav-link " target="_blank">
+                                    <span class="title">Employee Type</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-settings"></i>
+                            <span class="title">System</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/Role.html" class="nav-link ">
+                                    <span class="title">Roles</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/Permission.html" class="nav-link ">
+                                    <span class="title">Permissions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/FunctionGroup.html" class="nav-link " target="_blank">
+                                    <span class="title">Function Groups</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/Functions.html" class="nav-link ">
+                                    <span class="title">Functions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/Users.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="/Manages/System/FunctionPermissions.html" class="nav-link " target="_blank">
+                                    <span class="title">Function Permissions</span>
+                                </a>
+                            </li>
+                            <!--<li class="nav-item  ">
+                                <a href="page_system_500_1.html" class="nav-link ">
+                                    <span class="title">500 Page 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </li>
+                </ul>
+                <!-- END SIDEBAR MENU -->
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- BEGIN CONTENT -->
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <div class="page-content  " style="min-height: 1434px;">
+
+                <div class="ZPcontwrap dvToppos" id="admin-organization-Permission">
+                    <!-- menu top1 -->
+                    <div class="cont-wrap" id="zp-contwrap-organization-department">
+                        <nav id="zp-tlevel-organization-department" class="navbar navbar-default ZPSnav">
+                            <div class="container-fluid">
+                                <ul class="nav navbar-nav">
+                                    <li id="zp_subtab_organization_department" tab="true" class="active">
+                                        <a href="/Manages/System/FunctionPermission.html">Function Permission</a>
+                                    </li>
+                                    <!--<li id="zp_subtab_organization_department_searchdepts" tab="true" class="active">
+                                        <a href="/Manages/Organization/DepartmentSearch.html">Directory</a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- menu top1 -->
+              <!--      <div class="ZPcontwrap" id="admin-accesscontrol-permissions-form">-->
+                        <!-- $Id$ -->
+
+                        <div id="dvFormPerm">
+                            <div class="securesettings dvformbased">
+                                <!--  -->
+                                <div class="mainhead"style="height:94px">
+                                    <div class="row">
+                                        <div class="col-md-4 MT20">
+                                            <div class="col-md-4">
+                                                <label class="control-label ZPbold MT3">Form</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <div class="select2-container selectBox" id="s2id_formpermissionsidlist">
+                                                        <select class="selectBox select2-offscreen" style="width:280px ; height:30px" >
+                                                            <option value="-Select-" selected="selected">Select</option>
+                                                            <option value="1">Employee</option>
+                                                            <option value="3">Department</option>
+                                                            <option value="2">Organization Tree</option>
+                                                            
+                                                        </select>
+                                                        <!--<a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                            <span>Employee</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div>
+                                                        </a>
+                                                        <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1">
+                                                        <div class="select2-drop select2-with-searchbox" style="display:none">
+                                                            <div class="select2-search">
+                                                                <input type="text" autocomplete="off" class="select2-input" tabindex="-1">
+                                                            </div>
+                                                            <ul class="select2-results">   </ul>
+                                                        </div>-->
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 text-right">
+                                            <div class="col-md-11 perlevels recordCreate S13">
+                                                <ul class="MB0">
+                                                    <li>
+                                                        <div class="selPerm nodata">
+                                                        <span class="IC-per-my nodata"></span></div>
+                                                        <label class="control-label">No data</label>
+                                                    </li>
+                                                    <li>
+                                                    <div class="selPerm">
+                                                        <span class="IC-per-my"></span></div>
+                                                    <label class="control-label">My Data</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="selPerm"><span class="IC-per-sub"></span></div>
+                                                        <label class="control-label">Subordinates' Data</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="selPerm">
+                                                            <span class="IC-per-submy"></span>
+                                                        </div>
+                                                        <label class="control-label">Subordinates+My Data</label>
+                                                    </li>
+                                                    <li>
+                                                        <div class="selPerm"><span class="IC-per-all"></span></div>
+                                                        <label class="control-label">All Data</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--<div class="col-md-1">
+                                                <a class="pagetips" onclick="ZPeople.Help.show()">
+                                                    <span class="IC-qus MR3"></span>
+                                                </a>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="ZPTscrlcont " style="top:134px">
+                                    <table class="table table-bordered table-responsive tblpermission table-hover" id="formPermissionsTable" style="display: table;">
+                                        <thead>
+                                            <tr class="">
+                                                <th width="22%" rowspan="4" class="btmbrd"> <span class="PL20">Roles</span> </th>
+                                                <th width="42%" colspan="4" class="text-center">
+                                                    <span>Record Permissions</span>
+                                                </th>
+                                                <th width="12%" class="text-center"> <span>Field Permissions</span> </th>
+                                                <th colspan="2" class="text-center"> <span>Action Permission</span> </th>
+                                            </tr>
+                                            <tr class="bgrey">
+                                                <th class="btmbrd text-center">View</th>
+                                                <th class="btmbrd text-center">Edit</th>
+                                                <th class="btmbrd text-center">Add</th>
+                                                <th class="btmbrd text-center">Delete</th>
+                                                <th class="btmbrd text-center"></th>
+                                                <th class="btmbrd text-center">Import</th>
+                                                <th class="btmbrd text-center">Export</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="FormPermissionsTableRow467269000000035643">
+                                                <td><span class="tbllnk dvshwalert rname txttrim" onclick="AccessControl.Permissions.configPermForRole(this)" value="467269000000035643">Director</span></td>
+                                                <td class="text-center">
+                                                    <div name="viewPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" class="selPerm" isfldtitle="true" value="467269000000035643" fldtitle="Subordinates' Data" perm="4" data-original-title="" title=""><span class="IC-per-sub"></span></div>
+                                                </td>
+                                                <td class="text-center"><div name="editPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035643" fldtitle="Subordinates' Data" perm="4" data-original-title="" title=""><span class="IC-per-sub"></span></div></td>
+                                                <td class="text-center"><div name="addPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035643" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center"><div name="deletePermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035643" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center field"><div class="selPerm  fieldper" onclick="javascript:AccessControl.Permissions.FormPerm.FieldPerm.forRole(this)" value="467269000000035643"></div></td>
+                                                <td class="text-center"><div class="selPerm editRecord fieldim ZP-PermissionsSlider" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="importset" value="467269000000035643" perm="true"></div></td>
+                                                <td class="text-center"><div class="selPerm fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="exportset" value="467269000000035643" perm="false"></div></td>
+                                            </tr>
+                                            <tr id="FormPermissionsTableRow467269000000035639">
+                                                <td><span class="tbllnk dvshwalert rname txttrim" onclick="AccessControl.Permissions.configPermForRole(this)" value="467269000000035639">Manager</span></td>
+                                                <td class="text-center"><div name="viewPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" class="selPerm" isfldtitle="true" value="467269000000035639" fldtitle="All Data" perm="3" data-original-title="" title=""><span class="IC-per-all"></span></div></td>
+                                                <td class="text-center"><div name="editPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035639" fldtitle="My Data" perm="1" data-original-title="" title=""><span class="IC-per-my"></span></div></td>
+                                                <td class="text-center"><div name="addPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035639" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center"><div name="deletePermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035639" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center field"><div class="selPerm  fieldper" onclick="javascript:AccessControl.Permissions.FormPerm.FieldPerm.forRole(this)" value="467269000000035639"></div></td>
+                                                <td class="text-center"><div class="selPerm editRecord ZP-PermissionsSlider fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="importset" value="467269000000035639" perm="false"></div></td>
+                                                <td class="text-center"><div class="selPerm fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="exportset" value="467269000000035639" perm="false"></div></td>
+                                            </tr>
+                                            <tr id="FormPermissionsTableRow467269000000035647">
+                                                <td><span class="tbllnk dvshwalert rname txttrim" onclick="AccessControl.Permissions.configPermForRole(this)" value="467269000000035647">Team Incharge</span></td>
+                                                <td class="text-center"><div name="viewPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" class="selPerm" isfldtitle="true" value="467269000000035647" fldtitle="All Data" perm="3" data-original-title="" title=""><span class="IC-per-all"></span></div></td>
+                                                <td class="text-center"><div name="editPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035647" fldtitle="My Data" perm="1" data-original-title="" title=""><span class="IC-per-my"></span></div></td>
+                                                <td class="text-center"><div name="addPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035647" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center"><div name="deletePermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035647" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                                <td class="text-center field"><div class="selPerm  fieldper" onclick="javascript:AccessControl.Permissions.FormPerm.FieldPerm.forRole(this)" value="467269000000035647"></div></td>
+                                                <td class="text-center"><div class="selPerm editRecord ZP-PermissionsSlider fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="importset" value="467269000000035647" perm="false"></div></td>
+                                                <td class="text-center"><div class="selPerm fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="exportset" value="467269000000035647" perm="false"></div></td>
+                                            </tr>
+                                            <tr id="FormPermissionsTableRow467269000000035635"><td><span class="tbllnk dvshwalert rname txttrim" onclick="AccessControl.Permissions.configPermForRole(this)" value="467269000000035635">Team member</span></td><td class="text-center"><div name="viewPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" class="selPerm" isfldtitle="true" value="467269000000035635" fldtitle="All Data" perm="3" data-original-title="" title=""><span class="IC-per-all"></span></div></td>
+                                            <td class="text-center"><div name="editPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035635" fldtitle="My Data" perm="1" data-original-title="" title=""><span class="IC-per-my"></span></div></td>
+                                            <td class="text-center"><div name="addPermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035635" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                            <td class="text-center"><div name="deletePermissions" data-trigger="manual" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.getPopOver(this)" isfldtitle="true" class="selPerm " value="467269000000035635" fldtitle="No data" perm="0" data-original-title="" title=""><span class="IC-per-my nodata"></span></div></td>
+                                            <td class="text-center field"><div class="selPerm  fieldper" onclick="javascript:AccessControl.Permissions.FormPerm.FieldPerm.forRole(this)" value="467269000000035635"></div></td>
+                                            <td class="text-center"><div class="selPerm editRecord ZP-PermissionsSlider fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="importset" value="467269000000035635" perm="false"></div></td>
+                                            <td class="text-center"><div class="selPerm fieldex" onclick="AccessControl.Permissions.FormPerm.setActionPerm(this)" name="exportset" value="467269000000035635" perm="false"></div></td></tr>
+                                        </tbody>
+                                    </table>
+                                <div class="ZPND PT40" id="roleEmpty_totalEle" style="display: none;">
+                                        <div class="text-center">
+                                            <div class="ZPNdata">
+                                                <div id="noRoleFormPerm">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 124 124" enable-background="new 0 0 124 124" xml:space="preserve" class="ZPsvg">
+<g id="No_Permission">
+                                                    <g>
+                                                    <path class="filcolor" d="M33.1,86.4h-14v-13h14V86.4z M21.1,84.4h10v-9h-10V84.4z"></path>
+                                                    <rect x="38.1" y="73.4" class="filcolor" width="25" height="2"></rect>
+                                                    <polygon class="filcolor" points="15.1,51.4 15.1,49.4 18,49.7 18,51.4   "></polygon>
+                                                    <rect x="4.6" y="44.2" transform="matrix(0.52 0.8542 -0.8542 0.52 41.7571 16.3427)" class="filcolor" width="3.4" height="2.2"></rect>
+		
+                                                    <rect x="5.4" y="55.1" transform="matrix(0.8775 0.4796 -0.4796 0.8775 28.0905 3.8701)" class="filcolor" width="2.2" height="3.7"></rect>
+                                                    <rect x="105.1" y="103.4" class="filcolor" width="3" height="2"></rect>
+                                                    <rect x="95.1" y="103.4" class="filcolor" width="3" height="2"></rect>
+                                                    <rect x="116.1" y="103.4" class="filcolor" width="3" height="2"></rect>
+                                                    <path class="filcolor" d="M92.1,60.4c3.3,0,6,2.7,6,6c0,2.1-1.2,4.1-3,5.2l-1,0.6v1.2v11.1h-4V73.4v-1.2l-1-0.6    c-1.9-1.1-3-3.1-3-5.2C86.1,63.1,88.8,60.4,92.1,60.4 M92.1,58.4c-4.4,0-8,3.6-8,8c0,3,1.6,5.5,4,6.9v13.1h8V73.4    c2.4-1.4,4-4,4-6.9C100.1,62,96.5,58.4,92.1,58.4L92.1,58.4z"></path>
+	</g>
+                                                    <g>
+                                                    <rect x="38.1" y="78.4" fill="#1D1D1B" width="18" height="2"></rect>
+                                                    <rect x="38.1" y="83.4" fill="#1D1D1B" width="18" height="2"></rect>
+                                                    <rect x="19.1" y="90.4" fill="#1D1D1B" width="44" height="2"></rect>
+                                                    <rect x="19.1" y="96.4" fill="#1D1D1B" width="44" height="2"></rect>
+                                                    <path fill="#1D1D1B" d="M92.1,69.9c1.9,0,3.5-1.6,3.5-3.5c0-1.9-1.6-3.5-3.5-3.5c-1.9,0-3.5,1.6-3.5,3.5    C88.6,68.3,90.1,69.9,92.1,69.9z M92.1,64.7c0.9,0,1.7,0.7,1.7,1.7c0,0.9-0.7,1.7-1.7,1.7c-0.9,0-1.7-0.7-1.7-1.7    C90.4,65.5,91.2,64.7,92.1,64.7z"></path>
+                                                    <polygon fill="#1D1D1B" points="85.1,90.4 75.1,90.4 75.1,76.4 73.1,76.4 73.1,92.4 85.1,92.4   "></polygon>
+                                                    <rect x="73.1" y="65.5" fill="#1D1D1B" width="2" height="5"></rect>
+                                                    <rect x="110.1" y="63.4" fill="#1D1D1B" width="2" height="2"></rect>
+                                                    <rect x="110.1" y="55.5" fill="#1D1D1B" width="2" height="2"></rect>
+                                                    <path fill="#1D1D1B" d="M111,47.4V35.1c0-9.9-8.1-18-18-18c-9.9,0-18,8.1-18,18v12.3h-7v10h-56v50h74v-10h32v-50H111z M77.2,35.1    c0-8.7,7.1-15.8,15.8-15.8c8.7,0,15.8,7.1,15.8,15.8v12.3h-4.7V35.1c0-6.1-5-11.1-11.1-11.1c-6.1,0-11.1,5-11.1,11.1v12.3h-4.7    V35.1z M102,47.4h-18V35.1c0-4.9,4-9,9-9c4.9,0,9,4,9,9V47.4z M68.1,59.4v8.2h-54v-8.2H68.1z M84.1,105.4h-70v-36h54v28h16V105.4z     M116.1,95.4h-46v-46h46V95.4z"></path>
+                                                    <circle fill="#1D1D1B" cx="19.1" cy="63.4" r="2"></circle>
+                                                    <circle fill="#1D1D1B" cx="25.1" cy="63.4" r="2"></circle>
+                                                    <circle fill="#1D1D1B" cx="31.1" cy="63.4" r="2"></circle>
+	</g>
+</g>
+</svg>
+                                                </div><p class="no-para">- No roles have access to this form. -</p>
+                                                <div class="col-md-8 col-md-offset-2">
+                                                    <a class="btn btn-primary btnPlus" id="roleEmpty_addNewRolePerm" onclick="AccessControl.Permissions.FormPerm.optionValueShow(this)" style="display: none;">Set permissions for other role</a>
+                                                    <div class="col-md-6 col-md-offset-3 dvselrole" id="roleEmpty_formroleList" style="display: none;"><select class="selectBox" id="roleEmpty_formroleList_selectBox"></select><a class="btn btn-primary" onclick="AccessControl.Permissions.FormPerm.nonPermRoleAdd(this)">Add</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dvcom-action">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <a class="btn-link MT3" id="addNewRolePerm" onclick="AccessControl.Permissions.FormPerm.optionValueShow(this)" style="display:none;"><i class="IC-add S11 MR5"></i>Set permissions for other role</a>
+                                            <div class="DN" id="formroleList" style="display:none;"><div class="col-md-3"><select class="selectBox" id="formroleList_selectBox"></select></div><div class="col-md-2"><a class="btn btn-primary MT3" onclick="AccessControl.Permissions.FormPerm.nonPermRoleAdd(this)">Add</a></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ZP-PermissionsSlider" class="modal PopMdModel popRgtModel modal-right" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header"><a data-dismiss="modal" class="close"><span class="IC-cls-1px red"></span></a> <h6 class="modal-title">Permissions</h6></div><div class="modal-body">
+                                        <div class="ctable" id="zp_page_loading"><div class="ctcell"><div class="loader-inner line-scale"><div></div><div></div><div></div><div></div><div></div></div></div></div><div class="dvformperm">
+                                            <div class="rowpos clearfix"><div class="col-md-11"><div class="col-md-2"><label class="control-label MT5">Form</label></div><div class="col-md-4"><div class="select2-container selectBox" id="s2id_permissionPopUpFormId"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>Employee</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select class="selectBox select2-offscreen" id="permissionPopUpFormId" onchange="AccessControl.Permissions.FormPerm.switchSliderTab()" aria-hidden="true" tabindex="-1"><option value="467269000000035743" tabname="P_Asset">Asset</option><option value="467269000000035747" tabname="P_Benefit">Benefit</option><option value="467269000000035689" tabname="P_Policy">Company Policy</option><option value="467269000000035681" tabname="P_Department">Department</option><option value="467269000000035683" tabname="P_Designation">Designation</option><option value="467269000000035679" tabname="P_Employee">Employee</option><option value="467269000000067015" tabname="P_EmployeeSalary">Employee Salary</option><option value="467269000000035687" tabname="P_Separation">Exit Details</option><option value="467269000000067039" tabname="P_Goals">Goals</option><option value="467269000000064369" tabname="P_TimesheetJob">Jobs</option><option value="467269000000035693" tabname="P_EmployeeLeave">Leave</option><option value="467269000000104001" tabname="P_MultiRater">Multi-rater Review</option><option value="467269000000067033" tabname="P_PerformanceAppraisal">Performance Appraisal</option><option value="467269000000064269" tabname="P_TimesheetJobsList">Projects</option><option value="467269000000067027" tabname="P_SelfAppraisal">Self Appraisal</option><option value="467269000000100003" tabname="P_Task">Task</option><option value="467269000000035719" tabname="P_Training">Training</option><option value="467269000000035727" tabname="P_FeedbackTraining">Training Feedback</option><option value="467269000000035723" tabname="P_ApplyTraining">Training Registration</option><option value="467269000000035735" tabname="P_ExpenseDetails">Travel Expense</option><option value="467269000000035731" tabname="P_TravelInitiate">Travel Request</option></select></div><div class="col-md-2"><label class="control-label MT5">Role</label></div><div class="col-md-4"><div class="select2-container selectBox" id="s2id_permissionPopUpRoleId"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>Director</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select class="selectBox select2-offscreen" id="permissionPopUpRoleId" onchange="AccessControl.Permissions.FormPerm.switchSliderTab()" aria-hidden="true" tabindex="-1"><option value="467269000000035643" isprofile="false">Director</option><option value="467269000000035639" isprofile="false">Manager</option><option value="467269000000035647" isprofile="false">Team Incharge</option><option value="467269000000035635" isprofile="false">Team member</option></select></div></div></div><div class="tabpills MT5"><ul class="nav nav-tabs PL15" role="tablist" id="dvPermission"><li role="presentation" class="" id="Recordperm"><a href="#dvRecordperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Recordperm')" aria-expanded="false">Record Permissions</a></li><li role="presentation" id="Fieldperm" class=""><a href="#dvFieldperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Fieldperm')" aria-expanded="false">Field Permissions</a></li></ul></div><div class="tab-content col-md-12  PL0 PR0">
+                                                <div role="tabpanel" class="tab-pane fade in active" id="dvRecordperm">
+                                                    <ul class="panel-group chgpanel clearfix">
+                                                        <li>
+                                                            <div class="clearfix MT35">
+                                                                <div class="col-md-2"><div class="subhead MT15">View</div></div><div class="col-md-8">
+                                                                    <div class="clearfix">
+                                                                        <ul class="step-nav icons" name="viewPermissions">
+                                                                            <li class="0" istooltip="true" title="" data-original-title="No data">
+                                                                                <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 1 " istooltip="true" title="" data-original-title="My Data">
+                                                                                <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                                <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                                <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 3" istooltip="true" title="" data-original-title="All Data">
+                                                                                <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix MT35">
+                                                                <div class="col-md-2"><div class="subhead MT15">Edit</div></div><div class="col-md-8">
+                                                                    <div class="clearfix">
+                                                                        <ul class="step-nav icons" name="editPermissions">
+                                                                            <li class=" 0 active" istooltip="true" title="" data-original-title="No data">
+                                                                                <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 1" istooltip="true" title="" data-original-title="My Data">
+                                                                                <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                                <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                                <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 3" istooltip="true" title="" data-original-title="All Data">
+                                                                                <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix MT35">
+                                                                <div class="col-md-2"><div class="subhead MT15">Add</div></div><div class="col-md-8">
+                                                                    <div class="clearfix">
+                                                                        <ul class="step-nav icons" name="addPermissions">
+                                                                            <li class=" 0" istooltip="true" title="" data-original-title="No data">
+                                                                                <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 1 active" istooltip="true" title="" data-original-title="My Data">
+                                                                                <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                                <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                                <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 3" istooltip="true" title="" data-original-title="All Data">
+                                                                                <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="clearfix MT35">
+                                                                <div class="col-md-2"><div class="subhead MT15">Delete</div></div><div class="col-md-8">
+                                                                    <div class="clearfix">
+                                                                        <ul class="step-nav icons" name="deletePermissions">
+                                                                            <li class=" 0" istooltip="true" title="" data-original-title="No data">
+                                                                                <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 1" istooltip="true" title="" data-original-title="My Data">
+                                                                                <a class="IC-per-my" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)" value="1"></a>
+                                                                            </li>
+                                                                            <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                                <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                                <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                            <li class=" 3 active" istooltip="true" title="" data-original-title="All Data">
+                                                                                <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div><div role="tabpanel" class="tab-pane fade" id="dvFieldperm"><ul class="panel-group"><li><div class="dvformperm"><div class="dvfieldsection clearfix"><div class="dvfieldrht"><div class="clearfix" id="fieldsList"></div></div></div></div></li></ul></div>
+                                            </div>
+                                        </div>
+                                    </div><div class="modal-footer"><a data-dismiss="modal" class="btn btn-primary">Close</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="permissionsInnerSlider" tabindex="-1" class="modal PopMdModel popRgtModel modal-right ZPsecModal" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a data-dismiss="modal" class="close">
+                                            <span class="IC-cls-1px red"></span>
+                                        </a>
+                                        <h6 class="modal-title">Set Permission For<span class="ML5" id="bulkPermRoleName"></span></h6>
+                                    </div><div class="modal-body">
+                                        <div class="dvFieldsts">
+                                            <div class="selperpos clearfix">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="control-label PT15">View Permission</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <ul class="step-nav" id="innerSliderPermissionsView">
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="0" title="" data-original-title="No data"><a class="IC-per-my nodata"></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="1" title="" data-original-title="My Data"><a class="IC-per-my "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="4" title="" data-original-title="Subordinates' Data"><a class="IC-per-sub "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="2" title="" data-original-title="Subordinates+My Data"><a class="IC-per-submy "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="3" title="" data-original-title="All Data"><a class="IC-per-all "></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row MT25">
+                                                    <div class="col-md-3"><label class="control-label PT15">Edit Permission</label></div><div class="col-md-8">
+                                                        <ul class="step-nav" id="innerSliderPermissionsEdit">
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="0" title="" data-original-title="No data"><a class="IC-per-my nodata"></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="1" title="" data-original-title="My Data"><a class="IC-per-my "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="4" title="" data-original-title="Subordinates' Data"><a class="IC-per-sub "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="2" title="" data-original-title="Subordinates+My Data"><a class="IC-per-submy "></a></li>
+                                                            <li onclick="AccessControl.Permissions.FormPerm.FieldPerm.markThisActive(this)" istooltip="true" value="3" title="" data-original-title="All Data"><a class="IC-per-all "></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="row MT25"><p class="section col-md-12 PB15 ZPbold">Selected Fields</p> <div class="taggroup col-md-10" id="bulkPermissionsSelectedFields"></div></div>
+                                            </div>
+                                        </div>
+                                    </div><div class="modal-footer">
+                                        <a class="btn btn-primary" onclick="AccessControl.Permissions.FormPerm.FieldPerm.setBulkPermission()">Done</a>
+                                        <a data-dismiss="modal" class="btn btn-link">Back</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                ZPUtil.noDataSVG("noRoleFormPerm", "newzp/images/svg/no-permission.svg");//NO I18N
+                            });</script>
+                    </div>
+
+
+
+                  <!--</div>-->
+
+            </div>
+            <!-- END CONTENT BODY -->
+        </div>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
+
+        <!-- END QUICK SIDEBAR -->
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="/content/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/content/js/js.cookie.min.js" type="text/javascript"></script>
+    <script src="/content/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="/content/js/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="/content/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="/content/js/moment.min.js" type="text/javascript"></script>
+    <script src="/content/js/daterangepicker.min.js" type="text/javascript"></script>
+    <!--<script src="../assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/horizontal-timeline/horizontal-timeline.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+    <script src="../assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>-->
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="/content/js/app.min.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <!-- <script src="../assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>-->
+    <!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="/content/js/layout.min.js" type="text/javascript"></script>
+    <!-- <script src="../assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>-->
+    <!--<script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>-->
+    <!--<script src="/content/js/tp.1.min.js"></script>
+    <script src="/content/js/form.1.min.js"></script>
+    <script src="/content/js/form.2.min.js"></script>
+    <script src="/content/js/I18N_en.js"></script>-->
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script src="../../../content/js/form.js"></script>
+    <script>
+        var frm = new Manager();
+        $(document).ready(function () {
+            frm.InitForm();
+            //$('.divDS').show();
+            //$('.divAdd').hide();
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+
+
+        })
+    </script>
+
+</body>
+</html>
