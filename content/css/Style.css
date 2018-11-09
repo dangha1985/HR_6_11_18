@@ -1,12 +1,12 @@
 ﻿/*menu top*/
 .logo-default {
-    margin-top: 2px !important;
+    margin-top: 4px !important;
     width: 60px !important;
     height: 40px !important;
 }
 
 .page-logo {
-    width: 80px !important;
+    width: 80px ;
 }
 /*.logo-default {
     margin-top:2px !important;
@@ -29,7 +29,9 @@
     padding-left: 0px;
     padding-right: 0px;
 }
-
+.ZPSpanel {
+    position: unset;
+}
 .page-header.navbar .search-form.search-form-expanded {
     width: 300px;
     height: 45px !important;
@@ -109,7 +111,9 @@
 .page-sidebar-menu.page-sidebar-menu-hover-submenu > li:hover > .sub-menu {
     margin-left: 80px;
 }
-
+.ZPMic .path2 {
+    margin-left: -23px;
+}
 /*end menu left*/
 
 .table-advance thead tr th {
