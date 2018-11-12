@@ -27,7 +27,7 @@ Version: v1
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <!--  <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />-->
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
@@ -69,17 +69,9 @@ Version: v1
                 <!-- BEGIN HEADER SEARCH BOX -->
                 <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
                 <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                    <!--<div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit">
-                                <i class="icon-magnifier"></i>
-                            </a>
-                        </span>
-                    </div>-->
                     <div class="ZPSpanel" id="zpeople_search">
                         <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i> 
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
                             <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
                         </div>
                     </div>
@@ -88,364 +80,32 @@ Version: v1
                 <!-- BEGIN TOP NAVIGATION MENU -->
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
-                        <!-- BEGIN NOTIFICATION DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                        <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class
-
-                        <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <i class="icon-bell"></i>
-                                <span class="badge badge-default"> 7 </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="external">
-                                    <h3>
-                                        <span class="bold">12 pending</span> notifications
-                                    </h3>
-                                    <a href="page_user_profile_1.html">view all</a>
-                                </li>
-                                <li>
-                                    <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">just now</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-success">
-                                                        <i class="fa fa-plus"></i>
-                                                    </span> New user registered.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">3 mins</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-danger">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </span> Server #12 overloaded.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">10 mins</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-warning">
-                                                        <i class="fa fa-bell-o"></i>
-                                                    </span> Server #2 not responding.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">14 hrs</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-info">
-                                                        <i class="fa fa-bullhorn"></i>
-                                                    </span> Application error.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">2 days</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-danger">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </span> Database overloaded 68%.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">3 days</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-danger">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </span> A user IP blocked.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">4 days</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-warning">
-                                                        <i class="fa fa-bell-o"></i>
-                                                    </span> Storage Server #4 not responding dfdfdfd.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">5 days</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-info">
-                                                        <i class="fa fa-bullhorn"></i>
-                                                    </span> System Error.
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="time">9 days</span>
-                                                <span class="details">
-                                                    <span class="label label-sm label-icon label-danger">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </span> Storage server failed.
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <!-- END NOTIFICATION DROPDOWN -->
-                        <!-- BEGIN INBOX DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte
-
-                        <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <i class="icon-envelope-open"></i>
-                                <span class="badge badge-default"> 4 </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="external">
-                                    <h3>
-                                        You have
-                                        <span class="bold">7 New</span> Messages
-                                    </h3>
-                                    <a href="app_inbox.html">view all</a>
-                                </li>
-                                <li>
-                                    <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                    <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt="">
-                                                </span>
-                                                <span class="subject">
-                                                    <span class="from"> Lisa Wong </span>
-                                                    <span class="time">Just Now </span>
-                                                </span>
-                                                <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                    <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt="">
-                                                </span>
-                                                <span class="subject">
-                                                    <span class="from"> Richard Doe </span>
-                                                    <span class="time">16 mins </span>
-                                                </span>
-                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                    <img src="../assets/layouts/layout3/img/avatar1.jpg" class="img-circle" alt="">
-                                                </span>
-                                                <span class="subject">
-                                                    <span class="from"> Bob Nilson </span>
-                                                    <span class="time">2 hrs </span>
-                                                </span>
-                                                <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                    <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt="">
-                                                </span>
-                                                <span class="subject">
-                                                    <span class="from"> Lisa Wong </span>
-                                                    <span class="time">40 mins </span>
-                                                </span>
-                                                <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                    <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt="">
-                                                </span>
-                                                <span class="subject">
-                                                    <span class="from"> Richard Doe </span>
-                                                    <span class="time">46 mins </span>
-                                                </span>
-                                                <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <!-- END INBOX DROPDOWN -->
-                        <!-- BEGIN TODO DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte
-                            ---
-                        <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <i class="icon-calendar"></i>
-                                <span class="badge badge-default"> 3 </span>
-                            </a>
-                            <ul class="dropdown-menu extended tasks">
-                                <li class="external">
-                                    <h3>
-                                        You have
-                                        <span class="bold">12 pending</span> tasks
-                                    </h3>
-                                    <a href="app_todo.html">view all</a>
-                                </li>
-                                <li>
-                                    <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">New release v1.2 </span>
-                                                    <span class="percent">30%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">40% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">Application deployment</span>
-                                                    <span class="percent">65%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">65% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">Mobile app release</span>
-                                                    <span class="percent">98%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">98% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">Database migration</span>
-                                                    <span class="percent">10%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">10% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">Web server upgrade</span>
-                                                    <span class="percent">58%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">58% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">Mobile development</span>
-                                                    <span class="percent">85%</span>
-                                                </span>
-                                                <span class="progress">
-                                                    <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">85% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="task">
-                                                    <span class="desc">New UI release</span>
-                                                    <span class="percent">38%</span>
-                                                </span>
-                                                <span class="progress progress-striped">
-                                                    <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
-                                                        <span class="sr-only">38% Complete</span>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <!-- END TODO DROPDOWN -->
-                        <!-- BEGIN USER LOGIN DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="" />
-                                <span class="username username-hide-on-mobile"> Admin </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-                            <!--<ul class="dropdown-menu dropdown-menu-default">
-                                <li>
-                                    <a href="page_user_profile_1.html">
-                                        <i class="icon-user"></i> My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_calendar.html">
-                                        <i class="icon-calendar"></i> My Calendar
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_inbox.html">
-                                        <i class="icon-envelope-open"></i> My Inbox
-                                        <span class="badge badge-danger"> 3 </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_todo_2.html">
-                                        <i class="icon-rocket"></i> My Tasks
-                                        <span class="badge badge-success"> 7 </span>
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="page_user_lock_1.html">
-                                        <i class="icon-lock"></i> Lock Screen
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="page_user_login_1.html">
-                                        <i class="icon-key"></i> Log Out
-                                    </a>
-                                </li>
-                            </ul>-->
-                        </li>
-                        <!-- END USER LOGIN DROPDOWN -->
-
+                        <div class="ZPPimg dropdown">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="" empid="467269000000133005" imgtype="thumb">
+                        </div>
+                        <ul class="nav top-nav ZPaddPopOver">
+                            <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
+                            <li><a class="u-link" target="_blank" href="">Subscription</a> </li>
+                            <li id="zp_quickadd_form_outer">
+                                <a data-toggle="dropdown">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Quick Add"> <i class="IC-add-r"></i> </span>
+                                </a>
+                                <div class="dropdown-menu ZPplusBox  ZPCmn-Arrow top rt gray" id="zp_quickadd_form_container">
+                                    <div class="ZPTabVt">
+                                        <div class="lfttab" id="zp_quickadd_form_tabs"></div>
+                                        <div class="rhttabscrl">
+                                            <div class="tab-content PT20" id="zp_quickadd_forms">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown MR20" id="zp_feeds_notifications">
+                                <a class="dropdown-toggle" id="zp_ntfn_dropdown" data-toggle="modal">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Notifications" class="IC-bell-l S20"><sup class="ZPncount DNI" id="zp_feeds_ntfn_count"></sup></span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
                 <!-- END TOP NAVIGATION MENU -->
@@ -596,6 +256,306 @@ Version: v1
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content" style="min-height: 1434px;">
 
+                <div class="zp_Dtbar" id="page-wrapper">
+                    <div class="cont-wrap" id="zp-contwrap-home-dashboard">
+                        <div class="main-wrp" id="home-dashboard">
+                            <div class="ZPD-Mact">
+                                <div class="lft">
+                                    <div id="ZPD_Top_Att_Stat" class="in CP" onclick="">Check-in<div class="IC-clock S16"></div></div>
+                                    <span id="ZPD_Top_Att_THrs">00:00 Hrs</span>
+                                </div>
+                                <div class="rgt">
+                                    <ul>
+                                        <li id="zp_d_cdash" data-toggle="tooltip" data-placement="bottom" title="Customize Widgets">
+                                            <a href="javascript:;">
+                                                <i class="CR-apps">
+                                                    <i class="path1"></i>
+                                                    <i class="path2"></i>
+                                                    <i class="path3"></i>
+                                                    <i class="path4"></i>
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li id="zp_d_timelog" data-toggle="tooltip" data-placement="bottom" title="Add Time Logs">
+                                            <a href="javascript:;">
+                                                <i class="CR-timetracker">
+                                                    <i class="path1"></i>
+                                                    <i class="path2"></i>
+                                                    <i class="path3"></i>
+                                                    <i class="path4"></i>
+                                                    <i class="path5"></i>
+                                                </i>Time Logs
+                                            </a>
+                                        </li>
+                                        <li id="zp_d_addleave" data-toggle="tooltip" data-placement="bottom" title="Apply Leave">
+                                            <a href="javascript:;" id="apply_leave">
+                                                <i class="CR-leave">
+                                                    <i class="path1"></i>
+                                                    <i class="path2"></i>
+                                                <i class="path3"></i>
+                                                    <i class="path4"></i>
+                                                    <i class="path5"></i>
+                                                </i>Leave
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="Scrcont ">
+                                <div class="clearfix"></div>
+                                <div class="dash-main" id="zp_d_cmain">
+                                    <div class="row ui-sortable" id="zp_d_wrow">
+                                        <div class="col-sm-12" name="YEARLY_HIRING_ATTRITION" widget="true" loaded="true">
+                                            <div class="dash-col MT20 ">
+                                                <div class="dash-head">
+                                                    <i class="hicon IC-drag"></i><h3 class="dash-title"></h3><span class="cout DN" id="zpdash_widgetcnt"><b></b></span><p class="dash-sub"></p>
+                                                </div>
+                                                <div id="YEARLY_HIRING_ATTRITION" class="dash-body " data-highcharts-chart="0">
+                                                    <div id="highcharts-wbywyad-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 1800px; height: 260px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                        <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1800" height="260" viewBox="0 0 1800 260">
+                                                            <desc>Created with Highstock 6.0.4</desc>
+                                                            <defs>
+                                                                <clippath id="highcharts-wbywyad-1"><rect x="0" y="0" width="1716" height="172" fill="none"></rect></clippath>
+                                                                <clippath id="highcharts-wbywyad-3"><rect x="0" y="0" width="1716" height="172" fill="none"></rect></clippath>
+                                                            </defs>
+                                                            <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="1800" height="260" rx="0" ry="0"></rect>
+                                                            <rect fill="none" class="highcharts-plot-background" x="74" y="10" width="1716" height="172"></rect>
+                                                            <g class="highcharts-grid highcharts-xaxis-grid ">
+                                                                <path fill="none" class="highcharts-grid-line" d="M 229.5 10 L 229.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 385.5 10 L 385.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 541.5 10 L 541.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 697.5 10 L 697.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 853.5 10 L 853.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1009.5 10 L 1009.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1165.5 10 L 1165.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1321.5 10 L 1321.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1477.5 10 L 1477.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1633.5 10 L 1633.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 1789.5 10 L 1789.5 182" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-grid-line" d="M 73.5 10 L 73.5 182" opacity="1"></path>
+                                                            </g>
+                                                            <g class="highcharts-grid highcharts-yaxis-grid ">
+                                                                <path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 74 182.5 L 1790 182.5" opacity="1"></path>
+                                                                <path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 74 125.5 L 1790 125.5" opacity="1"></path>
+                                                                <path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 74 67.5 L 1790 67.5" opacity="1"></path>
+                                                                <path fill="none" stroke="#e6e6e6" stroke-width="1" class="highcharts-grid-line" d="M 74 9.5 L 1790 9.5" opacity="1"></path>
+                                                            </g>
+                                                            <rect fill="none" class="highcharts-plot-border" x="74" y="10" width="1716" height="172"></rect>
+                                                            <g class="highcharts-axis highcharts-xaxis ">
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 229.5 182 L 229.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 385.5 182 L 385.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 541.5 182 L 541.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 697.5 182 L 697.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 853.5 182 L 853.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1009.5 182 L 1009.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1165.5 182 L 1165.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1321.5 182 L 1321.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1477.5 182 L 1477.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1633.5 182 L 1633.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 1790.5 182 L 1790.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 73.5 182 L 73.5 192" opacity="1"></path>
+                                                                <path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" d="M 74 182.5 L 1790 182.5"></path>
+                                                            </g>
+                                                            <g class="highcharts-axis highcharts-yaxis "><text x="26.09375" text-anchor="middle" transform="translate(0,0) rotate(270 26.09375 96)" class="highcharts-axis-title" style="color:#666666;fill:#666666;" y="96"><tspan>% of Hiring &amp; Attrition</tspan></text><path fill="none" class="highcharts-axis-line" d="M 74 10 L 74 182"></path></g>
+                                                            <g class="highcharts-series-group">
+                                                                <g class="highcharts-series highcharts-series-0 highcharts-line-series highcharts-color-0 " transform="translate(74,10) scale(1 1)" clip-path="url(#highcharts-wbywyad-3)">
+                                                                    <path fill="none" d="M 78 172 L 234 172 L 390 172 L 546 172 L 702 172 L 858 172 L 1014 172 L 1170 172 L 1326 172 L 1482 172 L 1638 34.400000000000006" class="highcharts-graph" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                                                                </g>
+                                                                <g class="highcharts-markers highcharts-series-0 highcharts-line-series highcharts-color-0 " transform="translate(74,10) scale(1 1)">
+                                                                    <path fill="#7cb5ec" d="M 82 172 A 4 4 0 1 1 81.99999800000016 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 238 172 A 4 4 0 1 1 237.99999800000018 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 394 172 A 4 4 0 1 1 393.9999980000002 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 550 172 A 4 4 0 1 1 549.9999980000001 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 706 172 A 4 4 0 1 1 705.9999980000001 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 862 172 A 4 4 0 1 1 861.9999980000001 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 1018 172 A 4 4 0 1 1 1017.9999980000001 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 1174 172 A 4 4 0 1 1 1173.9999980000002 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 1330 172 A 4 4 0 1 1 1329.9999980000002 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 1486 172 A 4 4 0 1 1 1485.9999980000002 171.99600000066667 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                    <path fill="#7cb5ec" d="M 1642 34 A 4 4 0 1 1 1641.9999980000002 33.99600000066666 Z" class="highcharts-point highcharts-color-0"></path>
+                                                                </g>
+                                                                <g class="highcharts-series highcharts-series-1 highcharts-line-series highcharts-color-1 " transform="translate(74,10) scale(1 1)" clip-path="url(#highcharts-wbywyad-3)"><path fill="none" d="M 78 172 L 234 172 L 390 172 L 546 172 L 702 172 L 858 172 L 1014 172 L 1170 172 L 1326 172 L 1482 172 L 1638 172" class="highcharts-graph" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path></g>
+                                                                <g class="highcharts-markers highcharts-series-1 highcharts-line-series highcharts-color-1 " transform="translate(74,10) scale(1 1)">
+                                                                    <path fill="#434348" d="M 78 168 L 82 172 78 176 74 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 234 168 L 238 172 234 176 230 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 390 168 L 394 172 390 176 386 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 546 168 L 550 172 546 176 542 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 702 168 L 706 172 702 176 698 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 858 168 L 862 172 858 176 854 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 1014 168 L 1018 172 1014 176 1010 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 1170 168 L 1174 172 1170 176 1166 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 1326 168 L 1330 172 1326 176 1322 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 1482 168 L 1486 172 1482 176 1478 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                    <path fill="#434348" d="M 1638 168 L 1642 172 1638 176 1634 172 Z" class="highcharts-point highcharts-color-1"></path>
+                                                                </g>
+                                                            </g>
+                                                            <text x="900" text-anchor="middle" class="highcharts-title" style="color:#333333;font-size:18px;fill:#333333;" y="24"></text>
+                                                            <text x="900" text-anchor="middle" class="highcharts-subtitle" style="color:#666666;fill:#666666;" y="24"></text>
+                                                            <g class="highcharts-data-labels highcharts-series-0 highcharts-line-series highcharts-color-0 " transform="translate(74,10) scale(1 1)" opacity="1">
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(70,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(226,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(382,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(538,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(694,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(850,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(1006,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(1162,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(1318,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(1474,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-0 " transform="translate(1623,10)"><text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">600</tspan><tspan x="5" y="16">600</tspan></text></g>
+                                                            </g>
+                                                            <g class="highcharts-data-labels highcharts-series-1 highcharts-line-series highcharts-color-1 " transform="translate(74,10) scale(1 1)" opacity="1">
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(70,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(226,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(382,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(538,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(694,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(850,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(1006,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(1162,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(1318,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(1474,148)" opacity="0" visibility="hidden">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text>
+                                                                </g>
+                                                                <g class="highcharts-label highcharts-data-label highcharts-data-label-color-1 " transform="translate(1630,148)">
+                                                                    <text x="5" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16">
+                                                                        <tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan>
+                                                                        <tspan x="5" y="16">0</tspan>
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                            <g class="highcharts-legend" transform="translate(816,216)">
+                                                                <rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="167" height="29" visibility="visible"></rect>
+                                                                <g>
+                                                                    <g>
+                                                                        <g class="highcharts-legend-item highcharts-line-series highcharts-color-0 highcharts-series-0" transform="translate(8,3)">
+                                                                            <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#7cb5ec" stroke-width="2"></path>
+                                                                            <path fill="#7cb5ec" d="M 12 11 A 4 4 0 1 1 11.999998000000167 10.996000000666664 Z" class="highcharts-point"></path>
+                                                                            <text x="21" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start" y="15"><tspan>Hiring</tspan></text>
+                                                                        </g>
+                                                                        <g class="highcharts-legend-item highcharts-line-series highcharts-color-1 highcharts-series-1" transform="translate(86.3125,3)">
+                                                                            <path fill="none" d="M 0 11 L 16 11" class="highcharts-graph" stroke="#434348" stroke-width="2"></path>
+                                                                            <path fill="#434348" d="M 8 7 L 12 11 8 15 4 11 Z" class="highcharts-point"></path>
+                                                                            <text x="21" y="15" style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;" text-anchor="start"><tspan>Attrition</tspan></text>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                            <g class="highcharts-axis-labels highcharts-xaxis-labels ">
+                                                                <text x="152" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2008</tspan></text>
+                                                                <text x="308" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2009</tspan></text>
+                                                                <text x="464" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2010</tspan></text>
+                                                                <text x="620" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2011</tspan></text>
+                                                                <text x="776" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2012</tspan></text>
+                                                                <text x="932" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2013</tspan></text>
+                                                                <text x="1088" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2014</tspan></text>
+                                                                <text x="1244" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2015</tspan></text>
+                                                                <text x="1400" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2016</tspan></text>
+                                                                <text x="1556" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2017</tspan></text>
+                                                                <text x="1712" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="201" opacity="1"><tspan>2018</tspan></text>
+                                                            </g>
+                                                            <g class="highcharts-axis-labels highcharts-yaxis-labels ">
+                                                                <text x="59" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="186" opacity="1"><tspan>0</tspan></text>
+                                                                <text x="59" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="129" opacity="1">
+                                                                    <tspan>250</tspan>
+                                                                </text>
+                                                                <text x="59" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="71" opacity="1"><tspan>500</tspan></text>
+                                                                <text x="59" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="14" opacity="1"><tspan>750</tspan></text>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>

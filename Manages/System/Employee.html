@@ -27,7 +27,7 @@ Version: v1
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <!-- <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />-->
+    <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
@@ -289,50 +289,39 @@ Version: v1
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
-                                        <!-- <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
-                                             <a href="javascript:;" onclick="ZPExport.showExportContainer();">
-                                                 <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
-                                             </a>
-                                         </div>
-                                         <i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>
-                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
-                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                         </div>-->
-
+                                        <div onclick="ZPeople.Help.show();" class="IC-qus S21 gry FR ML20 CP" title="Help"></div>
+                                        <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
+                                            <a href="javascript:;" onclick="ZPExport.showExportContainer();">
+                                                <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
+                                            </a>
+                                        </div>
+                                        <!--<i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>-->
+                                        <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
+                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Department </a>-->
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
+                                        </div>
+                                       
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add', 'Employee')">Add Employee </a>
                                         </div>
-                                        <!--<div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
+                                        <div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
                                             <a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Import Employee</a>
-                                        </div>-->
-
-                                        <div class="FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm open">
-                                            <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true"></i>
-                                            <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD DN ">
-                                                <li id="zp_views_imp" style="">
-                                                    <a href="javascript:;" onclick="ZPForm.showForm('import')">
-                                                        <i class="IC-imprt DIB gry MR10 PR10"></i>Import
-                                                    </a>
-                                                </li>
-                                                <li id="zp_views_exp" style="">
-                                                    <a href="javascript:;" onclick="ZPExport.showExportContainer();">
-                                                        <i class="IC-exprt DIB gry MR10 PR10"></i>Export
-                                                    </a>
-                                                </li>
-                                                <li id="zp_views_history_exp" style="">
-                                                    <a href="javascript:;" onclick="ZPExport.showExportContainer('historyData');">
-                                                        <i class="IC-exprt DIB gry MR10 PR10"></i>History Export
-                                                    </a>
-                                                </li>
-                                                <li id="zp_views_impbulk" style="">
-                                                    <a href="javascript:;" onclick="ZPForm.showForm('bulkupload')">
-                                                        <i class="IC-imprt DIB gry MR10 PR10"></i>Bulk File Upload
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                            <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>
                                         </div>
+                                        
+                                        <!--<div class="FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm open">
+                                            <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true"></i>
+                                            <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD"><li id="zp_views_imp" style="">
+                                                <a href="javascript:;" onclick="ZPForm.showForm('import')">
+                                                <i class="IC-imprt DIB gry MR10"></i>Import</a></li><li id="zp_views_exp" style="">
+                                                <a href="javascript:;" onclick="ZPExport.showExportContainer();">
+                                                <i class="IC-exprt DIB gry MR10"></i>Export</a></li><li id="zp_views_history_exp" style="">
+                                                <a href="javascript:;" onclick="ZPExport.showExportContainer('historyData');">
+                                                <i class="IC-exprt DIB gry MR10"></i>History Export</a></li><li id="zp_views_impbulk" style="">
+                                                <a href="javascript:;" onclick="ZPForm.showForm('bulkupload')">
+                                                <i class="IC-imprt DIB gry MR10"></i>Bulk File Upload</a></li></ul>
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="ZPView.Search.actionsearch(true);"></i>
+                                            <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>
+                                        </div>-->
 
                                     </div>
                                 </div>
@@ -401,22 +390,6 @@ Version: v1
                                 <table class="table table-hover Vlis  FLhead" statictable="true" id="">
                                     <thead id="zp_views_recordheader" staticheader="true">
                                         <tr>
-                                            <th width="30">
-                                                <!--<div id="zp_customize_view_columns" style="display: inline;">
-                                                    <i class="IC-view-select DB S16 gry" data-toggle="dropdown" aria-expanded="false"></i>
-                                                    <ul id="zp_customize_view_dropdown" class="dropdown-menu chklistDd ZPCusPd ZPreg ZPCmn-Arrow top lt">
-                                                        <li class="topSrch">
-                                                            <input id="zp_customize_search" type="search" placeholder="Search" class="form-control">
-                                                            <i class="IC-lens lensIcon"></i>
-                                                        </li>
-                                                        <li><ul id="zp_customize_chkBoxList" class="chklists"></ul></li>
-                                                        <li class="footbtns">
-                                                            <button id="zp_cust_save_btn" class="btn btn-sm btn-primary MR5" type="button" onclick="ZPView.saveCustomizeColumn()">Save</button>
-                                                            <button class="btn btn-sm btn-default" type="button" onclick="ZPView.cancelCustomizeColumn()">Cancel</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>-->
-                                            </th>
                                             <th id=""><div><span>Photo</span></div> </th>
                                             <th width="10%"><div><span>First Name</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Last Name</span></div></th>
@@ -431,20 +404,6 @@ Version: v1
                                     </thead>
                                     <tbody>
                                         <tr id="" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138177">
-                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs " >
-                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true" style="display:none;" ></div>
-                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
-                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
-                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
-                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
-                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
-                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
-                                                    <li class="divider"></li>
-                                                    <li>
-                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
-                                                    </li>
-                                                </ul>
-                                            </td>
                                             <td id="zp_views_field_Photo" photo="true"><img src="/images/userg_inactive.png" imgtype="thumb" empid="467269000000138177" height="44"></td>
                                             <td id="zp_views_field_FirstName">ha9</td>
                                             <td id="zp_views_field_LastName">dang9</td>

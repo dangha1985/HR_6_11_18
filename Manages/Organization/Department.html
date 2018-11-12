@@ -261,10 +261,10 @@ Version: v1
 
                 <div class="ZPcontwrap dvToppos" id="">
 
-                   
+
 
                     <!--Danh sách-->
-                    <div class="deptsettings divDS " id="deptParent" >
+                    <div class="deptsettings divDS " id="deptParent">
 
                         <div class="cont-wrap" id="zp-contwrap-organization-department">
                             <nav id="zp-tlevel-organization-department" class="navbar navbar-default ZPSnav">
@@ -288,12 +288,21 @@ Version: v1
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
+                                        <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
+                                            <a href="javascript:;" onclick="ZPExport.showExportContainer();">
+                                                <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
+                                            </a>
+                                        </div>
+                                        <i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>
+                                        <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
+                                        </div>
+
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Department')">Add Department </a>
                                         </div>
-                                        <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
-                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Department </a>-->
-                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
+                                        <div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
+                                            <a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Import Department</a>
                                         </div>
 
                                     </div>

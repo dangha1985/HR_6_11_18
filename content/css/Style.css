@@ -8,6 +8,12 @@
 .page-logo {
     width: 80px ;
 }
+.page-header.navbar .page-logo {
+    background: #458bd6d6;
+}
+.ZPD-Mact .lft .in {
+    background-color:#337ab77a; /*#26344b61;*/ /*#337ab7;*/
+}
 /*.logo-default {
     margin-top:2px !important;
     width:160px !important;
@@ -86,6 +92,24 @@
 
 .page-header.navbar .top-menu .navbar-nav > li.dropdown-user .dropdown-toggle {
     padding: 12px 12px;
+}
+.ZPSpanel .IC-lens{
+    border-radius:50%!important;
+}
+.ZPSpanel input[type="search"]{
+    border-radius:3px!important;
+}
+.ZPPdrop.ZPCusDrs.dropdown .dropdown-menu {
+    top: 35px;
+}
+.TBDD {
+     min-width: 140px; 
+}
+.PR10 {
+padding-right:10px;
+}
+.dropdown-menu > li > a {
+     color: #337ab7; 
 }
 /*end menu top*/
 /*menu left*/
@@ -185,6 +209,13 @@ ol, ul {
 .S13 {
     font-size: 13px;
 }
+.S21 {
+    font-size: 21px;
+
+}
+.S16 {
+    font-size: 16px;
+}
 .securesettings .perlevels li {
     display: inline-block;
     padding-left: 10px;
@@ -200,6 +231,13 @@ ol, ul {
     display: block;
     margin-bottom: 0;
 }
+.btn-primary, .btn-default {
+    padding: 6px 12px;
+    border-radius: 3px!important;
+}
+ .btn-default {
+   border-color:#458bd6!important;
+}
 /*end menu stop*/
 #page-wrapper.Nbar2 .Scrcont {
     top: 100px;
@@ -214,6 +252,11 @@ ol, ul {
     right: 0;
     top: 45px;
 }
+.dropdownmenu:hover{
+    display:block!important;
+    /*color:red;*/
+}
+
 /*end content*/
 /* popup filter*/
 
