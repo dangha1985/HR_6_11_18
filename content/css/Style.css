@@ -9,10 +9,27 @@
     width: 80px ;
 }
 .page-header.navbar .page-logo {
-    background: #458bd6d6;
+    background:#ffffff; /*#337ab77a;458bd6d6;*/
 }
 .ZPD-Mact .lft .in {
-    background-color:#337ab77a; /*#26344b61;*/ /*#337ab7;*/
+    background-color:#337ab7; /*#26344b61;*/ 
+}
+.page-header.navbar .menu-toggler {
+    display: block;
+    cursor: pointer;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/sidebar-toggler.png);
+}
+.page-header.navbar .menu-toggler.responsive-toggler {
+    display: none;
+    float: right;
+    margin: 24px 14px 0 6px;
+    background-image: url(../images/sidebar-toggler-inverse.png);
 }
 /*.logo-default {
     margin-top:2px !important;
@@ -256,7 +273,21 @@ ol, ul {
     display:block!important;
     /*color:red;*/
 }
-
+.select2-offscreen {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+     width: 1px; 
+}
+input, button, select, textarea {
+     font-family: inherit; 
+     font-size: inherit; 
+     line-height: inherit; 
+}
 /*end content*/
 /* popup filter*/
 
@@ -322,6 +353,9 @@ ol, ul {
     border-bottom: 1px solid #e3e3e3;
 }
 /*end popup filter*/
+.dash-body {
+    height: 290px;
+}
 .Content {
     background-color: #fff;
 }

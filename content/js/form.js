@@ -29,6 +29,9 @@ Manager.prototype = {
     filterPopup: function () {
             $("#filter").slideToggle("slow");
     },
+    fnSlideToggle:function(id){
+        $('#' + id).slideToggle("slow");
+    },
     //checkbox filter
     fnCheckFilter: function () {
         if ($('.checkbox_name').isChecked == true) {

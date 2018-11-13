@@ -289,15 +289,22 @@ Version: v1
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
-                                        <!-- <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
-                                             <a href="javascript:;" onclick="ZPExport.showExportContainer();">
-                                                 <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
-                                             </a>
-                                         </div>
-                                         <i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>
-                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
-                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                         </div>-->
+
+                                        <div class="select2-container FR selct-wdth MR10" id="s2id_zp_views_typeofviews">
+                                            <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                <span>My Data</span><abbr class="select2-search-choice-close" style="display:none;">
+                                                </abbr>
+                                                <div><b></b></div>
+                                            </a>
+                                            <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2">
+                                        </div>
+                                        <select class="FR selct-wdth MR10 select2-offscreen" id="zp_views_typeofviews" reqtype="typeOfView" tabindex="-1">
+                                            <option value="all">All Data</option>
+                                            <option value="mydep">Subordinates+My Data</option>
+                                            <option value="sub">Subordinates' Data</option>
+                                            <option value="dirsub">Direct Subordinates Data</option>
+                                            <option value="self">My Data</option>
+                                        </select>
 
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add', 'Employee')">Add Employee </a>
@@ -307,8 +314,8 @@ Version: v1
                                         </div>-->
 
                                         <div class="FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm open">
-                                            <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true"></i>
-                                            <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD DN ">
+                                            <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true" onclick="frm.fnSlideToggle('dropdown-menu')"></i>
+                                            <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD " id="dropdown-menu" style="display:none;">
                                                 <li id="zp_views_imp" style="">
                                                     <a href="javascript:;" onclick="ZPForm.showForm('import')">
                                                         <i class="IC-imprt DIB gry MR10 PR10"></i>Import
@@ -331,7 +338,7 @@ Version: v1
                                                 </li>
                                             </ul>
                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                            <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>
+                                            <!-- <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>-->
                                         </div>
 
                                     </div>
@@ -385,6 +392,30 @@ Version: v1
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Employee Status</label>
+                                            <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                                <option value="-Select-" selected="selected">Select</option>
+                                                <option value="Active">Active</option>
+                                                <option value="Terminated">Terminated</option>
+                                                <option value="Deceased">Deceased</option>
+                                                <option value="Resigned">Resigned</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Employee type</label>
+                                            <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                                <option value="-Select-" selected="selected">Select</option>
+                                                <option value="Permanent">Permanent</option>
+                                                <option value="On Contract">On Contract</option>
+                                                <option value="Temporary">Temporary</option>
+                                                <option value="Trainee">Trainee</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer">
                                         <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
                                         <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
@@ -431,8 +462,8 @@ Version: v1
                                     </thead>
                                     <tbody>
                                         <tr id="" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138177">
-                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs " >
-                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true" style="display:none;" ></div>
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
                                                 <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
                                                     <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
                                                     <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
@@ -465,6 +496,20 @@ Version: v1
 
                                             <!-- <td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000138093')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014008" imgtype="thumb" empid="467269000000138093" height="44"></td>
                                             <td id="zp_views_field_FirstName">ha8</td>
                                             <td id="zp_views_field_LastName">dang8</td>
@@ -485,6 +530,20 @@ Version: v1
 
                                             <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000138063')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000017010" imgtype="thumb" empid="467269000000138063" height="44"></td>
                                             <td id="zp_views_field_FirstName">ha7</td>
                                             <td id="zp_views_field_LastName">dang7</td>
@@ -505,6 +564,20 @@ Version: v1
 
                                             <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136171')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000017008" imgtype="thumb" empid="467269000000136171" height="44"></td>
                                             <td id="zp_views_field_FirstName">ha6</td>
                                             <td id="zp_views_field_LastName">dang6</td>
@@ -522,7 +595,20 @@ Version: v1
                                             </td>
                                         </tr>
                                         <tr id="zp_view_record_467269000000136129" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136129">
-
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136129')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000016008" imgtype="thumb" empid="467269000000136129" height="44"></td>
@@ -542,7 +628,20 @@ Version: v1
                                             </td>
                                         </tr>
                                         <tr id="zp_view_record_467269000000136125" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136125">
-
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136125')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014009" imgtype="thumb" empid="467269000000136125" height="44"></td>
@@ -562,7 +661,20 @@ Version: v1
                                             </td>
                                         </tr>
                                         <tr id="zp_view_record_467269000000136121" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136121">
-
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136121')" id="zp_view_sel_record"><label></label></div></td>-->
                                             <!--<td class="ZPThumb"></td>-->
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014005" imgtype="thumb" empid="467269000000136121" height="44"></td>
@@ -583,7 +695,20 @@ Version: v1
                                         </tr>
 
                                         <tr id="zp_view_record_467269000000133005" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000133005">
-
+                                            <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
+                                                <div data-toggle="dropdown" id="zp_view_recmoreaction" class="IC-more S16   gry CP dropdown-toggle dropdownmenu " aria-expanded="true"></div>
+                                                <ul class="dropdown-menu ZPCmn-Arrow top gray MorDD">
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('VIEW', '467269000000138177')">View</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Record.getFormPage('EDIT', '467269000000138177')">Edit</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPView.Actions.deleteThisRecord('467269000000138177');">Delete</a></li>
+                                                    <li><a href="javascript:;" onclick="ZPForm.Record.getAuditHistoryForRecord('467269000000035679', '467269000000138177', true);">History</a></li>
+                                                    <li><a href="javascript:;" onclick="Task.createNewTask('467269000000035679', '467269000000138177')">Add Task</a></li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a onclick="MMtemplte.constructTemplateList(&quot;form&quot;,null,null,this,&quot;Merge&quot;);">Mail Merge Template</a>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                             <!--  <td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000133005')" id="zp_view_sel_record"><label></label></div></td>
                                             <td class="ZPThumb"></td>-->
                                             <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000015003" imgtype="thumb" empid="467269000000133005" height="44"></td>
@@ -937,7 +1062,8 @@ Version: v1
                                                             <textarea id="txtExpertise" class="form-control  zptxtarea-edit" name="Expertise" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
                                                         </div>
                                                     </div>
-                                                </div><div class="col-sm-6">
+                                                </div>
+                                                <div class="col-sm-6">
                                                     <div class="zp-label " isallowed="false">
                                                         <label class="zplt-label">AboutMe</label>
                                                         <div folabel="AboutMe" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
@@ -1168,8 +1294,7 @@ Version: v1
         var frm = new Manager();
         $(document).ready(function () {
             frm.InitForm();
-            //$('.divDS').show();
-            //$('.divAdd').hide();
+            //frm.fnSlideToggle('dropdown-menu');
             $('#clickmewow').click(function () {
                 $('#radio1003').attr('checked', 'checked');
             });

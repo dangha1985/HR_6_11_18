@@ -31,15 +31,14 @@ Version: v1
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
-    <!--<link href="/content/css/zp_css_1.css" rel="stylesheet" />-->
-    <!--  <link href="/content/css/zp_css_2.css" rel="stylesheet" />-->
+    <!-- <link href="/content/css/zp_css_1.css" rel="stylesheet" />-->
     <link href="/content/css/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="/content/css/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="/content/css/custom.min.css" rel="stylesheet" type="text/css" />
     <link href="/content/css/zp_css_2.css" rel="stylesheet" />
     <link href="/content/css/zpfont.css" rel="stylesheet" />
     <link href="/content/css/Style.css" rel="stylesheet" />
-    <!---->
+    <!--   <link href="../../../content/css/zp.css" rel="stylesheet" />-->
     <!-- END THEME LAYOUT STYLES -->
     <!-- <link rel="shortcut icon" href="favicon.ico" />-->
 </head>
@@ -69,17 +68,10 @@ Version: v1
                 <!-- BEGIN HEADER SEARCH BOX -->
                 <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
                 <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                    <!--<div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit">
-                                <i class="icon-magnifier"></i>
-                            </a>
-                        </span>
-                    </div>-->
+
                     <div class="ZPSpanel" id="zpeople_search">
                         <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
                             <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
                         </div>
                     </div>
@@ -105,41 +97,7 @@ Version: v1
                                 <span class="username username-hide-on-mobile"> Admin </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
-                            <!--<ul class="dropdown-menu dropdown-menu-default">
-                                <li>
-                                    <a href="page_user_profile_1.html">
-                                        <i class="icon-user"></i> My Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_calendar.html">
-                                        <i class="icon-calendar"></i> My Calendar
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_inbox.html">
-                                        <i class="icon-envelope-open"></i> My Inbox
-                                        <span class="badge badge-danger"> 3 </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="app_todo_2.html">
-                                        <i class="icon-rocket"></i> My Tasks
-                                        <span class="badge badge-success"> 7 </span>
-                                    </a>
-                                </li>
-                                <li class="divider"> </li>
-                                <li>
-                                    <a href="page_user_lock_1.html">
-                                        <i class="icon-lock"></i> Lock Screen
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="page_user_login_1.html">
-                                        <i class="icon-key"></i> Log Out
-                                    </a>
-                                </li>
-                            </ul>-->
+
                         </li>
                         <!-- END USER LOGIN DROPDOWN -->
 
@@ -281,15 +239,15 @@ Version: v1
                                 </a>
                             </li>
                             <!--<li class="nav-item  ">
-                        <a href="page_system_500_1.html" class="nav-link ">
-                            <span class="title">500 Page 1</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="page_system_500_2.html" class="nav-link " target="_blank">
-                            <span class="title">Users</span>
-                        </a>
-                    </li>-->
+                                <a href="page_system_500_1.html" class="nav-link ">
+                                    <span class="title">500 Page 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
@@ -301,248 +259,803 @@ Version: v1
         <!-- BEGIN CONTENT -->
         <div class="page-content-wrapper">
             <!-- BEGIN CONTENT BODY -->
-            <div class="page-content" style="min-height: 1434px;">
+            <div class="page-content  " style="min-height: 1434px;">
 
-                <div class="ZPcontwrap dvToppos" id="admin-organization-departments">
-                    <!--Danh sách-->
-                    <div class="deptsettings divDS" id="deptParent" style="display:none">
-                        <div class="mainhead">
+                <div class="ZPcontwrap dvToppos">
+
+                    <div class="divDS" id="">
+
+
+                        <!-- menu top2-->
+                        <div class="main-wrp mainhead">
                             <div class="row">
-                                <div class="col-md-6"><div class="col-md-12 PT5">User View</div></div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 PT5">User View  </div>
+                                </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
-                                        <div class="btn-group">
-                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','User')">Add User </a>
+                                        <div onclick="ZPeople.Help.show();" class="IC-qus S21 gry FR ML20 CP" title="Help"></div>
+                                        <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
+                                            <a href="javascript:;" onclick="ZPExport.showExportContainer();">
+                                                <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
+                                            </a>
                                         </div>
+                                        <!--<i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>-->
                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
                                             <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Department </a>-->
                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
                                         </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--tìm kiếm-->
-                        <div class="filter-popup parnel-filter top60 DN " id="filter">
-                            <div class="filter-header">
-                                <h6 class="addPopTitle">Filter</h6>
-                                <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Account Name</label>
-                                        <input type="text" class="form-control" id="txtAccountName_fil" value="" name="nickname">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Full Name</label>
-                                        <input type="text" class="form-control" id="txtFullName_fil" value="" name="nickname">
-                                    </div>
-                                </div>
-                                <div class="col-md-12 ">
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="text" class="form-control" id="txtEmail_fil" value="" name="aboutme">
-                                    </div>
-                                </div>
-                                <div class="filter-footer">
-                                    <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
-                                    <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end tìm kiếm-->
-                        <div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
+                                        <div class="btn-group">
+                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add', 'Employee')">Add User </a>
+                                        </div>
+                                        <div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
+                                            <a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Import User</a>
+                                        </div>
+                                        <div class="btn-group MR15" id="syncOptns">
+                                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                <span class="IC-sync S13 MR5"></span>Sync
+                                            </a>
+                                            <ul class="dropdown-menu bullet pull-left" role="menu">
+                                                <li onclick="User.AddUser.getZohoUsers();">
+                                                    <a class="dvImportUsr">Import from Zoho Mail</a>
+                                                </li>
+                                                <li onclick="User.AddUser.getGAppsUsers()">
+                                                    <a class="dvGappUsr" name="importGappsUser">Import from GApps</a>
+                                                </li>
+                                                <li onclick="User.AddUser.getMicroSoftUsers('1')"><a class="dvImportUsr" name="importMSUser">Import from Office365</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--<div class="FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm open">
+                                            <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true"></i>
+                                            <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD"><li id="zp_views_imp" style="">
+                                                <a href="javascript:;" onclick="ZPForm.showForm('import')">
+                                                <i class="IC-imprt DIB gry MR10"></i>Import</a></li><li id="zp_views_exp" style="">
+                                                <a href="javascript:;" onclick="ZPExport.showExportContainer();">
+                                                <i class="IC-exprt DIB gry MR10"></i>Export</a></li><li id="zp_views_history_exp" style="">
+                                                <a href="javascript:;" onclick="ZPExport.showExportContainer('historyData');">
+                                                <i class="IC-exprt DIB gry MR10"></i>History Export</a></li><li id="zp_views_impbulk" style="">
+                                                <a href="javascript:;" onclick="ZPForm.showForm('bulkupload')">
+                                                <i class="IC-imprt DIB gry MR10"></i>Bulk File Upload</a></li></ul>
+                                            <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="ZPView.Search.actionsearch(true);"></i>
+                                            <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>
+                                        </div>-->
 
-                            <div id="dvListview" class="dvListview DN" style="display: block;">
-                                <!--Tạo bảng-->
-                                <table id="listOf_departments" class="table table-hover table-responsive tbldepart">
-                                    <thead>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- filter -->
+                            <div class="filter-popup top100 parnel-filter DN " id="filter">
+                                <div class="filter-header">
+                                    <h6 class="addPopTitle">Filter</h6>
+                                    <a id="FilterClose" class="IC-cls flt-close" onclick="ZPView.Search.resetAfterClose();"></a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control" id="usernickname" value="" name="nickname">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Last Name</label>
+                                            <input type="text" class="form-control" id="usernickname" value="" name="nickname">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                        <div class="form-group">
+                                            <label>Email ID</label>
+                                            <input type="text" class="form-control" id="useraboutme" value="" name="aboutme">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Department</label>
+                                            <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                                <option value="-1">--Select--</option>
+                                                <option value="Phòng GĐ">Phòng GĐ</option>
+                                                <option value="Phòng GĐ">Phòng PGĐ</option>
+                                                <option value="Phòng GĐ">Phòng HC</option>
+                                                <option value="Phòng GĐ">Phòng LT</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Tilte</label>
+                                            <select id="" class="" tabindex="-1" style="height:34px;width:100%">
+                                                <option value="-Select-" selected="selected">Select</option>
+                                                <option value="Direct">Trưởng phòng</option>
+                                                <option value="Referral">Phó phòng</option>
+                                                <option value="Web">Nhân viên</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="filter-footer">
+                                        <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
+                                        <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end filter -->
+                        </div>
+                        <!-- menu top2 -->
+                        <!-- danh sách -->
+                        <div class="Scrcont section top60 " id="zp_views_list_container">
+                            <div class="table-responsive tabcont main-wrp H100" id="zp_views_container" style="width: 1850px;">
+                                <div class="ZPfhlin" style="width:1850px;"></div> <!--tạo đường thẳng-->
+                                <table class="table table-hover Vlis  FLhead" statictable="true" id="">
+                                    <thead id="zp_views_recordheader" staticheader="true">
                                         <tr>
-                                            <th class="text-center" width="2%"></th>
-                                            <!--  <th width="8%"><span class="CP ZPbold">User Name</span></th>-->
-                                            <!--<th width="15%"><span>Number of employees</span></th>-->
-                                            <th width="10%"><span class="ZPbold">Account Name</span></thwidth="10%">
-                                            <th width=""><span class="ZPbold">Full Name</span></th>
-                                            <th width="10%"><span class="ZPbold">Email</span></th>
-                                            <th width="10%"><span class="ZPbold">Password</span></th>
-                                            <!--<th width="5%%"><span class="ZPbold">Mobile Alias</span></th>
-                                            <!--<th width="10%"><span class="ZPbold">PasswordSalt</span></th>
-                                            <th width="10%"><span class="ZPbold">PasswordQuestion</span></th>
-                                            <th width="5%"><span class="ZPbold">PasswordAnswer</span></th>-->
-                                            <th width="10%"><span class="ZPbold">Role</span></th>
-                                            <th width="10%"><span class="ZPbold">Lock</span></th>
-                                            <th width="10%"><span class="ZPbold">Create Date</span></th>
-                                            <th width="10%"><span class="ZPbold">Action</span></th>
+                                            <th id=""><div><span>Photo</span></div> </th>
+                                            <th width="10%"><div><span>First Name</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Last Name</span></div></th>
+                                            <th width="11%"><div><span class="ZPbold">Email ID</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Department</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Title</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Date of joining</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Employee Status</span></div></th>
+                                            <th width="10%"><div><span class="ZPbold">Actions</span></div></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="text-center"></td>
-                                            <td><div>theanh123</div></td>
-                                            <td><div></div>Le The Anh</td>
-                                            <td><div></div>anhleutt69@gmail.com</td>
-                                            <td><div></div></td>
-                                            <td><div>Manager</div>
-                                            <td><div></div></td>
-                                            <td><div>07/11/2018</div></td>
+                                        <tr id="" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138177">
+                                            <td id="zp_views_field_Photo" photo="true"><img src="/images/userg_inactive.png" imgtype="thumb" empid="467269000000138177" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha9</td>
+                                            <td id="zp_views_field_LastName">dang9</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha9@gmail.com">ha9@gmail.com</a></td>
+                                            <td id="zp_views_field_Department"></td>
+                                            <td id="zp_views_field_Designation"></td>
+                                            <td id="zp_views_field_Dateofjoining"></td>
+                                            <td id="zp_views_field_Employeestatus">Inactive</td>
                                             <td>
                                                 <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','User')"></a>
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Employee')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center"></td>
-                                            <td><div>nguyenthuong</div></td>
-                                            <td><div></div>Nguyễn Thị Thường</td>
-                                            <td><div></div>thuong123@gmail.com</td>
-                                            <td><div></div></td>
-                                            <td><div>Team member</div>
-                                            <td><div></div></td>
-                                            <td><div>07/11/2018</div></td>
+                                        <tr id="zp_view_record_467269000000138093" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138093">
+
+                                            <!-- <td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000138093')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014008" imgtype="thumb" empid="467269000000138093" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha8</td>
+                                            <td id="zp_views_field_LastName">dang8</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha8@gmail.com">ha8@gmail.com</a></td>
+                                            <td id="zp_views_field_Department">Phòng HC</td>
+                                            <td id="zp_views_field_Designation">Nhân viên</td>
+                                            <td id="zp_views_field_Dateofjoining">18-Oct-2018</td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
                                             <td>
                                                 <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','User')"></a>
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td class="text-center"></td>
-                                            <td><div>tranthanh</div></td>
-                                            <td><div></div>Lê Trần Thành</td>
-                                            <td><div></div>tranthanh69@gmail.com</td>
-                                            <td><div></div></td>
-                                            <td><div>Director</div>
-                                            <td><div></div></td>
-                                            <td><div>07/11/2018</div></td>
+                                        <tr id="zp_view_record_467269000000138063" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138063">
+
+                                            <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000138063')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000017010" imgtype="thumb" empid="467269000000138063" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha7</td>
+                                            <td id="zp_views_field_LastName">dang7</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha7@gmail.com">ha7@gmail.com</a></td>
+                                            <td id="zp_views_field_Department">Phong LT</td>
+                                            <td id="zp_views_field_Designation">Nhân viên</td>
+                                            <td id="zp_views_field_Dateofjoining">19-Oct-2018</td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
                                             <td>
                                                 <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','User')"></a>
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr id="zp_view_record_467269000000136171" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136171">
+
+                                            <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136171')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000017008" imgtype="thumb" empid="467269000000136171" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha6</td>
+                                            <td id="zp_views_field_LastName">dang6</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha6@gmail.com">ha6@gmail.com</a></td>
+                                            <td id="zp_views_field_Department">Phong LT</td>
+                                            <td id="zp_views_field_Designation">Nhân viên</td>
+                                            <td id="zp_views_field_Dateofjoining">19-Oct-2018</td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr id="zp_view_record_467269000000136129" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136129">
+
+                                            <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136129')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000016008" imgtype="thumb" empid="467269000000136129" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha5</td>
+                                            <td id="zp_views_field_LastName">dang5</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha5@gmail.com.vn">ha5@gmail.com.vn</a></td>
+                                            <td id="zp_views_field_Department">Phòng HC</td>
+                                            <td id="zp_views_field_Designation">Phó phòng</td>
+                                            <td id="zp_views_field_Dateofjoining"></td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr id="zp_view_record_467269000000136125" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136125">
+
+                                            <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136125')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014009" imgtype="thumb" empid="467269000000136125" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha4</td>
+                                            <td id="zp_views_field_LastName">dang4</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha4@gmail.com.vn">ha4@gmail.com.vn</a></td>
+                                            <td id="zp_views_field_Department">Phong LT</td>
+                                            <td id="zp_views_field_Designation">Phó phòng</td>
+                                            <td id="zp_views_field_Dateofjoining">09-Oct-2018</td>
+                                            <td id="zp_views_field_Employee_type"></td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr id="zp_view_record_467269000000136121" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136121">
+
+                                            <!--<td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000136121')" id="zp_view_sel_record"><label></label></div></td>-->
+                                            <!--<td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000014005" imgtype="thumb" empid="467269000000136121" height="44"></td>
+                                            <td id="zp_views_field_FirstName">ha3</td>
+                                            <td id="zp_views_field_LastName">dang3</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:ha3@gmail.com.vn">ha3@gmail.com.vn</a></td>
+                                            <td id="zp_views_field_Department">Phong LT</td>
+                                            <td id="zp_views_field_Designation">Trưởng phòng</td>
+                                            <td id="zp_views_field_Dateofjoining"></td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
                                             </td>
                                         </tr>
 
+                                        <tr id="zp_view_record_467269000000133005" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000133005">
+
+                                            <!--  <td id="zp_view_select_rectd"><div class="checkbox"><input type="checkbox" onclick="ZPView.Actions.selectUnselectRec(false, this, 'single', '467269000000133005')" id="zp_view_sel_record"><label></label></div></td>
+                                            <td class="ZPThumb"></td>-->
+                                            <td id="zp_views_field_Photo" photo="true"><img src="viewPhoto?filename=6325165000000015003" imgtype="thumb" empid="467269000000133005" height="44"></td>
+                                            <td id="zp_views_field_FirstName">trangnth</td>
+                                            <td id="zp_views_field_LastName">trangnth</td>
+                                            <td id="zp_views_field_EmailID"><a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a></td>
+                                            <td id="zp_views_field_Department">Phòng GĐ</td>
+                                            <td id="zp_views_field_Designation">Trưởng phòng</td>
+                                            <td id="zp_views_field_Dateofjoining"></td>
+                                            <td id="zp_views_field_Employeestatus">Active</td>
+                                            <td>
+                                                <div class="dvlist-action ">
+                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
+                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
-                                <!--end Tạo bảng-->
                             </div>
+
+
                         </div>
-                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
+                        <div class="well ZPAct divTotal" id="zp_view_pagination" style="display: block;">
                             <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>
-                            <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
                         </div>
+                        <!--end danh sách -->
+                        <script>
+                            function fullViewFormWindow() {
+                                $('body').toggleClass('zp-newwindow');
+                                if (Layout.Page.container.find("#zpNewwindow").attr("class").indexOf("CR-miniview") === -1) {
+                                    Layout.Page.container.find("#zpNewwindow").addClass("CR-miniview");
+                                    Layout.Page.container.find("#zpNewwindow").removeClass("CR-fullview");
+                                } else {
+                                    Layout.Page.container.find("#zpNewwindow").removeClass("CR-miniview");
+                                    Layout.Page.container.find("#zpNewwindow").addClass("CR-fullview");
+                                }
+                                ZPView.Search.actionsearch(true, true);
+                                ZPView.handleTablePositionForView($('body').attr("class").indexOf("zp-newwindow") > -1);
+                            }
+                        </script>
+
                     </div>
-                    <!--end Danh sách-->
-                    <!--thêm| sửa bản ghi-->
-                    <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none" role="dialog" data-keyboard="false" id="zp_addedit_record_467269000000035681">
+
+                    <!--Employee add -->
+                    <div class="modal popRgtModel PopSsModel in divAdd DN" role="dialog" data-keyboard="false" id="zp_addedit_record">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content" id="headerParent">
                                 <div class="modal-header" id="zp_form_header">
-                                    <div class="zp-back" onclick="frm.showForm('ds')"><i class="IC-ar-lft"></i></div>
+                                    <div class="zp-back" onclick="frm.showForm()">
+                                        <i class="IC-ar-lft">
+                                        </i>
+                                    </div>
                                     <div class="ssp-profmin" id="zp_form_headerdisp">
-                                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;User</span>
+                                        <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Employee</span>
                                     </div>
 
                                     <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
                                 </div>
                                 <div class="modal-body P0I" id="zp_form_outer_container">
-                                    <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
-                                        <h3 issec="true" id="467269000000036007" class="zpcont-title">
-                                            <span class="ZPbold">User Details</span>
-                                        </h3>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="zp-label Matry">
-                                                    <label class="zplt-label">Account Name</label>
-                                                    <div class="zprt-label">
-                                                        <input id="txtAccountName" value="" type="text" name="AccountName" class="form-control zptxt-edit">
+                                    <div class="" id="zp_form_body">
+                                        <form class="zpcont-dt zpnew-recedit" id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
+                                            <h3 issec="true" id="467269000000035993" class="zpcont-title">
+                                                <span class="ZPbold">Basic Info</span>
+                                            </h3>
+                                            <div class="row" id="zp_section_fields_467269000000035993" secid="467269000000035993" row="1" istabular="false" isgrid="false">
+                                                <div class="col-sm-6">
+                                                    <!--<div class="zp-label Matry" isallowed="false">
+                                                        <label class="zplt-label">EmployeeID</label>
+                                                        <div folabel="EmployeeID" fieldtype="1" id="zp_field_outer_467269000000036253" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" fcid="467269000000036253" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036253" value="11" type="text" name="EmployeeID" class="form-control zptxt-edit"><div class="zp-msg" id="zp_form_lastemployeeid">
+                                                                Last Employee ID&nbsp;
+                                                                <span>10</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>-->
+                                                    <div class="zp-label Matry" isallowed="false">
+                                                        <label class="zplt-label">Last Name</label>
+                                                        <div folabel="LastName" id="" class="zprt-label">
+                                                            <input multi="false" onchange="" id="txtLastName" value="" type="text" name="LastName" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label Matry" isallowed="false">
+                                                        <label class="zplt-label">First Name</label>
+                                                        <div folabel="FirstName" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" onchange="" id="txtFirstName" value="" type="text" name="FirstName" class="form-control zptxt-edit">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Full Name</label>
-                                                    <div folabel="FullName" id="" class="zprt-label">
-                                                        <input multi="false" id="txtFullName" value="" type="text" name="FullName" class="form-control zptxt-edit">
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label Matry" isallowed="false">
+                                                        <label class="zplt-label">Email ID</label>
+                                                        <div folabel="EmailID" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" onchange="" id="txtEmailID" value="" type="text" name="EmailID" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Nick Name</label>
+                                                        <div folabel="Nick_Name" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" onchange="" id="txtNickName" value="" type="text" name="NickName" class="form-control zptxt-edit">
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Email</label>
-                                                    <div folabel="Email" id="" class="zprt-label">
-                                                        <input multi="false" id="txtEmail" value="" type="text" name="Email" class="form-control zptxt-edit">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Mobile</label>
-                                                    <div folabel="MobileAlias" id="" class="zprt-label">
-                                                        <input multi="false" id="txtMobile" value="" type="text" name="MobileAlias" class="form-control zptxt-edit">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Password</label>
-                                                    <div folabel="Password" id="" class="zprt-label">
-                                                        <input multi="false" id="txtPassword" value="" type="text" name="Password" class="form-control zptxt-edit">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  Matry" isallowed="false">
-                                                    <label class="zplt-label">Password Salt</label>
-                                                    <div folabel="PasswordSalt" id="" class="zprt-label">
-                                                        <input multi="false" id="txtPasswordSalt" value="" type="text" name="PasswordSalt" class="form-control zptxt-edit">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Password Question</label>
-                                                    <div class="zprt-label">
-                                                        <select class="select1">
-                                                            <option>Ban thich con vat nao</option>j
-                                                            <option>Cong viec ban yeu thich</option>
-                                                            <option>So thich cua ban</option>
-                                                            <option>Ban co tai nang gi</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label  " isallowed="false">
-                                                    <label class="zplt-label">Password Answer</label>
-                                                    <div folabel="PasswordAnswer" id="" class="zprt-label">
-                                                        <input multi="false" id="txtPasswordAnswer" value="" type="text" name="PasswordAnswer" class="form-control zptxt-edit">
-                                                    </div>
-                                                </div>
-                                                <div class="zp-label Matry " isallowed="false">
-                                                    <label class="zplt-label">Role</label>
-                                                    <div class="zprt-label" style="height:60px">
-                                                        <table id="ctl00_main_cblRoles" class="tbl_check" border="0">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td style="height:30px; width:170px"><input id="ctl00_main_cblRoles_0" type="checkbox" name="ctl00$main$cblRoles$0"><label for="ctl00_main_cblRoles_0">Admin</label></td>
-                                                                    <td><input id="ctl00_main_cblRoles_4" type="checkbox" name="ctl00$main$cblRoles$4"><label for="ctl00_main_cblRoles_4">Manager</label></td>
-
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><input id="ctl00_main_cblRoles_7" type="checkbox" name="ctl00$main$cblRoles$7"><label for="ctl00_main_cblRoles_7">Team Member</label></td>
-                                                                    <td><input id="ctl00_main_cblRoles_1" type="checkbox" name="ctl00$main$cblRoles$1"><label for="ctl00_main_cblRoles_1">Director</label></td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-                                                </div>
-
                                             </div>
+                                            <h3 issec="true" id="" class="zpcont-title">
+                                                <span class="ZPbold">Work</span>
+                                            </h3>
+                                            <div class="row" row="1" istabular="false" isgrid="false">
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Department</label>
+                                                        <div class="zprt-label">
+                                                            <select class="select1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="1">Phòng GĐ</option>
+                                                                <option value="2">Phòng PGĐ</option>
+                                                                <option value="3">Phòng HC</option>
+                                                                <option value="4">Phòng LT</option>
+                                                            </select>
+                                                        </div>
+                                                        <!--<div folabel="Department" fieldtype="26" displaytype="100" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="ZPActIcn">
+                                                            <a class="IC-add-form" fcid="467269000000036263" onclick="ZPForm.Field.quickFormFields(this)"></a></div>
+                                                            <div class="select2-container" id="s2id_zp_field_467269000000036263">
+                                                                <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                                    <span>Select</span>
+                                                                <abbr class="select2-search-choice-close" style="display:none;"></abbr>
+                                                                    <div><b></b></div>
+                                                                </a>
+                                                            <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen27">
+                                                                <div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">
+                                                                      <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div>
+                                                            </div>
+                                                            <input multi="false" fcid="467269000000036263" fieldtype="26" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036263" value="-Select-" type="text" name="Department" class="select2-offscreen" tabindex="-1">
+                                                        </div>-->
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Reporting To</label>
+                                                        <div class="zprt-label">
+                                                            <select class="select1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="52">Trần Việt Khoa</option>
+                                                                <option value="16">Demo Account</option>
+                                                                <option value="11">Nguyễn Thị Ngọc</option>
+                                                                <option value="74">Nguyen Duc Tuyen</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Source of hire</label>
+                                                        <div folabel="Source_of_hire" fieldtype="25" displaytype="100" id="zp_field_outer_467269000000036371" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="ZPActIcn">
+                                                                <a class="IC-add-form" buttonname="addicon" fcid="467269000000036371" onclick="ZPForm.PicklistQuickAdd.createQuickAddPopup(this)">
+                                                                </a>
+                                                            </div>
 
-                                            <div class="col-sm-6"></div>
-                                        </div>
+                                                            <select class="select1" id="" fcid="" fieldtype="25" name="Source_of_hire" onchange="" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Direct">Direct</option>
+                                                                <option value="Referral">Referral</option>
+                                                                <option value="Web">Web</option>
+                                                                <option value="Newspaper">Newspaper</option>
+                                                                <option value="Advertisement">Advertisement</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Seating Location</label>
+                                                        <div folabel="Work_location" fieldtype="1" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" onchange="" id="txtSeatingLocation" value="" type="text" name="SeatingLocation" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Location</label>
+                                                        <div folabel="LocationName" fieldtype="26" displaytype="100" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="ZPActIcn">
+                                                                <a class="IC-add-form" fcid="467269000000036265" onclick="ZPForm.Field.quickFormFields(this)"></a>
+                                                            </div>
+                                                            <select class="select1" id="" fcid="" fieldtype="25" name="Source_of_hire" onchange="" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Direct">Hà Nội</option>
+                                                                <option value="Referral">Hồ Chí Minh</option>
+                                                                <option value="Web">Hòa Bình</option>
+                                                                <option value="Newspaper">Thái Bình</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Title</label>
+                                                        <div folabel="Designation" fieldtype="26" displaytype="101" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="ZPActIcn">
+                                                                <a class="IC-add-form" fcid="467269000000036267" onclick="ZPForm.Field.quickFormFields(this)">
+                                                                </a>
+                                                            </div>
+                                                            <select class="select1" id="" fcid="" fieldtype="25" name="Source_of_hire" onchange="" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Direct">Trưởng phòng</option>
+                                                                <option value="Referral">Phó phòng</option>
+                                                                <option value="Web">Nhân viên</option>
+                                                            </select>
+                                                            <!--<div class="blkRadio" fieldtype="26">
+                                                                <label class="radio DIB">
+                                                                    <input type="radio" name="Designation" value="467269000000136091">
+                                                                    <span>  Trưởng phòng</span>
+                                                                </label><label class="radio DIB">
+                                                                    <input type="radio" name="Designation" value="467269000000136095"><span>  Phó phòng</span>
+                                                                </label>
+                                                                <label class="radio DIB"><input type="radio" name="Designation" value="467269000000136099"><span>  Nhân viên</span></label>
+                                                            </div>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Date of joining</label>
+                                                        <div folabel="Dateofjoining" fieldtype="10" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="zpcal">
+                                                                <input id="txtDateofjoining" type="text" onchange="" name="Dateofjoining" class="form-control" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Employee status</label>
+                                                        <div folabel="Employeestatus" fieldtype="25" displaytype="100" id="" class="zprt-label" relateddata="false" isfielddependent="false">
 
-                                        <!--<input type="hidden" value="P_Department" name="zp_tableName">
-                                        <input type="hidden" value="676969451" name="loginUserZUID">
-                                        <input type="hidden" value="c91197d1034b143eef4fddd1196e3cd3782d3fa73653e0576582d1dd91736e58fc06fdda92839719f663de179ee60bfe8b2df1906584fd1779e2abec0dcb155a" name="conreqcsr">
-                                        <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">-->
-                                    </form>
+                                                            <select class="select1" id="" name="Employeestatus" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Active">Active</option>
+                                                                <option value="Terminated">Terminated</option>
+                                                                <option value="Deceased">Deceased</option>
+                                                                <option value="Resigned">Resigned</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Employee type</label>
+                                                        <div folabel="Employee_type" fieldtype="25" displaytype="100" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="ZPActIcn"><a class="IC-add-form" buttonname="addicon" fcid="467269000000036367" onclick="ZPForm.PicklistQuickAdd.createQuickAddPopup(this)"></a></div>
+
+                                                            <select class="select1" name="Employee_type" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Permanent">Permanent</option>
+                                                                <option value="On Contract">On Contract</option>
+                                                                <option value="Temporary">Temporary</option>
+                                                                <option value="Trainee">Trainee</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Work phone</label>
+                                                        <div folabel="Work_phone" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" onchange="" id="txtWorkPhone" value="" type="text" name="WorkPhone" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Extension</label>
+                                                        <div folabel="Extension" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" id="txtExtension" value="" type="text" name="Extension" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Role</label>
+                                                        <div folabel="Role" fieldtype="26" displaytype="100" id="zp_field_outer_467269000000036269" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <select class="select1" name="Employee_type" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Permanent">Admin</option>
+                                                                <option value="On Contract">Team member</option>
+                                                                <option value="Temporary">Manager</option>
+                                                                <option value="Trainee">Director</option>
+                                                                <option value="Trainee">Team Incharge</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 issec="true" id="" class="zpcont-title"><span class="ZPbold">Personal</span></h3>
+                                            <div class="row" id="" secid="" row="1" istabular="false" isgrid="false">
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Photo</label>
+                                                        <div class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input id="txtPhoto" class="form-control  " name="Tags" type="file" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Mobile Phone</label>
+                                                        <div folabel="Mobile" fieldtype="1" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" id="txtMobilePhone" value="" type="text" name="MobilePhone" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Other Email</label>
+                                                        <div folabel="Other_Email" fieldtype="4" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <input multi="false" id="txtOtherEmail" value="" type="text" name="OtherEmail" class="form-control zptxt-edit">
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Birth Date</label>
+                                                        <div folabel="Date_of_birth" fieldtype="10" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="zpcal">
+                                                                <input id="txtDate_of_birth" type="text" caltype="popup" name="Date_of_birth" class="form-control" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Marital status</label>
+                                                        <div folabel="Marital_status" fieldtype="25" displaytype="101" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <!--  <div class="ZPActIcn"><a class="IC-add-form" buttonname="addicon" fcid="467269000000036373" onclick="ZPForm.PicklistQuickAdd.createQuickAddPopup(this)"></a></div>-->
+                                                            <div class="blkRadio" fieldtype="25">
+                                                                <label class="radio DIB">
+                                                                    <input type="radio" name="Marital_status" value="Single"><span>Single</span>
+                                                                </label>
+                                                                <label class="radio DIB">
+                                                                    <input type="radio" name="Marital_status" value="Married"><span>Married</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Address</label>
+                                                        <div folabel="Address" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <textarea id="txtAddress" class="form-control  zptxtarea-edit" name="Address" rows="5" style="height: 75px;"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Tags</label>
+                                                        <div folabel="Tags" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <textarea id="txtTags" class="form-control  zptxtarea-edit" name="Tags" rows="5" style="height: 75px;"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <h3 issec="true" id="467269000000035999" class="zpcont-title">
+                                                <span class="ZPbold">Summary</span>
+                                            </h3>
+                                            <div class="row" id="" secid="467269000000035999" row="1" istabular="false" isgrid="false">
+                                                <div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Job Description</label>
+                                                        <div folabel="Current_Job_Description" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <textarea id="txtJobDescription" class="form-control  zptxtarea-edit" name="Current_Job_Description" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Ask me about/Expertise</label>
+                                                        <div folabel="Expertise" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <textarea id="txtExpertise" class="form-control  zptxtarea-edit" name="Expertise" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div><div class="col-sm-6">
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">AboutMe</label>
+                                                        <div folabel="AboutMe" fieldtype="3" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <textarea id="txtAboutMe" class="form-control  zptxtarea-edit" name="AboutMe" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Date of exit</label>
+                                                        <div folabel="Dateofexit" fieldtype="10" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                            <div class="zpcal">
+                                                                <input id="txtDateofexit" type="text" caltype="popup" onchange="ZPForm.Field.closeconfmsg(true)" name="Dateofexit" class="form-control" value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="zp-label " isallowed="false">
+                                                        <label class="zplt-label">Gender</label>
+                                                        <div folabel="Gender" fieldtype="28" id="" class="zprt-label" relateddata="false" isfielddependent="false">
+
+                                                            <select class="select1" name="Gender" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                                <option value="-Select-" selected="selected">Select</option>
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Others">Others</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 issec="true" id="467269000000036001" class="zpcont-title">
+                                                <span class="ZPbold">Work experience</span>
+                                                <a class="IC-plus-big" istabadd="true" onclick="ZPForm.addTabularSectionRow('467269000000036001');">
+                                                </a>
+                                            </h3>
+                                            <div class="table-responsive label-body" id="" row="1" istabular="true" isgrid="true">
+                                                <table class="table table-hover Vlis bgc edit">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Previous Company Name</th>
+                                                            <th>Job Title</th>
+                                                            <th>From Date</th>
+                                                            <th>To Date</th>
+                                                            <th>Job Description</th>
+                                                            <th width="45">
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="zp_forms_tabluar_467269000000036001">
+                                                        <tr id="zp_tabular_row" row="1">
+                                                            <td folabel="Employer" isfielddependent="false" id="">
+                                                                <input multi="false" fcid="467269000000036291" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036291" value="" type="text" name="Employer" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="Jobtitle" isfielddependent="false" id="">
+                                                                <input multi="false" fcid="467269000000036293" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036293" value="" type="text" name="Jobtitle" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="FromDate" isfielddependent="false" id="">
+                                                                <div class="zpcal">
+                                                                    <input fieldtype="10" autofillby="0" id="" type="text" caltype="popup" onchange="ZPForm.Field.closeconfmsg(true)" name="FromDate" class="form-control" value="">
+                                                                </div>
+                                                            </td>
+                                                            <td folabel="Todate" isfielddependent="false" id="">
+                                                                <div class="zpcal">
+                                                                    <input fieldtype="10" autofillby="0" id="" type="text" caltype="popup" onchange="ZPForm.Field.closeconfmsg(true)" name="Todate" class="form-control" value="">
+                                                                </div>
+                                                            </td>
+                                                            <td folabel="Previous_JobDesc" isfielddependent="false" id="" class="txtarea-wid">
+                                                                <textarea fieldtype="3" id="" class="form-control  zptxtarea-edit" name="Previous_JobDesc" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                            </td>
+                                                            <td>
+                                                                <div id="zp_form_deletetabular_row" secid="467269000000036001" class="IC-cls-frm S18 gry MR10 FL MT6 CP DN" onclick="ZPForm.Record.removeTabularRow(this);">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <h3 issec="true" id="467269000000036003" class="zpcont-title">
+                                                <span class="ZPbold">Education</span>
+                                                <a class="IC-plus-big" istabadd="true" onclick="ZPForm.addTabularSectionRow('467269000000036003');"></a>
+                                            </h3>
+                                            <div class="table-responsive label-body" id="zp_section_fields_467269000000036003" row="1" istabular="true" isgrid="true">
+                                                <table class="table table-hover Vlis bgc edit">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>School Name</th>
+                                                            <th>Degree/Diploma</th>
+                                                            <th>Field(s) of Study</th>
+                                                            <th>Date of Completion</th>
+                                                            <th>Additional Notes</th>
+                                                            <th>Interests</th>
+                                                            <th width="45"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="zp_forms_tabluar_467269000000036003">
+                                                        <tr id="zp_tabular_row" row="1">
+                                                            <td folabel="College" isfielddependent="false" id="">
+                                                                <input multi="false" fcid="467269000000036303" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="" value="" type="text" name="College" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="Degree" isfielddependent="false" id="zp_field_outer_467269000000036305">
+                                                                <input multi="false" fcid="467269000000036305" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="" value="" type="text" name="Degree" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="Specialization" isfielddependent="false" id="zp_field_outer_467269000000036307">
+                                                                <input multi="false" fcid="467269000000036307" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="" value="" type="text" name="Specialization" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="Yearofgraduation" isfielddependent="false" id="zp_field_outer_467269000000036311">
+                                                                <input multi="false" fcid="467269000000036311" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="" value="" type="text" name="Yearofgraduation" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="Education_AdditionalNotes" isfielddependent="false" id="zp_field_outer_467269000000036309" class="txtarea-wid">
+                                                                <textarea fieldtype="3" id="zp_field_467269000000036309" class="form-control  zptxtarea-edit" name="Education_AdditionalNotes" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                            </td>
+                                                            <td folabel="Interests" isfielddependent="false" id="" class="txtarea-wid">
+                                                                <textarea fieldtype="3" id="" class="form-control  zptxtarea-edit" name="Interests" rows="5" style="height: 75px;" onchange="ZPForm.Field.closeconfmsg(true)"></textarea>
+                                                            </td>
+                                                            <td>
+                                                                <div id="zp_form_deletetabular_row" secid="467269000000036003" class="IC-cls-frm S18 gry MR10 FL MT6 CP DN" onclick="ZPForm.Record.removeTabularRow(this);"></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <h3 issec="true" id="467269000000036005" class="zpcont-title">
+                                                <span class="ZPbold">Dependent</span><a class="IC-plus-big" istabadd="true" onclick="ZPForm.addTabularSectionRow('467269000000036005');">
+                                                </a>
+                                            </h3>
+                                            <div class="table-responsive label-body" id="" row="1" istabular="true" isgrid="true">
+                                                <table class="table table-hover Vlis bgc edit">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Relationship</th>
+                                                            <th>Date of birth</th>
+                                                            <th width="45"></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="zp_forms_tabluar_467269000000036005">
+                                                        <tr id="zp_tabular_row" row="1">
+                                                            <td folabel="Name" isfielddependent="false" id="zp_field_outer_467269000000036315">
+                                                                <input multi="false" fcid="467269000000036315" fieldtype="1" onchange="ZPForm.Field.closeconfmsg(true)" id="zp_field_467269000000036315" value="" type="text" name="Name" class="form-control zptxt-edit">
+                                                            </td>
+                                                            <td folabel="DependentRelationship" isfielddependent="false" id="" class="PR">
+
+                                                                <select class="select1" style="top:14px!important" id="" name="DependentRelationship" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                                    <option value="-Select-" selected="selected">Select</option>
+                                                                    <option value="Father">Father</option>
+                                                                    <option value="Mother">Mother</option>
+                                                                    <option value="Brother">Brother</option>
+                                                                    <option value="Sister">Sister</option>
+                                                                    <option value="Husband">Husband</option>
+                                                                    <option value="Wife">Wife</option>
+                                                                    <option value="Child">Child</option>
+                                                                </select>
+                                                            </td>
+                                                            <td folabel="DependentDOB" isfielddependent="false" id="zp_field_outer_467269000000036319">
+                                                                <div class="zpcal">
+                                                                    <input fieldtype="10" autofillby="0" id="zp_field_467269000000036319" type="text" caltype="popup" onchange="ZPForm.Field.closeconfmsg(true)" name="DependentDOB" class="form-control" value="">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div id="zp_form_deletetabular_row" secid="467269000000036005" class="IC-cls-frm S18 gry MR10 FL MT6 CP DN" onclick="ZPForm.Record.removeTabularRow(this);"></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <input type="hidden" value="P_Employee" name="zp_tableName">
+                                            <input type="hidden" value="676969451" name="loginUserZUID">
+                                            <input type="hidden" value="56cf5d93ecbd30b75cbd606747a0b5c807ed8b828c3980d833e083dc31115e0de95c53c3b9c32b3cddeec6192ba217be27e7f6f2c5eede030ca11eeba63bdd14" name="conreqcsr">
+                                            <input type="hidden" value="467269000000035679" name="zp_formId">
+                                            <input type="hidden" value="addRecord" name="zp_mode">
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="modal-footer text-left divButtomAdd DN">
                                     <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
@@ -554,25 +1067,21 @@ Version: v1
                                     <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
                                 </div>
                             </div>
-                        </div>
+                        </div><iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;" __idm_frm__="31"></iframe>
                     </div>
-                    <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
+                    <!--end Employee add -->
+
                 </div>
-                <!--end thêm| sửa bản ghi-->
-
             </div>
-
-
+            <!-- END CONTENT BODY -->
         </div>
-        <!-- END CONTENT BODY -->
-    </div>
-    <!-- END CONTENT -->
-    <!-- BEGIN QUICK SIDEBAR -->
-    <a href="javascript:;" class="page-quick-sidebar-toggler">
-        <i class="icon-login"></i>
-    </a>
+        <!-- END CONTENT -->
+        <!-- BEGIN QUICK SIDEBAR -->
+        <a href="javascript:;" class="page-quick-sidebar-toggler">
+            <i class="icon-login"></i>
+        </a>
 
-    <!-- END QUICK SIDEBAR -->
+        <!-- END QUICK SIDEBAR -->
     </div>
     <!-- END CONTAINER -->
     <!-- BEGIN CORE PLUGINS -->
@@ -586,28 +1095,34 @@ Version: v1
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src="/content/js/moment.min.js" type="text/javascript"></script>
     <script src="/content/js/daterangepicker.min.js" type="text/javascript"></script>
-   
+
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="/content/js/app.min.js" type="text/javascript"></script>
     <!-- END THEME GLOBAL SCRIPTS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <!-- <script src="../assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>-->
     <!-- END PAGE LEVEL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <script src="/content/js/layout.min.js" type="text/javascript"></script>
-    <script src="../../content/js/form.js"></script>
-    <!-- <script src="../assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>-->
-    <!--<script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
-    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>-->
+    <script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>
+    <!--<script src="/content/js/tp.1.min.js"></script>
+    <script src="/content/js/form.1.min.js"></script>
+    <script src="/content/js/form.2.min.js"></script>
+    <script src="/content/js/I18N_en.js"></script>-->
     <!-- END THEME LAYOUT SCRIPTS -->
+    <script src="../../../content/js/form.js"></script>
     <script>
         var frm = new Manager();
         $(document).ready(function () {
             frm.InitForm();
+            //$('.divDS').show();
+            //$('.divAdd').hide();
             $('#clickmewow').click(function () {
                 $('#radio1003').attr('checked', 'checked');
             });
+
+
         })
     </script>
 
