@@ -47,65 +47,73 @@ Version: v1
     <!-- BEGIN HEADER -->
     <div class="page-header navbar navbar-fixed-top">
         <!-- BEGIN HEADER INNER -->
-        <div class="page-header-inner ">
-            <!-- BEGIN LOGO -->
-            <div class="page-logo">
-                <a href="/Manages/Index.html">
-                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
-                </a>
-                <div class="menu-toggler sidebar-toggler">
-                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-                </div>
-            </div>
-            <!-- END LOGO -->
-            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
-            <!-- END RESPONSIVE MENU TOGGLER -->
-            <!-- BEGIN PAGE ACTIONS -->
-            <!-- END PAGE ACTIONS -->
-            <!-- BEGIN PAGE TOP -->
-            <div class="page-top">
-                <!-- BEGIN HEADER SEARCH BOX -->
-                <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
-                <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-
-                    <div class="ZPSpanel" id="zpeople_search">
-                        <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
-                            <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
-                        </div>
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="/Manages/Index.html">
+                        <img src="/content/images/logo.png" alt="logo" class="logo-default" />
+                    </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
                     </div>
-                </form>
-                <!-- END HEADER SEARCH BOX -->
-                <!-- BEGIN TOP NAVIGATION MENU -->
-                <div class="top-menu">
-                    <ul class="nav navbar-nav pull-right">
-                        <!-- BEGIN NOTIFICATION DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                        <!-- END NOTIFICATION DROPDOWN -->
-                        <!-- BEGIN INBOX DROPDOWN -->
-                        <!-- END INBOX DROPDOWN -->
-                        <!-- BEGIN TODO DROPDOWN -->
-                        <!-- END TODO DROPDOWN -->
-                        <!-- BEGIN USER LOGIN DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="" />
-                                <span class="username username-hide-on-mobile"> Admin </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-
-                        </li>
-                        <!-- END USER LOGIN DROPDOWN -->
-
-                    </ul>
                 </div>
-                <!-- END TOP NAVIGATION MENU -->
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE ACTIONS -->
+                <!-- END PAGE ACTIONS -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN HEADER SEARCH BOX -->
+                    <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+                    <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
+                        <div class="ZPSpanel" id="zpeople_search">
+                            <div class="ZPTbox">
+                                <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
+                                <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END HEADER SEARCH BOX -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <div class="ZPPimg dropdown">
+                                <img data-toggle="dropdown" id="zpeople_userimage" src="" empid="467269000000133005" imgtype="thumb">
+                            </div>
+                            <ul class="nav top-nav ZPaddPopOver">
+                                <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
+                                <li><a class="u-link" target="_blank" href="">Subscription</a> </li>
+                                <li id="zp_quickadd_form_outer">
+                                    <a data-toggle="dropdown">
+                                        <span data-toggle="tooltip" data-placement="bottom" title="Quick Add"> <i class="IC-add-r"></i> </span>
+                                    </a>
+                                    <div class="dropdown-menu ZPplusBox  ZPCmn-Arrow top rt gray" id="zp_quickadd_form_container">
+                                        <div class="ZPTabVt">
+                                            <div class="lfttab" id="zp_quickadd_form_tabs"></div>
+                                            <div class="rhttabscrl">
+                                                <div class="tab-content PT20" id="zp_quickadd_forms">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown MR20" id="zp_feeds_notifications">
+                                    <a class="dropdown-toggle" id="zp_ntfn_dropdown" data-toggle="modal">
+                                        <span data-toggle="tooltip" data-placement="bottom" title="Notifications" class="IC-bell-l S20"><sup class="ZPncount DNI" id="zp_feeds_ntfn_count"></sup></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
             </div>
-            <!-- END PAGE TOP -->
+            <!-- END HEADER INNER -->
         </div>
         <!-- END HEADER INNER -->
     </div>
@@ -285,12 +293,48 @@ Version: v1
                         <div class="main-wrp mainhead">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="col-md-12 PT5">Employee View  </div>
+                                    <div class="" id="zp_views_mousehover">
+                                        <!--<div class="project-select select-dd FL PR MR10" id="zp_views_viewlist">
+                                            <div class="select2-container" id="s2id_zp_select_viewlist">
+                                                <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                    <span>Employee View</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>
+                                                    <div><b></b></div>
+                                                </a>
+                                                <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1">
+                                            </div>
+                                            <select id="zp_select_viewlist" class="select2-offscreen" tabindex="-1">
+                                                <option selected="" value="467269000000035705">Employee View</option>
+                                                <option value="467269000000035793">Disabled Employee View</option>
+                                                <option value="467269000000035795">Inactive Employees View</option>
+                                            </select>
+                                        </div>-->
+                                        <div class="project-select  FL PR MR10" style="padding-left:15px;">
+                                            <select id="zp_select_viewlist" class="select" tabindex="-1" style="background-color: #f9fafc;border:0">
+                                                <option selected="" value="467269000000035705">Employee View</option>
+                                                <option value="467269000000035793">Disabled Employee View</option>
+                                                <option value="467269000000035795">Inactive Employees View</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="actn" id="zp_views_actions">
+                                            <a class="btn" id="viewCreateButton" onclick="frm.fnFormView('Add');" style="display: inline;">Create</a><span class=""> | </span>
+                                            <a class="btn" id="viewEditButton" onclick="frm.fnFormView('Edit');" style="display: inline;">Edit</a>
+                                            <span class="btn" style="display: none;">.</span> <a class="DN" id="viewDeleteButton" onclick="ZPNewView.showDelete();" style="display: none;">Delete</a>
+                                        </div>
+                                    </div>
+                                    <!--<div class="combobox">
+                                        <input type="text" name="" value="" min="" max="" step="" /><br />
+                                        <select size="3">
+                                            <option value="0"> 0</option>
+                                            <option value="25"> 25</option>
+                                            <option value="40"> 40</option>
+                                        </select>
+                                    </div>-->
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
 
-                                        <div class="select2-container FR selct-wdth MR10" id="s2id_zp_views_typeofviews">
+                                        <!--<div class="select2-container FR selct-wdth MR10" id="s2id_zp_views_typeofviews">
                                             <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
                                                 <span>My Data</span><abbr class="select2-search-choice-close" style="display:none;">
                                                 </abbr>
@@ -304,15 +348,21 @@ Version: v1
                                             <option value="sub">Subordinates' Data</option>
                                             <option value="dirsub">Direct Subordinates Data</option>
                                             <option value="self">My Data</option>
-                                        </select>
+                                        </select>-->
+
+                                        <div class="btn-group MR10">
+                                            <select class="select" id="zp_views_typeofviews" reqtype="typeOfView" tabindex="-1">
+                                                <option value="all">All Data</option>
+                                                <option value="mydep">Subordinates+My Data</option>
+                                                <option value="sub">Subordinates' Data</option>
+                                                <option value="dirsub">Direct Subordinates Data</option>
+                                                <option value="self">My Data</option>
+                                            </select>
+                                        </div>
 
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add', 'Employee')">Add Employee </a>
                                         </div>
-                                        <!--<div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
-                                            <a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Import Employee</a>
-                                        </div>-->
-
                                         <div class="FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm open">
                                             <i data-toggle="dropdown" class="IC-more  S18 gry  CP ML20 dropdown-toggle" id="zp_views_impexp" style="" aria-expanded="true" onclick="frm.fnSlideToggle('dropdown-menu')"></i>
                                             <ul class="dropdown-menu ZPCmn-Arrow top gray TBDD " id="dropdown-menu" style="display:none;">
@@ -338,7 +388,7 @@ Version: v1
                                                 </li>
                                             </ul>
                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                            <!-- <i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>-->
+                                            <!--<i id="zpNewwindow" class="FL S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();" data-original-title="" title=""></i>-->
                                         </div>
 
                                     </div>
@@ -451,13 +501,13 @@ Version: v1
                                             <th id=""><div><span>Photo</span></div> </th>
                                             <th width="10%"><div><span>First Name</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Last Name</span></div></th>
-                                            <th width="11%"><div><span class="ZPbold">Email ID</span></div></th>
+                                            <th width="15%"><div><span class="ZPbold">Email ID</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Department</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Title</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Date of joining</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Employee Status</span></div></th>
                                             <th width="10%"><div><span class="ZPbold">Employee Type</span></div></th>
-                                            <th width="10%"><div><span class="ZPbold">Actions</span></div></th>
+                                            <!-- <th width="10%"><div><span class="ZPbold">Actions</span></div></th>-->
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -485,12 +535,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining"></td>
                                             <td id="zp_views_field_Employeestatus">Inactive</td>
                                             <td id="zp_views_field_Employee_type"></td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Employee')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000138093" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138093">
 
@@ -519,12 +569,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining">18-Oct-2018</td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">Permanent</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000138063" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000138063">
 
@@ -553,12 +603,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining">19-Oct-2018</td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">On Contract</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000136171" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136171">
 
@@ -587,12 +637,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining">19-Oct-2018</td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">Permanent</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000136129" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136129">
                                             <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
@@ -620,12 +670,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining"></td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">Permanent</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000136125" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136125">
                                             <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
@@ -653,12 +703,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining">09-Oct-2018</td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type"></td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                         <tr id="zp_view_record_467269000000136121" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000136121">
                                             <td id="zp_view_moreactiontd" class="PL20 dropdown ZPCusDrs ">
@@ -686,12 +736,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining"></td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">Permanent</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
 
                                         <tr id="zp_view_record_467269000000133005" isdraft="false" isagreementsent="false" agreeid="undefined" module="undefined" recordid="467269000000133005">
@@ -720,12 +770,12 @@ Version: v1
                                             <td id="zp_views_field_Dateofjoining"></td>
                                             <td id="zp_views_field_Employeestatus">Active</td>
                                             <td id="zp_views_field_Employee_type">Permanent</td>
-                                            <td>
+                                            <!--<td>
                                                 <div class="dvlist-action ">
                                                     <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit')"></a>
                                                     <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
                                                 </div>
-                                            </td>
+                                            </td>-->
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1248,7 +1298,356 @@ Version: v1
                         </div><iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;" __idm_frm__="31"></iframe>
                     </div>
                     <!--end Employee add -->
-
+                    <!-- Create view -->
+                    <div class="modal popRgtModel PopLgModel in DN div_CView" id="createview" role="dialog" aria-labelledby="modal" aria-hidden="false">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header PR">
+                                    <button aria-label="Close" data-dismiss="modal" class="close" type="button" onclick="frm.fnClose('createview')">
+                                        <span aria-hidden="true">
+                                        <div class="IC-cls-1px red S21 CP"></div></span>
+                                    </button>
+                                    <h6 class="addPopTitle S18" id="zp_modal_header">Create View</h6>
+                                </div>
+                                <div class="modal-body" id="zp_modal_body">
+                                    <div class="PL30 PR30">
+                                        <form style="width:70%;" class="form-horizontal pad" role="form">
+                                            <div id="viewNameSection" class="form-group">
+                                                <label class="control-label col-sm-3">Specify View Name</label>
+                                            <div class="col-sm-6">
+                                                <input type="name" placeholder="Enter View Name" class="form-control" id="zp_custom_view_name"><span id="zp_custom_view_name_error" class="error-msg"></span></div>
+                                            </div>
+                                        <div id="defaultViewSection" class="form-group">
+                                                <div id="defaultViewSection" class="col-sm-6 col-sm-offset-3">
+                                                    <label class="checkbox DIB">
+                                                    <input id="zp_custom_view_default" type="checkbox"><span class="ML2">Set as default view</span></label>
+                                                </div>
+                                            </div>
+                                            <div id="viewPremissionSection" class="form-group">
+                                                <label class="control-label col-sm-3">View Permission</label><div class="col-sm-9">
+                                                    <div><label class="radio DIB">
+                                                        <input id="zp_custom_view_only_me" type="radio" name="view" onclick="ZPNewView.sharedTo()" checked=""><span class="ML2">Only to me</span></label></div><div class="MT10">
+                                                        <label class="radio DIB">
+                                                            <input id="zp_custom_view_all_employees" type="radio" name="view" onclick="ZPNewView.sharedTo()"><span class="ML2">Allow all employees to access this custom view</span>
+                                                        </label>
+                                                    </div><div class="MT10"><label class="radio DIB">
+                                                <input id="zp_custom_view_selected_users" type="radio" name="view" onclick="ZPNewView.sharedTo()"><span class="ML2">Share this view to specific users, departments, roles or locations</span></label></div>
+                                                </div>
+                                            </div>
+                                        <div class="form-group DN" id="zp_custom_view_sharedto">
+                                                <label class="control-label col-sm-3">Shared To</label><div id="applicableToComponent" class="col-sm-6"></div>
+                                            </div>
+                                        </form>
+                                        <h5 style="padding-left:30px;">Select Columns</h5>
+                                        <div class="row MB20" style="padding-left:30px;">
+                                            <div class="col-md-5">
+                                                <div class="ZPSCdiv">
+                                                    <ul id="zp_custom_view_left_columns" class="list-group">
+                                                        <li id="467269000000036255" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">First Name</span></div></li>
+                                                        <li id="467269000000036253" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">EmployeeID</span></div></li>
+                                                        <li id="467269000000036261" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Nick Name</span></div></li>
+                                                        <li id="467269000000036283" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Other Email</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036281" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div>
+                                                                <span id="leftFormCompNameID">Extension</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036265" parentfcid="0" refformid="0" childcnt="6" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child"><div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Location</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div></div><ul class="list-group DN">
+                                                                <li id="467269000000036265_467269000000036251" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Description</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036265_467269000000036247" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5">
+                                                                        </div><span id="childCmpNameID">Mail Alias</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036265_467269000000036245" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Location Name</span></div></li>
+                                                                <li id="467269000000036265_467269000000036249" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Country</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036265_467269000000111003" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div>
+                                                                        <span id="childCmpNameID">Time Zone</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036265_467269000000111001" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div>
+                                                                        <span id="childCmpNameID">State/Province</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li id="467269000000036287" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Mobile Phone</span></div></li>
+                                                        <li id="467269000000036263" parentfcid="0" refformid="0" childcnt="2" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div>
+                                                                <span id="leftFormCompNameID">Department</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div>
+                                                            </div>
+                                                            <ul class="list-group DN">
+                                                                <li id="467269000000036263_467269000000036123" parentfcid="467269000000036263" refformid="467269000000035897" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div>
+                                                                        <span id="childCmpNameID">Mail Alias</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036263_467269000000036121" parentfcid="467269000000036263" refformid="467269000000035897" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div>
+                                                                        <span id="childCmpNameID">Department Name</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li id="467269000000036285" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Birth Date</span></div></li>
+                                                        <li id="467269000000036259" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Email ID</span></div></li>
+                                                        <li id="467269000000036313" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Tags</span></div></li>
+                                                        <li id="467269000000036257" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Last Name</span></div></li>
+                                                        <li id="467269000000036279" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Work phone</span></div></li>
+                                                        <li id="467269000000036273" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Photo</span></div></li>
+                                                        <li id="467269000000036271" parentfcid="0" refformid="0" childcnt="31" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Reporting To</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div>
+                                                            </div><ul class="list-group DN">
+                                                                <li id="467269000000036271_467269000000036255" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">First Name</span></div>
+                                                                </li>
+                                                                <li id="467269000000036271_467269000000036253" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">EmployeeID</span></div></li>
+                                                                <li id="467269000000036271_467269000000036261" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Nick Name</span></div></li>
+                                                                <li id="467269000000036271_467269000000036283" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Other Email</span></div></li>
+                                                                <li id="467269000000036271_467269000000036281" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Extension</span></div></li>
+                                                                <li id="467269000000036271_467269000000036265" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Location</span></div></li>
+                                                                <li id="467269000000036271_467269000000036287" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Mobile Phone</span></div></li>
+                                                                <li id="467269000000036271_467269000000036263" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Department</span></div></li>
+                                                                <li id="467269000000036271_467269000000036285" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Birth Date</span></div></li>
+                                                                <li id="467269000000036271_467269000000036259" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Email ID</span></div></li>
+                                                                <li id="467269000000036271_467269000000036313" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Tags</span></div></li>
+                                                                <li id="467269000000036271_467269000000036257" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Last Name</span></div></li>
+                                                                <li id="467269000000036271_467269000000036279" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Work phone</span></div></li>
+                                                                <li id="467269000000036271_467269000000036273" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Photo</span></div></li>
+                                                                <li id="467269000000036271_467269000000036271" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Reporting To</span></div></li>
+                                                                <li id="467269000000036271_467269000000036277" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Seating Location</span></div></li>
+                                                                <li id="467269000000036271_467269000000036275" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Date of joining</span></div></li>
+                                                                <li id="467269000000036271_467269000000036269" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Role</span></div></li>
+                                                                <li id="467269000000036271_467269000000036301" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Address</span></div></li>
+                                                                <li id="467269000000036271_467269000000036267" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Title</span></div></li>
+                                                                <li id="467269000000036271_467269000000036321" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Job Description</span></div></li>
+                                                                <li id="467269000000036271_467269000000036333" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Gender</span></div></li>
+                                                                <li id="467269000000036271_467269000000036371" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5">
+                                                                    </div><span id="childCmpNameID">Source of hire</span></div></li>
+                                                                <li id="467269000000036271_467269000000036373" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5">
+                                                                        </div><span id="childCmpNameID">Marital status</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036271_467269000000036325" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">AboutMe</span></div></li>
+                                                                <li id="467269000000036271_467269000000036369" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Employee status</span></div></li>
+                                                                <li id="467269000000036271_467269000000036323" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Ask me about/Expertise</span></div></li>
+                                                                <li id="467269000000036271_467269000000036367" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Employee type</span></div></li>
+                                                                <li id="467269000000036271_467269000000036329" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Date of exit</span></div></li>
+                                                                <li id="467269000000036271_467269000000114003" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Experience</span></div></li>
+                                                                <li id="467269000000036271_467269000000114001" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Age</span></div></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li id="467269000000036277" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div>
+                                                                <span id="leftFormCompNameID">Seating Location</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036275" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div>
+                                                                <span id="leftFormCompNameID">Date of joining</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036269" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div>
+                                                                <span id="leftFormCompNameID">Role</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036301" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Address</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036267" parentfcid="0" refformid="0" childcnt="2" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div>
+                                                                <span id="leftFormCompNameID">Title</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div>
+                                                            </div><ul class="list-group DN">
+                                                                <li id="467269000000036267_467269000000036243" parentfcid="467269000000036267" refformid="467269000000035901" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div>
+                                                                        <span id="childCmpNameID">Mail Alias</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li id="467269000000036267_467269000000036241" parentfcid="467269000000036267" refformid="467269000000035901" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)">
+                                                                    <div id="childCompDiv" class="list-child">
+                                                                        <div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Designation Name</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li id="467269000000036321" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Job Description</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036333" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Gender</span></div></li>
+                                                        <li id="467269000000036371" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Source of hire</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036373" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Marital status</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036325" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">AboutMe</span></div></li>
+                                                        <li id="467269000000036369" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div>
+                                                                <span id="leftFormCompNameID">Employee status</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036323" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Ask me about/Expertise</span></div></li>
+                                                        <li id="467269000000036367" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Employee type</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000036329" parentfcid="0" refformid="0" sumrequired="false" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Date of exit</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000114003" parentfcid="0" refformid="0" sumrequired="true" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Experience</span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="467269000000114001" parentfcid="0" refformid="0" sumrequired="true" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                                            <div id="parentCompDiv" class="list-child">
+                                                                <div class="IC-drag FL gry MR5"></div><span id="leftFormCompNameID">Age</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 MT80">
+                                                <div class="ZPCVatn"><div class="IC-ar-lft-2 blu S16 CP" onclick="ZPNewView.moveAllLeftToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-rgt blu S16 CP" onclick="ZPNewView.moveSelectedRowToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-lft blu S16 CP" onclick="ZPNewView.moveSelectedRowToLeft()"></div></div><div class="ZPCVatn">
+                                                    <div class="IC-ar-rgt-2 blu S16 CP" onclick="ZPNewView.moveAllRightToLeft()"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ZPSCdiv" id="zp_rightSide"><ul id="zp_custom_view_right_columns" class="list-group ui-sortable"></ul></div><span class="error-msg DN" id="zp_right_column_error">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h5 id="criteriaHeader" style="padding-left:30px;">Criteria</h5>
+                                        <div id="criteriaSection" style="border-top:1px solid #e9edf3;padding-left:30px;" class="outcontainer" >
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100">AND/OR</th>
+                                                        <th width="200">Field Name</th>
+                                                        <th width="180">Condition</th>
+                                                        <th width="300">Value</th>
+                                                        <th width="20"></th>
+                                                        <th width="100"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="zp_custom_view_criteria_table_body">
+                                                    <tr id="zp_criteria_0" class="ZPLRow ZPLErr">
+                                                        <td></td>
+                                                        <td class="dropdown"><input id="fieldOpetions" value="None" fcid="-1" pfcid="-1" iscrtfc="true" class="form-control" data-placement="bottom" data-toggle="popover" data-original-title="" title=""><span class="error-msg DN" id="zp_criteria_field_error"></span></td>
+                                                        <td>
+                                                            <div class="select2-container select2-container-disabled" id="s2id_autogen15">
+                                                                <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                                    <span>None</span>
+                                                                    <abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div>
+                                                                </a>
+                                                                <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen16" disabled="disabled">
+                                                                <div class="select2-drop select2-with-searchbox" style="display:none">
+                                                                    <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input" tabindex="-1">   </div>
+                                                                    <ul class="select2-results">   </ul>
+                                                                </div>
+                                                            </div>
+                                                            <select isopr="true" onchange="ZPNewView.onConditionChange(this)" class="select2-offscreen" tabindex="-1" style="display: inline-block;" disabled="disabled"><option value="-1">None</option></select>
+                                                        </td>
+                                                        <td id="crtValueTD"><input id="txtValue" type="text" class="form-control" disabled="disabled"><span class="error-msg DN" id="zp_criteria_error"></span></td>
+                                                        <td id="lookupIcon" class="dropup PL0I">
+                                                            <i id="zp_crt_input_dropdown" class="IC-addlist S18 FL MT5 gry CP DN" data-toggle="dropdown" aria-expanded="false"></i>
+                                                            <div id="crtDropdownSelection" class="dropdown-menu ZPCusPd ZPappBox ZptxtBox  ZPCmn-Arrow bottom rt gray">
+                                                                <div class="ZPTabVt">
+                                                                    <div class="rhttabscrl">
+                                                                        <div class="tab-content">
+                                                                            <div class="tab-pane active" role="tabpanel">
+                                                                                <div>
+                                                                                    <div class="ZPtopSearch">
+                                                                                        <label class="checkbox DIB FL PT8 MR10"><input id="crtAllCheck" type="checkbox" onclick="ZPNewView.crtAllCheckSelect(this)"><span></span></label><div class="ZPsearch" id="ZPsearch">
+                                                                                            <div class="dvsearch Dropdown PR">
+                                                                                                <span class="ZPico-search FL MT2 ML8 ZPtooltip IC-lens S16" zptitle="Search Category"></span>
+                                                                                            </div><input type="search" class="ZPselect" id="crtRecordSearch" placeholder="Search" value="" name="Search">
+                                                                                        </div>
+                                                                                    </div><div class="ZPapplCb"><ul id="ulList"></ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="IC-plus-fill S16 blu FL MT5 CP" onclick="ZPNewView.addCriteria(this)"></div><div class="IC-cls-fill S16 red FL MT5 ML5 CP" onclick="ZPNewView.removeCriteria(this)">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table><span id="zp_criteria_error" class="error-msg"></span>
+                                        </div>
+                                    </div>
+                                </div><div class="modal-footer"><button type="button" id="zp_modal_blubtn" class="btn btn-primary">Save</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end create view -->
+                    <!-- Edit view -->
+                    <div class="modal popRgtModel PopLgModel in DN div_EView" id="editview" role="dialog" aria-labelledby="modal" aria-hidden="false">
+                    <div class="modal-dialog" role="document"><div class="modal-content">
+                        <div class="modal-header PR">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button" onclick="frm.fnClose('editview')"><span aria-hidden="true">
+                            <div class="IC-cls-1px red S21 CP"></div></span></button>
+                        <h5 class="addPopTitle" id="zp_modal_header">Edit View</h5>
+                        </div>
+                        <div class="modal-body" id="zp_modal_body">
+                        <div class="PL30 PR30"><form style="width:70%;" class="form-horizontal pad" role="form">
+                            <div id="viewNameSection" class="form-group"><label class="control-label col-sm-3">Specify View Name</label><div class="col-sm-6"><input type="name" placeholder="Enter View Name" class="form-control" id="zp_custom_view_name"><span id="zp_custom_view_name_error" class="error-msg"></span></div></div></form>
+                            <h5 style="padding-left:30px;">Select Columns</h5>
+                            <div class="row MB20"><div class="col-md-5">
+                                <div class="ZPSCdiv"><ul id="zp_custom_view_left_columns" class="list-group">
+                                    <li id="467269000000036265" parentfcid="0" refformid="0" childcnt="6" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)">
+                                    <div id="parentCompDiv" class="list-child"><div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Location</span>
+                                        <div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div></div><ul class="list-group DN">
+                                        <li id="467269000000036265_467269000000036251" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Description</span></div></li><li id="467269000000036265_467269000000036247" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Mail Alias</span></div></li><li id="467269000000036265_467269000000036245" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Location Name</span></div></li><li id="467269000000036265_467269000000036249" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Country</span></div></li><li id="467269000000036265_467269000000111003" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Time Zone</span></div></li><li id="467269000000036265_467269000000111001" parentfcid="467269000000036265" refformid="467269000000035905" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">State/Province</span></div></li></ul></li><li id="467269000000036263" parentfcid="0" refformid="0" childcnt="2" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Department</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div></div><ul class="list-group DN"><li id="467269000000036263_467269000000036123" parentfcid="467269000000036263" refformid="467269000000035897" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Mail Alias</span></div></li><li id="467269000000036263_467269000000036121" parentfcid="467269000000036263" refformid="467269000000035897" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Department Name</span></div></li></ul></li><li id="467269000000036271" parentfcid="0" refformid="0" childcnt="31" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Reporting To</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div></div>
+                                    <ul class="list-group DN"><li id="467269000000036271_467269000000036255" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">First Name</span></div></li><li id="467269000000036271_467269000000036253" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">EmployeeID</span></div></li><li id="467269000000036271_467269000000036261" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Nick Name</span></div></li><li id="467269000000036271_467269000000036283" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Other Email</span></div></li><li id="467269000000036271_467269000000036281" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Extension</span></div></li><li id="467269000000036271_467269000000036265" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Location</span></div></li><li id="467269000000036271_467269000000036287" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Mobile Phone</span></div></li><li id="467269000000036271_467269000000036263" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Department</span></div></li><li id="467269000000036271_467269000000036285" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Birth Date</span></div></li><li id="467269000000036271_467269000000036259" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Email ID</span></div></li><li id="467269000000036271_467269000000036313" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Tags</span></div></li><li id="467269000000036271_467269000000036257" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Last Name</span></div></li><li id="467269000000036271_467269000000036279" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Work phone</span></div></li><li id="467269000000036271_467269000000036273" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Photo</span></div></li><li id="467269000000036271_467269000000036271" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Reporting To</span></div></li><li id="467269000000036271_467269000000036277" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Seating Location</span></div></li><li id="467269000000036271_467269000000036275" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Date of joining</span></div></li><li id="467269000000036271_467269000000036269" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Role</span></div></li><li id="467269000000036271_467269000000036301" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Address</span></div></li><li id="467269000000036271_467269000000036267" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Title</span></div></li><li id="467269000000036271_467269000000036321" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Job Description</span></div></li><li id="467269000000036271_467269000000036333" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Gender</span></div></li><li id="467269000000036271_467269000000036371" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Source of hire</span></div></li><li id="467269000000036271_467269000000036373" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Marital status</span></div></li><li id="467269000000036271_467269000000036325" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">AboutMe</span></div></li><li id="467269000000036271_467269000000036369" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Employee status</span></div></li><li id="467269000000036271_467269000000036323" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Ask me about/Expertise</span></div></li><li id="467269000000036271_467269000000036367" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Employee type</span></div></li><li id="467269000000036271_467269000000036329" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Date of exit</span></div></li><li id="467269000000036271_467269000000114003" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Experience</span></div></li><li id="467269000000036271_467269000000114001" parentfcid="467269000000036271" refformid="467269000000035893" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Age</span></div></li></ul></li><li id="467269000000036267" parentfcid="0" refformid="0" childcnt="2" side="left" class="list-group-item" onclick="ZPNewView.componentSelect(event,&quot;left&quot;,this,&quot;parent&quot;)"><div id="parentCompDiv" class="list-child"><div id="upAndDwn" class="IC-ar-dwn FL blu MR5 CP" onclick="ZPNewView.toggleLookupComponent(this)"></div><span id="leftFormCompNameID">Title</span><div class="IC-Lookup2-2x FR blu CP" onclick="ZPNewView.toggleLookupComponent(this)"></div></div><ul class="list-group DN"><li id="467269000000036267_467269000000036243" parentfcid="467269000000036267" refformid="467269000000035901" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Mail Alias</span></div></li><li id="467269000000036267_467269000000036241" parentfcid="467269000000036267" refformid="467269000000035901" childcnt="0" side="left" class="list-group-item" onclick="ZPNewView.childComponentSelect(event,&quot;left&quot;,this,&quot;child&quot;)"><div id="childCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="childCmpNameID">Designation Name</span></div></li></ul></li></ul></div></div><div class="col-md-1 MT80"><div class="ZPCVatn"><div class="IC-ar-lft-2 blu S16 CP" onclick="ZPNewView.moveAllLeftToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-rgt blu S16 CP" onclick="ZPNewView.moveSelectedRowToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-lft blu S16 CP" onclick="ZPNewView.moveSelectedRowToLeft()"></div></div><div class="ZPCVatn"><div class="IC-ar-rgt-2 blu S16 CP" onclick="ZPNewView.moveAllRightToLeft()"></div></div></div><div class="col-md-6"><div class="ZPSCdiv" id="zp_rightSide"><ul id="zp_custom_view_right_columns" class="list-group ui-sortable"><li id="467269000000036253" value="467269000000036253" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">EmployeeID</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036255" value="467269000000036255" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">First Name</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036257" value="467269000000036257" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Last Name</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036259" value="467269000000036259" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Email ID</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036263" value="467269000000036263" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Department</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036267" value="467269000000036267" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Title</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036273" value="467269000000036273" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Photo</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036275" value="467269000000036275" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Date of joining</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036277" value="467269000000036277" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Work location</span><br><font class="S12" id="originalFormCompNameID">Seating Location</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036279" value="467269000000036279" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Work phone</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036281" value="467269000000036281" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Extension</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036283" value="467269000000036283" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Other Email</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036271" value="467269000000036271" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Reporting To</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036285" value="467269000000036285" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Birth Date</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036287" value="467269000000036287" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Mobile Phone</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036301" value="467269000000036301" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Address</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036369" value="467269000000036369" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Employee Status</span><br><font class="S12" id="originalFormCompNameID">Employee status</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036367" value="467269000000036367" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Employee Type</span><br><font class="S12" id="originalFormCompNameID">Employee type</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036371" value="467269000000036371" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Source of Hire</span><br><font class="S12" id="originalFormCompNameID">Source of hire</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036373" value="467269000000036373" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Marital Status</span><br><font class="S12" id="originalFormCompNameID">Marital status</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036269" value="467269000000036269" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">Employee Role</span><br><font class="S12" id="originalFormCompNameID">Role</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036325" value="467269000000036325" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><div class="Edtxt"><span id="editedFormCompNameID">AbouMe</span><br><font class="S12" id="originalFormCompNameID">AboutMe</font></div><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036313" value="467269000000036313" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Tags</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036261" value="467269000000036261" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Nick Name</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036321" value="467269000000036321" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Job Description</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036333" value="467269000000036333" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Gender</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036323" value="467269000000036323" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Ask me about/Expertise</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000036329" value="467269000000036329" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Date of exit</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i></div></li><li id="467269000000114003" value="467269000000114003" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Experience</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i><div id="sumID" class="asdc ML10 list-over" onmousedown="ZPNewView.setSum(this)" value="">SUM</div></div></li><li id="467269000000114001" value="467269000000114001" parentfcid="0" refformid="467269000000035893" childcnt="undefined" side="right" class="list-group-item" onclick="ZPNewView.componentSelect(event,'right',this)"><div id="parentCompDiv" class="list-child"><div class="IC-drag FL gry MR5"></div><span id="rightFormCompNameID">Age</span><i class="IC-pen gry CP S13 ML8 list-over" onmousedown="ZPNewView.enableTextBox(this)"></i><div id="sumID" class="asdc ML10 list-over" onmousedown="ZPNewView.setSum(this)" value="">SUM</div></div></li></ul></div><span class="error-msg DN" id="zp_right_column_error"></span></div></div></div></div><div class="modal-footer"><button type="button" id="zp_modal_blubtn" class="btn btn-primary">Save</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button></div></div></div></div>
+                    <!-- end edit view -->
                 </div>
             </div>
             <!-- END CONTENT BODY -->
@@ -1282,9 +1681,9 @@ Version: v1
     <!-- END PAGE LEVEL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <script src="/content/js/layout.min.js" type="text/javascript"></script>
-    <script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
+    <!--<script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
     <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>
-    <!--<script src="/content/js/tp.1.min.js"></script>
+    <script src="/content/js/tp.1.min.js"></script>
     <script src="/content/js/form.1.min.js"></script>
     <script src="/content/js/form.2.min.js"></script>
     <script src="/content/js/I18N_en.js"></script>-->
@@ -1298,7 +1697,39 @@ Version: v1
             $('#clickmewow').click(function () {
                 $('#radio1003').attr('checked', 'checked');
             });
-
+            //combox
+            $('.combobox').each(function () {
+                var
+                    $input = $(this).find('input'),
+                    $select = $(this).find('select');
+                function hideSelect() {
+                    setTimeout(function () {
+                        if (!$select.is(':focus') && !$input.is(':focus')) {
+                            $select
+                                .hide()
+                                .css('z-index', 1);
+                        }
+                    }, 20);
+                }
+                $input
+                    .focusin(function () {
+                        if (!$select.is(':visible')) {
+                            $select
+                                .outerWidth($input.outerWidth())
+                                .show()
+                                .css('z-index', 100);
+                        }
+                    })
+                    .focusout(hideSelect)
+                    .on('input', function () {
+                        $select.val('');
+                    });
+                $select
+                    .change(function () {
+                        $input.val($select.val());
+                    })
+                    .focusout(hideSelect);
+            });
 
         })
     </script>

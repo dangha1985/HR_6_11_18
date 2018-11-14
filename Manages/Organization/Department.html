@@ -51,7 +51,7 @@ Version: v1
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="/Manages/Index.html">
-                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
+                    <img src="/content/images/logo.png" alt="logo" class="logo-default" />
                 </a>
                 <div class="menu-toggler sidebar-toggler">
                     <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -68,18 +68,9 @@ Version: v1
                 <!-- BEGIN HEADER SEARCH BOX -->
                 <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
                 <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                    <!--<div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit">
-                                <i class="icon-magnifier"></i>
-                            </a>
-                        </span>
-                    </div>-->
-
                     <div class="ZPSpanel" id="zpeople_search">
                         <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
                             <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
                         </div>
                     </div>
@@ -88,27 +79,32 @@ Version: v1
                 <!-- BEGIN TOP NAVIGATION MENU -->
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
-                        <!-- BEGIN NOTIFICATION DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                        <!-- END NOTIFICATION DROPDOWN -->
-                        <!-- BEGIN INBOX DROPDOWN -->
-                        <!-- END INBOX DROPDOWN -->
-                        <!-- BEGIN TODO DROPDOWN -->
-                        <!-- END TODO DROPDOWN -->
-                        <!-- BEGIN USER LOGIN DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="" />
-                                <span class="username username-hide-on-mobile"> Admin </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-
-                        </li>
-                        <!-- END USER LOGIN DROPDOWN -->
-
+                        <div class="ZPPimg dropdown">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="" empid="467269000000133005" imgtype="thumb">
+                        </div>
+                        <ul class="nav top-nav ZPaddPopOver">
+                            <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
+                            <li><a class="u-link" target="_blank" href="">Subscription</a> </li>
+                            <li id="zp_quickadd_form_outer">
+                                <a data-toggle="dropdown">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Quick Add"> <i class="IC-add-r"></i> </span>
+                                </a>
+                                <div class="dropdown-menu ZPplusBox  ZPCmn-Arrow top rt gray" id="zp_quickadd_form_container">
+                                    <div class="ZPTabVt">
+                                        <div class="lfttab" id="zp_quickadd_form_tabs"></div>
+                                        <div class="rhttabscrl">
+                                            <div class="tab-content PT20" id="zp_quickadd_forms">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown MR20" id="zp_feeds_notifications">
+                                <a class="dropdown-toggle" id="zp_ntfn_dropdown" data-toggle="modal">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Notifications" class="IC-bell-l S20"><sup class="ZPncount DNI" id="zp_feeds_ntfn_count"></sup></span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
                 <!-- END TOP NAVIGATION MENU -->
@@ -281,28 +277,55 @@ Version: v1
                         <!--end menu top 1 -->
                         <!-- menu top 2 -->
                         <div class="mainhead">
-                            <div class="row">
+                            <div class="row" style="margin-left:0px!important;">
                                 <div class="col-md-6">
-                                    <div class="col-md-12 PT5">Department View  </div>
+                                    <div class="" id="zp_views_mousehover">
+                                        <div class="project-select  FL PR MR10" style="margin-left:0px!important;">
+                                            <select id="zp_select_viewlist" class="select" tabindex="-1" style="background-color: #f9fafc;border:0">
+                                                <option selected="" value="467269000000035705">Department View</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="actn" id="zp_views_actions">
+                                            <a class="btn" id="viewCreateButton" onclick="frm.fnFormView('Add');" style="display: inline;">Create</a><span class=""> | </span>
+                                            <a class="btn" id="viewEditButton" onclick="frm.fnFormView('Edit');" style="display: inline;">Edit</a>
+                                            <span class="btn" style="display: none;">.</span> <a class="DN" id="viewDeleteButton" onclick="ZPNewView.showDelete();" style="display: none;">Delete</a>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
+                                        
                                         <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
                                             <a href="javascript:;" onclick="ZPExport.showExportContainer();">
                                                 <i data-toggle="dropdown" class="IC-exprt DIB gry ML10" style="" aria-expanded="false" title="Export"></i>
+                                            </a>
+                                        </div>
+                                        <div class="btn-group S18 gry FR ML10 CP" style="width:38px; padding-top:4px;">
+                                            <a href="javascript:;" onclick="">
+                                                <i data-toggle="dropdown" class="IC-imprt DIB gry ML10" style="" aria-expanded="false" title="Import"></i>
                                             </a>
                                         </div>
                                         <!--<i id="zpNewwindow" class="FR S18 ML20 CP gry ZPtitle CR-fullview" onclick="fullViewFormWindow();"></i>-->
                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
                                         </div>
-
+                                        <div class="btn-group MR10">
+                                            <select class="select" id="zp_views_typeofviews" reqtype="typeOfView" tabindex="-1">
+                                                <option value="all">All Data</option>
+                                                <option value="mydep">Subordinates+My Data</option>
+                                                <option value="sub">Subordinates' Data</option>
+                                                <option value="dirsub">Direct Subordinates Data</option>
+                                                <option value="self">My Data</option>
+                                            </select>
+                                        </div>
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Department')">Add Department </a>
                                         </div>
-                                        <div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
+                                        <!--<div id="importNonuser" class="btn-group MR5" onclick="User.AddUser.getAddUserListPage(null,null,false)">
                                             <a aria-expanded="false" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Import Department</a>
-                                        </div>
+                                        </div>-->
 
                                     </div>
                                 </div>
@@ -490,6 +513,197 @@ Version: v1
                         <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
                     </div>
                     <!--end thêm| sửa bản ghi-->
+                    <!-- Create view -->
+                    <div class="modal popRgtModel PopLgModel in DN div_CView" id="createview" role="dialog" aria-labelledby="modal" aria-hidden="false">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header PR">
+                                    <button aria-label="Close" data-dismiss="modal" class="close" type="button" onclick="frm.fnClose('createview')">
+                                        <span aria-hidden="true">
+                                            <div class="IC-cls-1px red S21 CP"></div>
+                                        </span>
+                                    </button>
+                                    <h5 class="addPopTitle S18" id="zp_modal_header">Create View</h5>
+                                </div>
+                                <div class="modal-body" id="zp_modal_body">
+                                    <div class="PL30 PR30">
+                                        <form style="width:70%;" class="form-horizontal pad" role="form">
+                                            <div id="viewNameSection" class="form-group">
+                                                <label class="control-label col-sm-3">Specify View Name</label>
+                                                <div class="col-sm-6">
+                                                    <input type="name" placeholder="Enter View Name" class="form-control" id="zp_custom_view_name"><span id="zp_custom_view_name_error" class="error-msg"></span>
+                                                </div>
+                                            </div>
+                                            <div id="defaultViewSection" class="form-group">
+                                                <div id="defaultViewSection" class="col-sm-6 col-sm-offset-3">
+                                                    <label class="checkbox DIB">
+                                                        <input id="zp_custom_view_default" type="checkbox"><span class="ML2">Set as default view</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div id="viewPremissionSection" class="form-group">
+                                                <label class="control-label col-sm-3">View Permission</label><div class="col-sm-9">
+                                                    <div>
+                                                        <label class="radio DIB">
+                                                            <input id="zp_custom_view_only_me" type="radio" name="view" onclick="ZPNewView.sharedTo()" checked=""><span class="ML2">Only to me</span>
+                                                        </label>
+                                                    </div><div class="MT10">
+                                                        <label class="radio DIB">
+                                                            <input id="zp_custom_view_all_employees" type="radio" name="view" onclick="ZPNewView.sharedTo()"><span class="ML2">Allow all employees to access this custom view</span>
+                                                        </label>
+                                                    </div><div class="MT10">
+                                                        <label class="radio DIB">
+                                                            <input id="zp_custom_view_selected_users" type="radio" name="view" onclick="ZPNewView.sharedTo()"><span class="ML2">Share this view to specific users, departments, roles or locations</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group DN" id="zp_custom_view_sharedto">
+                                                <label class="control-label col-sm-3">Shared To</label><div id="applicableToComponent" class="col-sm-6"></div>
+                                            </div>
+                                        </form>
+                                        <h5 style="padding-left:30px;">Select Columns</h5>
+                                        <div class="row MB20" style="padding-left:30px;">
+                                            <div class="col-md-5">
+                                                <div class="ZPSCdiv">
+                                                  
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 MT80">
+                                                <div class="ZPCVatn"><div class="IC-ar-lft-2 blu S16 CP" onclick="ZPNewView.moveAllLeftToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-rgt blu S16 CP" onclick="ZPNewView.moveSelectedRowToRight()"></div></div><div class="ZPCVatn"><div class="IC-ar-lft blu S16 CP" onclick="ZPNewView.moveSelectedRowToLeft()"></div></div><div class="ZPCVatn">
+                                                    <div class="IC-ar-rgt-2 blu S16 CP" onclick="ZPNewView.moveAllRightToLeft()"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ZPSCdiv" id="zp_rightSide"><ul id="zp_custom_view_right_columns" class="list-group ui-sortable"></ul></div><span class="error-msg DN" id="zp_right_column_error">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h5 id="criteriaHeader" style="padding-left:30px;">Criteria</h5>
+                                        <div id="criteriaSection" style="border-top:1px solid #e9edf3;padding-left:30px;" class="outcontainer">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="100">AND/OR</th>
+                                                        <th width="200">Field Name</th>
+                                                        <th width="180">Condition</th>
+                                                        <th width="300">Value</th>
+                                                        <th width="20"></th>
+                                                        <th width="100"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="zp_custom_view_criteria_table_body">
+                                                    <tr id="zp_criteria_0" class="ZPLRow ZPLErr">
+                                                        <td></td>
+                                                        <td class="dropdown"><input id="fieldOpetions" value="None" fcid="-1" pfcid="-1" iscrtfc="true" class="form-control" data-placement="bottom" data-toggle="popover" data-original-title="" title=""><span class="error-msg DN" id="zp_criteria_field_error"></span></td>
+                                                        <td>
+                                                            <div class="select2-container select2-container-disabled" id="s2id_autogen15">
+                                                                <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">
+                                                                    <span>None</span>
+                                                                    <abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div>
+                                                                </a>
+                                                                <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen16" disabled="disabled">
+                                                                <div class="select2-drop select2-with-searchbox" style="display:none">
+                                                                    <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input" tabindex="-1">   </div>
+                                                                    <ul class="select2-results">   </ul>
+                                                                </div>
+                                                            </div>
+                                                            <select isopr="true" onchange="ZPNewView.onConditionChange(this)" class="select2-offscreen" tabindex="-1" style="display: inline-block;" disabled="disabled"><option value="-1">None</option></select>
+                                                        </td>
+                                                        <td id="crtValueTD"><input id="txtValue" type="text" class="form-control" disabled="disabled"><span class="error-msg DN" id="zp_criteria_error"></span></td>
+                                                        <td id="lookupIcon" class="dropup PL0I">
+                                                            <i id="zp_crt_input_dropdown" class="IC-addlist S18 FL MT5 gry CP DN" data-toggle="dropdown" aria-expanded="false"></i>
+                                                            <div id="crtDropdownSelection" class="dropdown-menu ZPCusPd ZPappBox ZptxtBox  ZPCmn-Arrow bottom rt gray">
+                                                                <div class="ZPTabVt">
+                                                                    <div class="rhttabscrl">
+                                                                        <div class="tab-content">
+                                                                            <div class="tab-pane active" role="tabpanel">
+                                                                                <div>
+                                                                                    <div class="ZPtopSearch">
+                                                                                        <label class="checkbox DIB FL PT8 MR10"><input id="crtAllCheck" type="checkbox" onclick="ZPNewView.crtAllCheckSelect(this)"><span></span></label>
+                                                                                    <div class="ZPsearch" id="ZPsearch">
+                                                                                            <div class="dvsearch Dropdown PR">
+                                                                                                <span class="ZPico-search FL MT2 ML8 ZPtooltip IC-lens S16" zptitle="Search Category"></span>
+                                                                                            </div><input type="search" class="ZPselect" id="crtRecordSearch" placeholder="Search" value="" name="Search">
+                                                                                        </div>
+                                                                                    </div><div class="ZPapplCb"><ul id="ulList"></ul></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="IC-plus-fill S16 blu FL MT5 CP" onclick="ZPNewView.addCriteria(this)"></div><div class="IC-cls-fill S16 red FL MT5 ML5 CP" onclick="ZPNewView.removeCriteria(this)">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <span id="zp_criteria_error" class="error-msg"></span>
+                                        </div>
+                                    </div>
+                                </div><div class="modal-footer"><button type="button" id="zp_modal_blubtn" class="btn btn-primary">Save</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<!-- end create view -->-->
+                    <!-- edit view -->
+                    <div class="modal popRgtModel PopLgModel in DN div_EView" id="editview" role="dialog" aria-labelledby="modal" aria-hidden="false">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header PR">
+                                    <button aria-label="Close" data-dismiss="modal" class="close" type="button" onclick="frm.fnClose('editview')">
+                                        <span aria-hidden="true">
+                                            <div class="IC-cls-1px red S21 CP"></div>
+                                        </span>
+                                    </button>
+                                    <h5 class="addPopTitle S18" id="zp_modal_header">Edit View</h5>
+                                </div>
+                                <div class="modal-body" id="zp_modal_body">
+                                    <div class="PL30 PR30">
+                                        <form style="width:70%;" class="form-horizontal pad" role="form">
+                                            <div id="viewNameSection" class="form-group">
+                                                <label class="control-label col-sm-3">Specify View Name</label>
+                                                <div class="col-sm-6">
+                                                    <input type="name" placeholder="Enter View Name" class="form-control" id="zp_custom_view_name"><span id="zp_custom_view_name_error" class="error-msg"></span>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="form-group DN" id="zp_custom_view_sharedto">
+                                                <label class="control-label col-sm-3">Shared To</label><div id="applicableToComponent" class="col-sm-6"></div>
+                                            </div>
+                                        </form>
+                                        <h5 style="padding-left:30px;">Select Columns</h5>
+                                        <div class="row MB20" style="padding-left:30px;">
+                                            <div class="col-md-5">
+                                                <div class="ZPSCdiv">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1 MT80">
+                                                <div class="ZPCVatn"><div class="IC-ar-lft-2 blu S16 CP" onclick="ZPNewView.moveAllLeftToRight()"></div></div>
+                                                <div class="ZPCVatn"><div class="IC-ar-rgt blu S16 CP" onclick="ZPNewView.moveSelectedRowToRight()"></div></div><div class="ZPCVatn">
+                                                <div class="IC-ar-lft blu S16 CP" onclick="ZPNewView.moveSelectedRowToLeft()"></div></div><div class="ZPCVatn">
+                                                    <div class="IC-ar-rgt-2 blu S16 CP" onclick="ZPNewView.moveAllRightToLeft()"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ZPSCdiv" id="zp_rightSide">
+                                                <ul id="zp_custom_view_right_columns" class="list-group ui-sortable"></ul></div>
+                                                <span class="error-msg DN" id="zp_right_column_error">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer"><button type="button" id="zp_modal_blubtn" class="btn btn-primary">Save</button><button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<!-- end edit view -->-->
                 </div>
             </div>
             <!-- END CONTENT BODY -->

@@ -25,6 +25,24 @@ Manager.prototype = {
             $('.divAdd').hide();
         }
     },
+    //ẩn hiện form ở trang home
+    fnHideShow: function (divHide, divShow) {
+        $('#'+ divHide).hide();
+        $('#'+ divShow).show();
+    },
+    //ẩn hiện form add, edit cua view
+    fnFormView: function (mode) {
+        if (mode == "Add" ) {
+            $('.div_CView').show();
+        }
+        if (mode == "Edit") {
+            $('.div_EView').show();
+        }
+    },
+    //close form
+    fnClose:function(divhide){
+        $('#'+ divhide).hide();
+    },
     //ẩn hiện filter
     filterPopup: function () {
             $("#filter").slideToggle("slow");

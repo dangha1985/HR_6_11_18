@@ -31,8 +31,6 @@ Version: v1
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
-    <!--<link href="/content/css/zp_css_1.css" rel="stylesheet" />-->
-    <!--  <link href="/content/css/zp_css_2.css" rel="stylesheet" />-->
     <link href="/content/css/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="/content/css/blue.min.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="/content/css/custom.min.css" rel="stylesheet" type="text/css" />
@@ -270,11 +268,11 @@ Version: v1
                                         <li id="zp_d_cdash" data-toggle="tooltip" data-placement="bottom" title="Customize Widgets" onclick="frm.fnSlideToggle('zp_d_cw')">
                                             <a href="javascript:;">
                                                 <i class="CR-apps">
-                                                    <i class="path1"></i><i class="path2"></i><i class="path3"></i><i class="path4"></i>
+                                                    <!--<i class="path1"></i><i class="path2"></i><i class="path3"></i><i class="path4"></i>-->
                                                 </i>
                                             </a>
                                         </li>
-                                        <li id="zp_d_timelog" data-toggle="tooltip" data-placement="bottom" title="Add Time Logs">
+                                        <li id="zp_d_timelog" data-toggle="tooltip" data-placement="bottom" title="Add Time Logs" onclick="frm.fnHideShow('divMain','divTimeLog')">
                                             <a href="javascript:;">
                                                 <i class="CR-timetracker">
                                                     <i class="path1"></i>
@@ -285,7 +283,7 @@ Version: v1
                                                 </i>Time Logs
                                             </a>
                                         </li>
-                                        <li id="zp_d_addleave" data-toggle="tooltip" data-placement="bottom" title="Apply Leave" onclick="frm.showForm('Add','Leave')">
+                                        <li id="zp_d_addleave" data-toggle="tooltip" data-placement="bottom" title="Apply Leave" onclick="frm.fnHideShow('divMain','divLeave')">
                                             <a href="javascript:;" id="apply_leave">
                                                 <i class="CR-leave">
                                                     <i class="path1"></i>
@@ -384,7 +382,7 @@ Version: v1
                             </div>
                             <!-- end menu top 1 -->
                             <!-- main -->
-                            <div class="Scrcont divDS">
+                            <div class="Scrcont " id="divMain">
                                 <div class="clearfix"></div>
                                 <div class="dash-main" id="zp_d_cmain">
                                     <div class="row ui-sortable" id="zp_d_wrow">
@@ -499,14 +497,14 @@ Version: v1
                                                     <h3 class="dash-title"></h3><span class="cout DN" id="zpdash_widgetcnt"><b></b></span><p class="dash-sub"></p>
                                                 </div>
                                                 <div id="YEARLY_HIRING_ATTRITION" class="dash-body " data-highcharts-chart="0">
-                                                    <div id="highcharts-wbywyad-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 1800px; height: 260px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-                                                        <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1800" height="260" viewBox="0 0 1800 260">
+                                                    <div id="highcharts-wbywyad-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 1770px; height: 260px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                                        <svg version="1.1" class="highcharts-root" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="1770px" height="260" viewBox="0 0 1800 260">
                                                             <desc>Created with Highstock 6.0.4</desc>
                                                             <defs>
                                                                 <clippath id="highcharts-wbywyad-1"><rect x="0" y="0" width="1716" height="172" fill="none"></rect></clippath>
                                                                 <clippath id="highcharts-wbywyad-3"><rect x="0" y="0" width="1716" height="172" fill="none"></rect></clippath>
                                                             </defs>
-                                                            <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="1800" height="260" rx="0" ry="0"></rect>
+                                                            <rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="1770px" height="260" rx="0" ry="0"></rect>
                                                             <rect fill="none" class="highcharts-plot-background" x="74" y="10" width="1716" height="172"></rect>
                                                             <g class="highcharts-grid highcharts-xaxis-grid ">
                                                                 <path fill="none" class="highcharts-grid-line" d="M 229.5 10 L 229.5 182" opacity="1"></path>
@@ -743,11 +741,11 @@ Version: v1
                             </div>
                             <!-- end main -->
                             <!--add Leave / rời khỏi  -->
-                            <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none" role="dialog" data-keyboard="false" id="zp_addedit_record_467269000000035681">
+                            <div class="modal popRgtModel PopSsModel PopSgModel in" style="display:none" role="dialog" data-keyboard="false" id="divLeave">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content" id="headerParent">
                                         <div class="modal-header" id="zp_form_header">
-                                            <div class="zp-back" onclick="frm.showForm()"><i class="IC-ar-lft"></i></div>
+                                            <div class="zp-back" onclick="frm.fnHideShow('divLeave','divMain')"><i class="IC-ar-lft"></i></div>
                                             <div class="ssp-profmin" id="zp_form_headerdisp">
                                                 <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Leave</span>
                                             </div>
@@ -798,7 +796,7 @@ Version: v1
                                                             </div>
                                                         </div>
 
-                                                        
+
                                                         <div class="zp-label  " isallowed="false">
                                                             <label class="zplt-label">Team Email ID</label>
                                                             <div class="zprt-label">
@@ -833,9 +831,154 @@ Version: v1
                                 </div>
                                 <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
                             </div>
-
-                           
                             <!-- end addLeave -->
+                            <!--add time logs  -->
+                            <div class="modal popRgtModel PopSsModel PopSgModel in divAdd" style="display:none" role="dialog" data-keyboard="false" id="divTimeLog">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content" id="headerParent">
+                                        <div class="modal-header" id="zp_form_header">
+                                            <div class="zp-back" onclick="frm.fnHideShow('divTimeLog','divMain')"><i class="IC-ar-lft"></i></div>
+                                            <div class="ssp-profmin" id="zp_form_headerdisp">
+                                                <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Time Log</span>
+                                            </div>
+
+                                            <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
+                                        </div>
+                                        <div class="modal-body P0I" id="zp_form_outer_container">
+                                            <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
+                                                <h3 issec="true" id="" class="zpcont-title">
+                                                    <span class="ZPbold">Time Log Details</span>
+                                                </h3>
+                                                <div class="row" id="" row="1" istabular="false" isgrid="false">
+                                                    <div class="col-sm-6">
+                                                        <div class="zp-label  " isallowed="false">
+                                                            <label class="zplt-label">Project</label>
+                                                            <div folabel="" class="zprt-label">
+                                                                <div class="ZPActIcn"><a class="IC-add-form" fcid="467269000000086001" onclick="ZPForm.Field.quickFormFields(this)"></a></div>
+                                                                <select class="select1">
+                                                                    <option value="-Select-" selected="selected">Select</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="zp-label Matry " isallowed="false">
+                                                            <label class="zplt-label">Job Name</label>
+                                                            <div class="zprt-label">
+                                                                <div class="ZPActIcn"><a class="IC-add-form" fcid="467269000000086001" onclick="ZPForm.Field.quickFormFields(this)"></a></div>
+                                                                <select class="select1">
+                                                                    <option value="-Select-" selected="selected">Select</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="zp-label zp-multi-2 " isallowed="false">
+                                                            <label class="zplt-label">Work Item</label>
+                                                            <div class="zprt-label">
+                                                                <input multi="false" id="" value="" type="text" name="" class="form-control zptxt-edit">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="zp-label zp-multi-2 Matry" isallowed="false">
+                                                            <label class="zplt-label">Date</label>
+                                                            <div class="zprt-label">
+                                                                <div class="zpcal">
+                                                                    <input fieldtype="10" id="" type="text" class="form-control " value="">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="zp-label  " isallowed="false">
+                                                            <label class="zplt-label">Description</label>
+                                                            <div class="zprt-label">
+                                                                <textarea class="form-control zptxtarea-edit" rows="3"></textarea>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="zp-label Matry " isallowed="false">
+                                                            <label class="zplt-label">Hours</label>
+                                                            <div folabel="TotalHours" fieldtype="5" id="zp_field_outer_467269000000064693" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                                <div class="MB10" id="timelog_type">
+                                                                    <label class="radio DIB MR10">
+                                                                        <input type="radio" name="timelogTime" id="timelog_hrs" value="0" onclick="Timetracker.timelogs.showHideTimeLogTimer('0');"><span>Hours</span>
+                                                                    </label>
+                                                                    <label class="radio DIB MR10">
+                                                                        <input type="radio" name="timelogTime" id="timelog_start_end" value="1" onclick="Timetracker.timelogs.showHideTimeLogTimer('1');"><span>Start &amp; End</span>
+                                                                    </label>
+                                                                    <label class="radio DIB MR10">
+                                                                        <input type="radio" name="timelogTime" id="timelog_start_timer" value="2" onclick="Timetracker.timelogs.showHideTimeLogTimer('2');"><span>Start Timer</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div id="timelog_hours_time" class="hrsDts W60 timePopover DN" style="display: block;">
+                                                                    <input id="timelog_hrstime" type="text" class="form-control" value="00:00">
+                                                                    <i class="IC-info S18 gry ML10 form-icon" data-content="<ul class='hlplis'><li><span>2:50</span><em>-</em>two hours and fifty mins</li>
+                                                                <li><span>10:5</span><em>-</em>ten hours and five mins</li>
+                                                                <li><span>:35</span><em>-</em>thirty five mins</li>
+                                                                <li><span>3.5</span><em>-</em>three hours and thirty mins</li><li><span>4.75</span><em>-</em>four hours and forty five mins</li><li><span>.5</span><em>-</em>thirty mins</li>
+                                                                    <li><span>7</span><em>-</em>seven hours</li></ul>" data-placement="right" data-toggle="popover" data-html="true" data-popover="true" data-original-title="" title=""></i>
+                                                                </div>
+                                                               
+                                                                <div id="timelog_start_end_time" class="hrsDts DN">
+                                                                    <div class="input-group bootstrap-timepicker timepicker">
+                                                                        <input type="text" id="timelog_fromtime" class="form-control"><span class="input-group-addon">
+                                                                            <div class="IC-clock gry CP"></div>
+                                                                        </span>
+                                                                    </div><span class="hyphen">-</span>
+                                                                    <div class="input-group bootstrap-timepicker timepicker">
+                                                                        <input type="text" id="timelog_totime" class="form-control"><span class="input-group-addon">
+                                                                            <div class="IC-clock gry CP"></div>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        <div class="zp-label  " isallowed="false">
+                                                            <label class="zplt-label">Billable Status</label>
+                                                            <div folabel="Billable_Status" fieldtype="5" id="zp_field_outer_467269000000064695" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                                <div class="select2-container" id="s2id_zp_field_467269000000064695">
+                                                                    <a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>Billable</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>
+                                                                    <input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen19">
+                                                                </div><select id="zp_field_467269000000064695" fieldtype="5" name="Billable_Status" class="select2-offscreen" tabindex="-1">
+                                                                    <option value="0" selected="">Billable</option>
+                                                                    <option value="1">Non-Billable</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="zp-label  " isallowed="false">
+                                                            <label class="zplt-label">Attachment</label>
+                                                            <div folabel="Attachment" fieldtype="18" id="zp_field_outer_467269000000064697" class="zprt-label" relateddata="false" isfielddependent="false">
+                                                                <div class="ZPUFile">
+                                                                    <div class="" id="beforeUpload">
+                                                                        <span>Upload from </span>
+                                                                        <div class="ZPCfile">
+                                                                            <span>Desktop</span>
+                                                                            <div class="ZPFfile OH">
+                                                                                <input type="file" onchange="ZPForm.Field.closeconfmsg(true)" class=" form-control" fieldtype="18" id="zp_field_467269000000064697" value="" name="Attachment">
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="dgry ML2 MR2">or</span>
+                                                                        <a onclick="Files.showCloudPickerModal('https://gadgets.zoho.com/CloudPicker?sources=zohodocs,gdrive,dropbox,skydrive,box,evernote&amp;purpose=mailView&amp;zservice=zpeople&amp;attachLimit=1&amp;frameorigin=https://people.zoho.com&amp;serURL=https://people.zoho.com/cloudPicker.zp%3FfcId%3D467269000000064697', 'Forms')">Cloud</a>
+                                                                    </div><div class="zpmulti-fl DN" id="afterUpload"></div>
+                                                                </div><div class="ZPActIcn"><a class="IC-info" data-toggle="popover" data-content="Max. size is 5 MB" data-placement="right" data-trigger="hover" data-original-title="" title=""></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6"></div>
+                                                </div>
+                                                <input type="hidden" value="P_Department" name="zp_tableName">
+                                                <input type="hidden" value="676969451" name="loginUserZUID">
+                                                <input type="hidden" value="c91197d1034b143eef4fddd1196e3cd3782d3fa73653e0576582d1dd91736e58fc06fdda92839719f663de179ee60bfe8b2df1906584fd1779e2abec0dcb155a" name="conreqcsr">
+                                                <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer text-left  ">
+                                            <button type="button" id="zp_forms_add_btn" onclick="ZPForm.IS_SUBMITNEW=false;ZPForm.Record.validateAndSubmit();" class="btn btn-primary">Submit</button>
+                                            <button type="button" id="zp_form_cancel_close_btn" class="btn btn-default" onclick="frm.showForm('ds')">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
+                            </div>
+                            <!-- end add time logs -->
                         </div>
                     </div>
                 </div>
@@ -913,6 +1056,7 @@ Version: v1
             $('#clickmewow').click(function () {
                 $('#radio1003').attr('checked', 'checked');
             });
+
         })
     </script>
 
