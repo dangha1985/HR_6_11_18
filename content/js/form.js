@@ -28,7 +28,8 @@ Manager.prototype = {
     //ẩn hiện form ở trang home
     fnHideShow: function (divHide, divShow) {
         $('#'+ divHide).hide();
-        $('#'+ divShow).show();
+        $('#' + divShow).show();
+        $('#div_hide').show();
     },
     //ẩn hiện form add, edit cua view
     fnFormView: function (mode) {
@@ -41,14 +42,15 @@ Manager.prototype = {
     },
     //close form
     fnClose:function(divhide){
-        $('#'+ divhide).hide();
+        $('#' + divhide).hide();
+        $('#div_hide').hide();
     },
     //ẩn hiện filter
     filterPopup: function () {
-            $("#filter").slideToggle("slow");
+            $("#filter").slideToggle("fast");
     },
     fnSlideToggle:function(id){
-        $('#' + id).slideToggle("slow");
+        $('#' + id).slideToggle("fast");
     },
     //checkbox filter
     fnCheckFilter: function () {

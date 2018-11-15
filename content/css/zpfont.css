@@ -2940,8 +2940,8 @@
         
         @font-face {
           font-family: 'zpclr-font';
-          src: url('../fonts/zpclr-font.eot?dan9we');
-          src: url('../fonts/zpclr-font.eot?dan9we#iefix') format('embedded-opentype'), url('../fonts/zpclr-font.ttf?dan9we') format('truetype'), url('../fonts/zpclr-font.woff?dan9we') format('woff'), url('../fonts/zpclr-font.svg?dan9we#zpclr-font') format('svg');
+          src: url('../fonts/zpclr-font.eot');
+          src: url('../fonts/zpclr-font.eot') format('embedded-opentype'), url('../fonts/zpclr-font.ttf') format('truetype'), url('../fonts/zpclr-font.woff') format('woff'), url('../fonts/zpclr-font.svg') format('svg');
           font-weight: normal;
           font-style: normal;
         }
