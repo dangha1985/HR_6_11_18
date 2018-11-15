@@ -51,7 +51,7 @@ Version: v1
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="/Manages/Index.html">
-                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
+                    <img src="/content/images/logo.png" alt="logo" class="logo-default" />
                 </a>
                 <div class="menu-toggler sidebar-toggler">
                     <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -68,18 +68,9 @@ Version: v1
                 <!-- BEGIN HEADER SEARCH BOX -->
                 <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
                 <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                    <!--<div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit">
-                                <i class="icon-magnifier"></i>
-                            </a>
-                        </span>
-                    </div>-->
-
                     <div class="ZPSpanel" id="zpeople_search">
                         <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
                             <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
                         </div>
                     </div>
@@ -88,29 +79,107 @@ Version: v1
                 <!-- BEGIN TOP NAVIGATION MENU -->
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
-                        <!-- BEGIN NOTIFICATION DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                        <!-- END NOTIFICATION DROPDOWN -->
-                        <!-- BEGIN INBOX DROPDOWN -->
-                        <!-- END INBOX DROPDOWN -->
-                        <!-- BEGIN TODO DROPDOWN -->
-                        <!-- END TODO DROPDOWN -->
-                        <!-- BEGIN USER LOGIN DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="" />
-                                <span class="username username-hide-on-mobile"> Admin </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-
-                        </li>
-                        <!-- END USER LOGIN DROPDOWN -->
-
+                        <div class="ZPPimg dropdown">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user')">
+                        </div>
+                        <ul class="nav top-nav ZPaddPopOver">
+                            <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
+                            <li><a class="u-link" target="_blank" href="">Subscription</a> </li>
+                            <li id="zp_quickadd_form_outer">
+                                <a data-toggle="dropdown">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Quick Add"> <i class="IC-add-r"></i> </span>
+                                </a>
+                                <div class="dropdown-menu ZPplusBox  ZPCmn-Arrow top rt gray" id="zp_quickadd_form_container">
+                                    <div class="ZPTabVt">
+                                        <div class="lfttab" id="zp_quickadd_form_tabs"></div>
+                                        <div class="rhttabscrl">
+                                            <div class="tab-content PT20" id="zp_quickadd_forms">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown MR20" id="zp_feeds_notifications">
+                                <a class="dropdown-toggle" id="zp_ntfn_dropdown" data-toggle="modal">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Notifications" class="IC-bell-l S20"><sup class="ZPncount DNI" id="zp_feeds_ntfn_count"></sup></span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
+                <!-- user info -->
+                <div id="div_user" class="modal popRgtModel ZPAdpop PopXmModel in" role="dialog" aria-labelledby="modal" tabindex="-1" aria-hidden="false" style="display: none;">
+                    <div class="modal-dialog ZPRMpnl ZPPopProVw">
+                        <div class="modal-content">
+                            <div class="modal-body Nomdlhead" id="zp_modal_body">
+                                <div class="ZPUserAcc">
+                                    <i data-dismiss="modal" class="IC-cls-1px red S21 CP ZPUclse" onclick="frm.fnClose('div_user');"></i>
+                                    <div class="ZPprofdt">
+                                        <img src="/content/images/avatar1.jpg"><h4>1&nbsp;-&nbsp;trangnth</h4><span>
+                                            <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a>
+                                        </span><span>Trưởng phòng</span>
+                                        <div class="ZPMyacc">
+                                            <a class="btn btn-default btn-myAcc" target="_blank" href="">My Account</a><a href="/people/Logout.do" class="ZPSOut">Sign Out</a>
+                                        </div>
+                                    </div><div class="ZPMultiOrg">
+                                        <div id="orgListView">
+                                            <a>
+                                                <span id="ZPChangeOrg">Công ty cổ phần giải pháp KST<i class="IC-Setting-02"></i></span>
+                                            </a> <ul id="ZPChangeOrgUL" class="dropdown-menu" style="display: none;">
+                                                <li><a href="/kstcompany/hr" id="Công ty cổ phần giải pháp KST">Công ty cổ phần giải pháp KST</a></li>
+                                                <li class="manage">
+                                                    <span id="ZPManageOrg">
+                                                        <a href="/organizations" target="_blank">
+                                                            <i>Manage Organization</i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ZPSelthemes">
+                                        <h4>Themes</h4><div class="ZPdeftheme">
+                                            <span>Menu Color</span>
+                                            <div class="ZPThemeOpt"><div class="onoffswitch"><input name="onoffswitch" class="onoffswitch-checkbox" id="toggle_theme" type="checkbox" checked="checked"><label class="onoffswitch-label" for="toggle_theme"><span class="onoffswitch-inner"><i></i><i></i><i></i></span><span class="onoffswitch-switch"></span></label></div></div>
+                                        </div>
+                                        <div class="ZPdeftheme"><span>Theme Color</span><div class="ZPThemeOpt"><ul class="ZPClists" id="zp_selection_theme"><li class="ZPTC1 active" theme="0"><a><b class="IC-tick"></b></a></li><li class="ZPTC2" theme="1"></li><li class="ZPTC3" theme="2"></li><li class="ZPTC4" theme="3"></li></ul></div></div>
+                                        <div class="ZPdeftheme"><a href="javascript:;" id="zp_organizetab"></a></div>
+                                    </div><div class="ZSPlinks">
+                                        <ul>
+                                            <li> <i class="CR-getstart S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a onclick="GettingStarted.init()" id="gettingStartedbtn" href="#admin/gettingStarted" target="_blank">Getting Started</a> </li>
+                                            <li> <i class="CR-refer S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a href="https://www.zoho.com/people/referral.html" target="_blank">Refer a friend</a> </li>
+                                            <li>
+                                                <i class="CR-help S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i>
+                                                <a target="_blank" href="//www.zoho.com/people/help/adminguide/overview.html">Help</a>
+                                            </li>
+                                            <li> <i class="CR-support S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> <a href="javascript:;" onclick="ZPUtil.feedBackAlert('contactsupport');"> Contact Support</a> </li>
+                                            <li> <i class="CR-wnew S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i><a target="_blank" href="//www.zoho.com/people/whats-new.html">What's New</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><div class="modal-footer">
+                                <ul class="ZPMFlinks">
+                                    <li> <a target="_blank" href="//play.google.com/store/apps/details?id=com.zoho.people"> <i class="CR-android"><i class="path1"></i><i class="path2"></i></i></a></li>
+                                    <li>
+                                        <a target="_blank" href="//itunes.apple.com/in/app/zoho-people-smartest-way-to/id680525956?mt=8" ;="">
+                                            <i class="CR-apple">
+                                                <i class="path1"></i>
+                                                <i class="path2"></i>
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="//www.zoho.com/people/free-webinar.html">
+                                            <i class="CR-video"><i class="path1"></i><i class="path2"></i><i class="path3"></i><i class="path4"></i></i>
+                                        </a>
+                                    </li>
+                                    <li> <a target="_blank" href="//youtube.com/channel/UCvBTxIHDnBW8ip1cdB0x8zg"> <i class="CR-ytube"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end user info -->
                 <!-- END TOP NAVIGATION MENU -->
             </div>
             <!-- END PAGE TOP -->
@@ -279,8 +348,22 @@ Version: v1
                                 </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
+                                        <div onclick="ZPeople.Help.show();" class="IC-qus S21 gry FR ML20 CP" title="Help"></div>
                                         <div class="btn-group">
-                                            <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Location')">Add Location </a>
+                                            <a class="btn btn-primary btnPlus dvshwalert MR10" onclick="frm.showForm('Add','Location')">Add Location </a>
+                                        </div>
+                                        <div class="btn-group MR10  ">
+                                            <a data-toggle="dropdown" class="btn btn-default btn-small dropdown-toggle" id="sort_menu" aria-expanded="false">
+                                                <span class="IC-switch S12"></span>
+                                            </a>
+                                            <ul style="min-width:80px; " role="menu" class="dropdown-menu bullet pull-right " >
+                                                <li onclick="Organization.ManageOrgs.getSortListOfDeptDesgLoc(0,&quot;departments&quot;)">
+                                                    <a>Alphabetically</a>
+                                                </li>
+                                                <li onclick="Organization.ManageOrgs.getSortListOfDeptDesgLoc(2,&quot;departments&quot;)">
+                                                    <a>Date</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
                                             <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Location </a>-->

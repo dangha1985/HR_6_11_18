@@ -199,10 +199,16 @@ padding-right:10px;
 }
 
 .mainhead {
-    padding: 15px 25px;
+    padding: 15px 0px;
     background-color: #f9fafc;
     border-bottom: 1px solid #e3e3e3;
     height: 60px;
+}
+.btn:not(.btn-sm):not(.btn-lg) {
+    line-height: 1.44;
+}
+.btn-group>.dropdown-menu, .dropdown-toggle>.dropdown-menu, .dropdown>.dropdown-menu {
+    margin-top: 10px;
 }
 .recordCreate .selPerm {
     color: #30363e;
@@ -290,6 +296,7 @@ input, button, select, textarea {
 }
 .select{
     height: 30px;
+    width:100%;
     /*border: 0;
     background-color: #f9fafc;
     padding-left: 10px;
@@ -329,6 +336,18 @@ input, button, select, textarea {
     position: absolute;
     overflow-y: auto;
 }
+.step-nav li {
+    list-style-type: none;
+    color: #fff;
+    text-transform: uppercase;
+    width: 20%;
+    float: left;
+    position: relative;
+    text-align: center;
+    height: 48px;
+    line-height: 57px;
+}
+
 /*end content*/
 /* popup filter*/
 
@@ -392,6 +411,7 @@ ol, ul {
     position: relative;
     padding: 5px 15px 5px 15px;
     border-bottom: 1px solid #e3e3e3;
+    font-weight:600;
 }
 /*end popup filter*/
 .dash-body {
@@ -400,6 +420,183 @@ ol, ul {
 .Content {
     background-color: #fff;
 }
+.ML10 {
+    margin-left: 10px;
+}
+.DI {
+    display: inline;
+}
+.dvhelpover {
+    opacity: .3;
+    color: #000;
+}
+.dvRole .bgwhite {
+    padding: 12px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+
+.bgwhite {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 2px #f9fafc;
+    position: relative;
+}
+MT5 {
+    margin-top: 5px;
+}
+.MT20 {
+    margin-top: 20px;
+}
+.MT30 {
+    margin-top: 30px;
+}
+.MT35 {
+    margin-top: 35px;
+}
+.MR15 {
+    margin-right: 15px;
+}
+
+.ML15 {
+    margin-left: 15px;
+}
+.MB5 {
+    margin-bottom: 5px;
+}
+.PL15 {
+    padding-left: 15px!important;
+}
+.PT10 {
+    padding-top: 10px!important;
+}
+.deptsettings .bgwhite .spncount {
+    position: absolute;
+    right: 16px;
+    top: 9px;
+    background-color: #4b89dc;
+    border-radius: 10px;
+    padding: 0 5px;
+    font-size: 13px;
+    color: #fff;
+    height: 18px;
+    text-align: center;
+    min-width: 26px;
+    line-height: 19px;
+}
+
+.bgwhite .dvedit {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    z-index: 1;
+}
+.dvRole .bgwhite .btnpermission {
+    position: absolute;
+    left: 15px;
+    top: 26px;
+    font-size: 13px;
+    margin-top: 2px;
+    padding: 4px 8px;
+    opacity: .5;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dddddd;
+}
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav > li {
+    position: relative;
+    display: block;
+}
+.tabpills .nav-tabs>li.active>a {
+    border: 1px solid transparent;
+    border-bottom: 2px solid #4b89dc;
+    color: #4b89dc;
+}
+.tabpills .nav>li>a {
+    padding: 12px 3px;
+    margin-right: 25px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #999999;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.tabpills .nav a {
+    color: #30363e;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: 2px 2px 0 0;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 12px 15px;
+}
+.modal-right .PR0 {
+    padding-right: 0;
+}
+.modal-right .PL0 {
+    padding-left: 0;
+}
+
+.fade.in {
+    opacity: 1;
+}
+.panel-group {
+    margin-bottom: 14px;
+}
+.step-nav li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 48px;
+    display: block;
+    color: #fff;
+    background: #fff;
+    border-radius: 3px;
+    margin: 0 auto 5px;
+    border: 1px solid #eae9e9;
+    border-radius: 50%;
+    height: 48px;
+    z-index: 1;
+    position: relative;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.step-nav li:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    position: absolute;
+    left: -50%;
+    top: 26px;
+    z-index: 0;
+}
+
 /*zp*/
 .PopSsModel.modal.popRgtModel.in, .PopSgModel.modal.popRgtModel.in {
     width: auto;
@@ -440,29 +637,7 @@ ol, ul {
     font-family: latobold;
 }
 
-.select1 {
-    position: absolute;
-    left: 0;
-    top: 0px;
-    z-index: 9998;
-    background-color: #fff;
-    width: 100%;
-    height: 30px;
-    border: unset;
-    border-bottom: 1px solid #e3e3e3;
-}
 
-.select2 {
-    position: absolute;
-    left: 0;
-    top: 14px;
-    z-index: 9998;
-    background-color: #fff;
-    width: 100%;
-    height: 30px;
-    border: unset;
-    border-bottom: 1px solid #e3e3e3;
-}
 
 modal-header .close {
     margin-top: -2px;

@@ -51,7 +51,7 @@ Version: v1
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="/Manages/Index.html">
-                    <img src="/content/img/logo.png" alt="logo" class="logo-default" />
+                    <img src="/content/images/logo.png" alt="logo" class="logo-default" />
                 </a>
                 <div class="menu-toggler sidebar-toggler">
                     <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -68,18 +68,9 @@ Version: v1
                 <!-- BEGIN HEADER SEARCH BOX -->
                 <!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
                 <form class="search-form search-form-expanded" action="page_general_search_3.html" method="GET">
-                    <!--<div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search Employee.........." name="query">
-                        <span class="input-group-btn">
-                            <a href="javascript:;" class="btn submit">
-                                <i class="icon-magnifier"></i>
-                            </a>
-                        </span>
-                    </div>-->
-
                     <div class="ZPSpanel" id="zpeople_search">
                         <div class="ZPTbox">
-                            <span class="IC-lens S8" id="zpeople_search_pico"></span> <!-- <i class="IC-cls ZPSclse" id="zp_search_close"></i> -->
+                            <span class="IC-lens S8" id="zpeople_search_pico"></span>  <i class="IC-cls ZPSclse" id="zp_search_close"></i>
                             <input type="search" class="ZPselect" id="zpeople_search_box" placeholder="Search Employee" value="" name="Search">
                         </div>
                     </div>
@@ -88,29 +79,107 @@ Version: v1
                 <!-- BEGIN TOP NAVIGATION MENU -->
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
-                        <!-- BEGIN NOTIFICATION DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class below "dropdown-extended" to change the dropdown styte -->
-                        <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
-                        <!-- END NOTIFICATION DROPDOWN -->
-                        <!-- BEGIN INBOX DROPDOWN -->
-                        <!-- END INBOX DROPDOWN -->
-                        <!-- BEGIN TODO DROPDOWN -->
-                        <!-- END TODO DROPDOWN -->
-                        <!-- BEGIN USER LOGIN DROPDOWN -->
-                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-
-                        <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="" />
-                                <span class="username username-hide-on-mobile"> Admin </span>
-                                <i class="fa fa-angle-down"></i>
-                            </a>
-
-                        </li>
-                        <!-- END USER LOGIN DROPDOWN -->
-
+                        <div class="ZPPimg dropdown">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user')">
+                        </div>
+                        <ul class="nav top-nav ZPaddPopOver">
+                            <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
+                            <li><a class="u-link" target="_blank" href="">Subscription</a> </li>
+                            <li id="zp_quickadd_form_outer">
+                                <a data-toggle="dropdown">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Quick Add"> <i class="IC-add-r"></i> </span>
+                                </a>
+                                <div class="dropdown-menu ZPplusBox  ZPCmn-Arrow top rt gray" id="zp_quickadd_form_container">
+                                    <div class="ZPTabVt">
+                                        <div class="lfttab" id="zp_quickadd_form_tabs"></div>
+                                        <div class="rhttabscrl">
+                                            <div class="tab-content PT20" id="zp_quickadd_forms">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown MR20" id="zp_feeds_notifications">
+                                <a class="dropdown-toggle" id="zp_ntfn_dropdown" data-toggle="modal">
+                                    <span data-toggle="tooltip" data-placement="bottom" title="Notifications" class="IC-bell-l S20"><sup class="ZPncount DNI" id="zp_feeds_ntfn_count"></sup></span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
+                <!-- user info -->
+                <div id="div_user" class="modal popRgtModel ZPAdpop PopXmModel in" role="dialog" aria-labelledby="modal" tabindex="-1" aria-hidden="false" style="display: none;">
+                    <div class="modal-dialog ZPRMpnl ZPPopProVw">
+                        <div class="modal-content">
+                            <div class="modal-body Nomdlhead" id="zp_modal_body">
+                                <div class="ZPUserAcc">
+                                    <i data-dismiss="modal" class="IC-cls-1px red S21 CP ZPUclse" onclick="frm.fnClose('div_user');"></i>
+                                    <div class="ZPprofdt">
+                                        <img src="/content/images/avatar1.jpg"><h4>1&nbsp;-&nbsp;trangnth</h4><span>
+                                            <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a>
+                                        </span><span>Trưởng phòng</span>
+                                        <div class="ZPMyacc">
+                                            <a class="btn btn-default btn-myAcc" target="_blank" href="">My Account</a><a href="/people/Logout.do" class="ZPSOut">Sign Out</a>
+                                        </div>
+                                    </div><div class="ZPMultiOrg">
+                                        <div id="orgListView">
+                                            <a>
+                                                <span id="ZPChangeOrg">Công ty cổ phần giải pháp KST<i class="IC-Setting-02"></i></span>
+                                            </a> <ul id="ZPChangeOrgUL" class="dropdown-menu" style="display: none;">
+                                                <li><a href="/kstcompany/hr" id="Công ty cổ phần giải pháp KST">Công ty cổ phần giải pháp KST</a></li>
+                                                <li class="manage">
+                                                    <span id="ZPManageOrg">
+                                                        <a href="/organizations" target="_blank">
+                                                            <i>Manage Organization</i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ZPSelthemes">
+                                        <h4>Themes</h4><div class="ZPdeftheme">
+                                            <span>Menu Color</span>
+                                            <div class="ZPThemeOpt"><div class="onoffswitch"><input name="onoffswitch" class="onoffswitch-checkbox" id="toggle_theme" type="checkbox" checked="checked"><label class="onoffswitch-label" for="toggle_theme"><span class="onoffswitch-inner"><i></i><i></i><i></i></span><span class="onoffswitch-switch"></span></label></div></div>
+                                        </div>
+                                        <div class="ZPdeftheme"><span>Theme Color</span><div class="ZPThemeOpt"><ul class="ZPClists" id="zp_selection_theme"><li class="ZPTC1 active" theme="0"><a><b class="IC-tick"></b></a></li><li class="ZPTC2" theme="1"></li><li class="ZPTC3" theme="2"></li><li class="ZPTC4" theme="3"></li></ul></div></div>
+                                        <div class="ZPdeftheme"><a href="javascript:;" id="zp_organizetab"></a></div>
+                                    </div><div class="ZSPlinks">
+                                        <ul>
+                                            <li> <i class="CR-getstart S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a onclick="GettingStarted.init()" id="gettingStartedbtn" href="#admin/gettingStarted" target="_blank">Getting Started</a> </li>
+                                            <li> <i class="CR-refer S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a href="https://www.zoho.com/people/referral.html" target="_blank">Refer a friend</a> </li>
+                                            <li>
+                                                <i class="CR-help S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i>
+                                                <a target="_blank" href="//www.zoho.com/people/help/adminguide/overview.html">Help</a>
+                                            </li>
+                                            <li> <i class="CR-support S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> <a href="javascript:;" onclick="ZPUtil.feedBackAlert('contactsupport');"> Contact Support</a> </li>
+                                            <li> <i class="CR-wnew S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i><a target="_blank" href="//www.zoho.com/people/whats-new.html">What's New</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><div class="modal-footer">
+                                <ul class="ZPMFlinks">
+                                    <li> <a target="_blank" href="//play.google.com/store/apps/details?id=com.zoho.people"> <i class="CR-android"><i class="path1"></i><i class="path2"></i></i></a></li>
+                                    <li>
+                                        <a target="_blank" href="//itunes.apple.com/in/app/zoho-people-smartest-way-to/id680525956?mt=8" ;="">
+                                            <i class="CR-apple">
+                                                <i class="path1"></i>
+                                                <i class="path2"></i>
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="//www.zoho.com/people/free-webinar.html">
+                                            <i class="CR-video"><i class="path1"></i><i class="path2"></i><i class="path3"></i><i class="path4"></i></i>
+                                        </a>
+                                    </li>
+                                    <li> <a target="_blank" href="//youtube.com/channel/UCvBTxIHDnBW8ip1cdB0x8zg"> <i class="CR-ytube"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end user info -->
                 <!-- END TOP NAVIGATION MENU -->
             </div>
             <!-- END PAGE TOP -->
@@ -261,19 +330,22 @@ Version: v1
 
                 <div class="ZPcontwrap dvToppos" id="admin-organization-Role">
                     <!--Danh sách-->
-                    <div class="deptsettings divDS " id="deptParent" >
+                    <div class="deptsettings divDS dvRole" id="deptParent">
                         <div class="mainhead">
                             <div class="row">
-                                <div class="col-md-6"><div class="col-md-12 PT5">Role View</div></div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 PT5">Create different roles and assign permissions to each role to access organizational data.</div>
+                                </div>
                                 <div class="col-md-6 text-right">
                                     <div class="col-md-12" id="headeOptns">
+                                        <div onclick="ZPeople.Help.show();" class="IC-qus S21 gry FR ML20 CP" title="Help"></div>
                                         <div class="btn-group">
                                             <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="frm.showForm('Add','Role')">Add Role </a>
                                         </div>
-                                        <div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
-                                            <!--  <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Role </a>-->
+                                        <!--<div class="btn-group FR dropdown MT7 PR ZPCusDrs impexp ZPPdrop cust-dm">
+                                              <a class="btn btn-primary btnPlus dvshwalert MR5" onclick="User.getRecordPage(&quot;467269000000035681&quot;,&quot;&quot;,false,&quot;ADD&quot;,false,&quot;gridview&quot;)">Add Role </a>
                                             <i data-toggle="modal" class="IC-filter S18 CP FL ML20 gry" id="zp_views_search_filter" onclick="frm.filterPopup();" title="Filter"></i>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -291,94 +363,160 @@ Version: v1
                                         <input type="text" class="form-control" id="txtRoleName_fil" value="" name="nickname">
                                     </div>
                                 </div>
-                                
+
                                 <div class="filter-footer">
                                     <button class="btn btn-primary" onclick="ZPView.Search.getRecordsBySearchParam();">Apply</button>
                                     <a class="btn btn-link" onclick="ZPView.Search.resetSearch();">Reset</a>
                                 </div>
                             </div>
                         </div>
-                     
-                        <!--end tìm kiếm-->
-                        <div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
 
-                            <div id="dvListview" class="dvListview " style="display: block;">
-                                <!--Tạo bảng-->
-                                <table id="listOf_Roles" class="table table-hover table-responsive tbldepart">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center" width="2%"></th>
-                                            <th width="25%"><span class="CP ZPbold">Role Name</span></th>
-                                            <th><span class="ZPbold">Description</span></th>
-                                            
-                                            <th width="12%"><span class="ZPbold">Actions</span></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr recpkid="467269000000136133" formid="467269000000035681">
-                                            <td class="text-center"></td>
-                                            <td>
-                                                <div>Admin</div>
-                                            </td>
-                                            
-                                            <td><div></div></td>
-                                            
-                                            <td>
-                                                <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Role')"></a>
-                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                        <!--end tìm kiếm-->
+                        <div class="ZPTscrlcont">
+                            <div class="clearfix MT30 ML15 MR15" id="listOfRoles">
+                                <div class="col-md-3" id="listRoleId-467269000000035631" name="roleBlock" roleid="467269000000035631" count="1">
+                                    <div class="bgwhite">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="MB5 ZPbold">
+                                                    <span class="depthead" name="rolename">Admin</span>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr recpkid="467269000000136213" formid="467269000000035681">
-                                            <td class="text-center"></td>
-                                            <td>
-                                                <div>Team member</div>
-                                            </td>
-                                            <td><div>Thành viên trong đội</div></td>
-                                            <td><div class="dvlist-action ">
-												<a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
-                                        </tr>
-                                        <tr >
-                                            <td class="text-center"></td>
-                                            <td><div>Director</div></td>
-                                            <td><div>Giám đốc</div></td>
-                                            <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-												<a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"></td>
-                                            <td><div>Manager</div></td>
-                                            <td><div>Quản lý</div></td>
-                                            <td>
-                                                <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                                <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035631','Admin','1',this)">
+                                                    <label class="lblcount">1 <span></span></label>
+                                                </a><span>All locations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" id="listRoleId-467269000000035643" name="roleBlock" roleid="467269000000035643" count="0">
+                                    <div class="bgwhite">
+                                        <div class="row">
+                                            <div class="dvedit">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                                        <span class="IC-more S16"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu bullet pull-right droprht" role="menu"><li data-toggle="modal" data-target="#editRolePopUp"><a name="edit_role">Edit</a></li><li><a name="delete_role">Delete</a></li></ul>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center"></td>
-                                            <td><div>Team Incharge</div></td>
-                                            <td><div>Đội phụ trách</div></td>
-                                            <td>
-                                                <div class="dvlist-action ">
-                                                    <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                                    <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                            </div><div class="col-md-12">
+                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Director</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035643','Director','0',this)"><label class="lblcount">0 <span></span></label></a>
+                                                <a value="467269000000035643" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" id="listRoleId-467269000000035639" name="roleBlock" roleid="467269000000035639" count="3">
+                                    <div class="bgwhite">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Manager</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035639','Manager','3',this)">
+                                                    <label class="lblcount">3 <span></span></label>
+                                                </a><a value="467269000000035639" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" id="listRoleId-467269000000035647" name="roleBlock" roleid="467269000000035647" count="0">
+                                    <div class="bgwhite">
+                                        <div class="row">
+                                            <div class="dvedit">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="IC-more S16"></span></a>
+                                                    <ul class="dropdown-menu bullet pull-right droprht" role="menu"><li data-toggle="modal" data-target="#editRolePopUp"><a name="edit_role">Edit</a></li><li><a name="delete_role">Delete</a></li></ul>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                </table>
-                                <!--end Tạo bảng-->
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Team Incharge</span></div>
+                                                <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035647','Team%20Incharge','0',this)"><label class="lblcount">0 <span></span></label></a>
+                                                <a value="467269000000035647" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3" id="listRoleId-467269000000035635" name="roleBlock" roleid="467269000000035635" count="6">
+                                    <div class="bgwhite"><div class="row"><div class="col-md-12"><div class="MB5 ZPbold"><span class="depthead" name="rolename">Team member</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035635','Team%20member','6',this)"><label class="lblcount">6 <span></span></label></a><a value="467269000000035635" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a></div></div></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
-                            <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>
-                          <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
+                        <!--<div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
+
+                            <div id="dvListview" class="dvListview " style="display: block;">-->
+                        <!--Tạo bảng-->
+                        <!--<table id="listOf_Roles" class="table table-hover table-responsive tbldepart">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" width="2%"></th>
+                                    <th width="25%"><span class="CP ZPbold">Role Name</span></th>
+                                    <th><span class="ZPbold">Description</span></th>
+
+                                    <th width="12%"><span class="ZPbold">Actions</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr recpkid="467269000000136133" formid="467269000000035681">
+                                    <td class="text-center"></td>
+                                    <td>
+                                        <div>Admin</div>
+                                    </td>
+
+                                    <td><div></div></td>
+
+                                    <td>
+                                        <div class="dvlist-action ">
+                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Role')"></a>
+                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr recpkid="467269000000136213" formid="467269000000035681">
+                                    <td class="text-center"></td>
+                                    <td>
+                                        <div>Team member</div>
+                                    </td>
+                                    <td><div>Thành viên trong đội</div></td>
+                                    <td><div class="dvlist-action ">
+                                        <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                        <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
+                                </tr>
+                                <tr >
+                                    <td class="text-center"></td>
+                                    <td><div>Director</div></td>
+                                    <td><div>Giám đốc</div></td>
+                                    <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                        <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"></td>
+                                    <td><div>Manager</div></td>
+                                    <td><div>Quản lý</div></td>
+                                    <td>
+                                        <div class="dvlist-action ">
+                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"></td>
+                                    <td><div>Team Incharge</div></td>
+                                    <td><div>Đội phụ trách</div></td>
+                                    <td>
+                                        <div class="dvlist-action ">
+                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
+                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>-->
+                        <!--end Tạo bảng-->
+                        <!--</div>
                         </div>
+                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
+                            <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>-->
+                        <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
+                        <!--</div>-->
                     </div>
                     <!--end Danh sách-->
                     <!--thêm| sửa bản ghi-->
@@ -393,6 +531,7 @@ Version: v1
 
                                     <a class="IC-cls close" onclick="ZPForm.Field.closeconfmsg()"></a>
                                 </div>
+
                                 <div class="modal-body P0I" id="zp_form_outer_container">
                                     <form class="zpcont-dt zpnew-recedit ZPSCol " id="zp_form_container" action="/addUpdateRecord.zp" target="zp_form_response" method="post" enctype="multipart/form-data">
                                         <h3 issec="true" id="467269000000036007" class="zpcont-title">
@@ -406,21 +545,55 @@ Version: v1
                                                         <input multi="false" id="txtRoleName" value="" type="text" name="Role" class="form-control zptxt-edit">
                                                     </div>
                                                 </div>
-                                                <div class="zp-label  " isallowed="false">
+                                                <!--<div class="zp-label  " isallowed="false">
                                                     <label class="zplt-label">Description</label>
                                                     <div folabel="MailAlias" id="" class="zprt-label">
                                                         <textarea rows="3" id="txtDescription" value="" type="text" name="Description" class="form-control zptxtarea-edit"></textarea>
                                                     </div>
+                                                </div>-->
+                                                <div class="zp-label  " isallowed="false">
+                                                    <label class="zplt-label">Clone role</label>
+                                                    <div folabel="Role" class="zprt-label">
+                                                        <select class="select1" name="Employee_type" onchange="ZPForm.Field.closeconfmsg(true,this)" tabindex="-1">
+                                                            <option value="-Select-" selected="selected">Select</option>
+                                                            <option value="Permanent">Admin</option>
+                                                            <option value="On Contract">Team member</option>
+                                                            <option value="Temporary">Manager</option>
+                                                            <option value="Trainee">Director</option>
+                                                            <option value="Trainee">Team Incharge</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="zp-label">
+                                                    <div class="inlCbox PB15">
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" id="roleType" name="chk"><span>Location Admin</span>
+                                                        </label>
+                                                        <div class="DI info ML10 dvhelpover" data-toggle="popover" data-trigger="hover" data-content="This role will be admin for all modules data alone except Performance module." data-original-title="" title="">
+                                                            <span class="IC-info S15"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="zp-label  " isallowed="false">
+                                                    <label class="zplt-label">Locations to tag</label>
+                                                    <div folabel="Role" class="zprt-label">
+                                                        <select class="select1" id="" fcid="" fieldtype="25" name="Source_of_hire" onchange="" tabindex="-1">
+                                                            <option value="-Select-" selected="selected">Select</option>
+                                                            <option value="Direct">Hà Nội</option>
+                                                            <option value="Referral">Hồ Chí Minh</option>
+                                                            <option value="Web">Hòa Bình</option>
+                                                            <option value="Newspaper">Thái Bình</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
 
-                                               
                                             </div>
                                             <div class="col-sm-6"></div>
                                         </div>
-                                        <!--<input type="hidden" value="P_Department" name="zp_tableName">
+                                        <input type="hidden" value="P_Department" name="zp_tableName">
                                         <input type="hidden" value="676969451" name="loginUserZUID">
                                         <input type="hidden" value="c91197d1034b143eef4fddd1196e3cd3782d3fa73653e0576582d1dd91736e58fc06fdda92839719f663de179ee60bfe8b2df1906584fd1779e2abec0dcb155a" name="conreqcsr">
-                                        <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">-->
+                                        <input type="hidden" value="467269000000035681" name="zp_formId"><input type="hidden" value="addRecord" name="zp_mode">
                                     </form>
                                 </div>
                                 <div class="modal-footer text-left divButtomAdd DN">
@@ -437,6 +610,170 @@ Version: v1
                         <iframe name="zp_form_response" frameborder="0" style="height: 0px;width: 0px; display: none;"></iframe>
                     </div>
                     <!--end thêm| sửa bản ghi-->
+                    <!-- config permission -->
+                    <div id="ZP-PermissionsSlider" class="modal PopMdModel popRgtModel modal-right in" style="display: block;" aria-hidden="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <a data-dismiss="modal" class="close"><span class="IC-cls-1px red"></span></a>
+                                    <h6 class="modal-title">Permissions</h6>
+                                </div><div class="modal-body">
+                                    <div class="ctable" id="zp_page_loading" style="display: none;">
+                                        <div class="ctcell">
+                                            <div class="loader-inner line-scale">
+                                                <div></div>
+                                                <div></div><div></div><div></div><div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dvformperm">
+                                        <div class="rowpos clearfix">
+                                            <div class="col-md-11">
+                                                <div class="col-md-2">
+                                                    <label class="control-label MT5">Form</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                        <select class="select " aria-hidden="false" tabindex="-1">
+                                                            <option value="467269000000035681" tabname="P_Department">Department</option>
+                                                            <option value="467269000000035683" tabname="P_Designation">Designation</option>
+                                                            <option value="467269000000035679" tabname="P_Employee">Employee</option>
+                                                            <option value="467269000000067015" tabname="P_EmployeeSalary">Employee Salary</option>
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-2">
+                                                <label class="control-label MT5">Role</label></div>
+                                                <div class="col-md-4">
+                                                    <select class="select" >
+                                                        <option value="467269000000035643" isprofile="false">Director</option>
+                                                        <option value="467269000000035639" isprofile="false">Manager</option>
+                                                        <option value="467269000000152003" isprofile="false">role1</option>
+                                                        <option value="467269000000155007" isprofile="true">role2</option>
+                                                        <option value="467269000000035647" isprofile="false">Team Incharge</option>
+                                                        <option value="467269000000035635" isprofile="false">Team member</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="tabpills MT5">
+                                            <ul class="nav nav-tabs PL15" role="tablist" id="dvPermission">
+                                                <li role="presentation" class="active PT10" id="Recordperm">
+                                                <a href="#dvRecordperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Recordperm')" aria-expanded="true">Record Permissions</a></li>
+                                                <li role="presentation" id="Fieldperm" class="PT10">
+                                                    <a href="#dvFieldperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Fieldperm')" aria-expanded="false">Field Permissions</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content col-md-12  PL0 PR0">
+                                            <div role="tabpanel" class="tab-pane fade active in" id="dvRecordperm">
+                                                <ul class="panel-group chgpanel clearfix">
+                                                    <li>
+                                                        <div class="clearfix MT35">
+                                                            <div class="col-md-2"><div class="subhead MT15">View</div></div><div class="col-md-8">
+                                                                <div class="clearfix">
+                                                                    <ul class="step-nav icons" name="viewPermissions">
+                                                                        <li class="0" istooltip="true" title="" data-original-title="No data">
+                                                                            <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                        </li>
+                                                                        <li class="1" istooltip="true" title="" data-original-title="My Data">
+                                                                            <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                        </li>
+                                                                        <li class="4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                            <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                        </li>
+                                                                        <li class="2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                            <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
+                                                                        </li>
+                                                                        <li class="3 active" istooltip="true" title="" data-original-title="All Data">
+                                                                            <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="clearfix MT35">
+                                                            <div class="col-md-2"><div class="subhead MT15">Edit</div></div><div class="col-md-8">
+                                                                <div class="clearfix">
+                                                                    <ul class="step-nav icons" name="editPermissions">
+                                                                        <li class="0" istooltip="true" title="" data-original-title="No data">
+                                                                            <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class="1 active" istooltip="true" title="" data-original-title="My Data">
+                                                                            <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                            <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                            <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 3" istooltip="true" title="" data-original-title="All Data">
+                                                                            <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="clearfix MT35">
+                                                            <div class="col-md-2"><div class="subhead MT15">Add</div></div><div class="col-md-8">
+                                                                <div class="clearfix">
+                                                                    <ul class="step-nav icons" name="addPermissions">
+                                                                        <li class="0 active" istooltip="true" title="" data-original-title="No data">
+                                                                            <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class="1" istooltip="true" title="" data-original-title="My Data">
+                                                                            <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                            <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                            <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 3" istooltip="true" title="" data-original-title="All Data">
+                                                                            <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="clearfix MT35">
+                                                            <div class="col-md-2"><div class="subhead MT15">Delete</div></div><div class="col-md-8">
+                                                                <div class="clearfix">
+                                                                    <ul class="step-nav icons" name="deletePermissions">
+                                                                        <li class="0 active" istooltip="true" title="" data-original-title="No data">
+                                                                            <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 1" istooltip="true" title="" data-original-title="My Data">
+                                                                            <a class="IC-per-my" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)" value="1"></a>
+                                                                        </li>
+                                                                        <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                            <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                            <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                        <li class="3" istooltip="true" title="" data-original-title="All Data">
+                                                                            <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div><div role="tabpanel" class="tab-pane fade" id="dvFieldperm"><ul class="panel-group"><li><div class="dvformperm"><div class="dvfieldsection clearfix"><div class="dvfieldrht"><div class="clearfix" id="fieldsList"></div></div></div></div></li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><div class="modal-footer"><a data-dismiss="modal" class="btn btn-primary">Close</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ennd config permission -->
                 </div>
 
             </div>
