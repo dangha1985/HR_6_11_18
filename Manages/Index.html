@@ -79,7 +79,7 @@ Version: v1
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
                         <div class="ZPPimg dropdown">
-                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user')">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user','show')">
                         </div>
                         <ul class="nav top-nav ZPaddPopOver">
                             <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
@@ -107,7 +107,7 @@ Version: v1
                     </ul>
                 </div>
                 <!-- user info -->
-                <div id="div_user" class="modal popRgtModel ZPAdpop PopXmModel in" role="dialog" aria-labelledby="modal" tabindex="-1" aria-hidden="false" style="display: none;z-index:1000000">
+                <div id="div_user" class="modal popRgtModel ZPAdpop PopXmModel in" role="dialog" aria-labelledby="modal" tabindex="-1" aria-hidden="false" style="display: none; z-index:100">
                     <div class="modal-dialog ZPRMpnl ZPPopProVw">
                         <div class="modal-content">
                             <div class="modal-body Nomdlhead" id="zp_modal_body">
@@ -344,9 +344,9 @@ Version: v1
                                                 </i>
                                             </a>
                                         </li>
-                                        <li id="zp_d_timelog" data-toggle="tooltip" data-placement="bottom" title="Add Time Logs" onclick="frm.fnHideShow('divMain','divTimeLog')">
+                                        <li id="zp_d_timelog" data-toggle="tooltip" data-placement="bottom" title="Add Time Logs" onclick="frm.fnHideShow('divMain','divTimeLog','show')">
                                             <a href="javascript:;">
-                                                <i class="CR-timetracker">
+                                                <i class="CR-timetracker" style="display:inline-flex;">
                                                     <i class="path1"></i>
                                                     <i class="path2"></i>
                                                     <i class="path3"></i>
@@ -355,9 +355,9 @@ Version: v1
                                                 </i>Time Logs
                                             </a>
                                         </li>
-                                        <li id="zp_d_addleave" data-toggle="tooltip" data-placement="bottom" title="Apply Leave" onclick="frm.fnHideShow('divMain','divLeave')">
-                                            <a href="javascript:;" id="apply_leave">
-                                                <i class="CR-leave">
+                                        <li id="zp_d_addleave" data-toggle="tooltip" data-placement="bottom" title="Apply Leave" onclick="frm.fnHideShow('divMain', 'divLeave', 'show')">
+                                            <a href="javascript:;" id="apply_leave" >
+                                                <i class="CR-leave" style="display:inline-flex;">
                                                     <i class="path1"></i>
                                                     <i class="path2"></i>
                                                     <i class="path3"></i>
@@ -817,7 +817,7 @@ Version: v1
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content" id="headerParent">
                                         <div class="modal-header" id="zp_form_header">
-                                            <div class="zp-back" onclick="frm.fnHideShow('divLeave','divMain')"><i class="IC-ar-lft"></i></div>
+                                            <div class="zp-back" onclick="frm.fnHideShow('divLeave','divMain','hide')"><i class="IC-ar-lft"></i></div>
                                             <div class="ssp-profmin" id="zp_form_headerdisp">
                                                 <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Leave</span>
                                             </div>
@@ -909,7 +909,7 @@ Version: v1
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content" id="headerParent">
                                         <div class="modal-header" id="zp_form_header">
-                                            <div class="zp-back" onclick="frm.fnHideShow('divTimeLog','divMain')"><i class="IC-ar-lft"></i></div>
+                                            <div class="zp-back" onclick="frm.fnHideShow('divTimeLog','divMain','hide')"><i class="IC-ar-lft"></i></div>
                                             <div class="ssp-profmin" id="zp_form_headerdisp">
                                                 <span class="ssp-un" id="zp_form_header_name">Add&nbsp;Time Log</span>
                                             </div>
@@ -1067,7 +1067,8 @@ Version: v1
 
         <!-- END QUICK SIDEBAR -->
     </div>
-    <div style="position:fixed;width:100%; height:100%;background-color:black;top:0; display:none;z-index:9;opacity:0.2" id="div_hide"></div>
+    <!-- div dùng để làm mờ không thao tác dc lên trang hiện tại khi đang gọi popup  -->
+    <div style="position:fixed;width:100%; height:100%;background-color:black;top:0; display:none;z-index:9;opacity:0.1" id="div_hidden"></div>
     <!-- END CONTAINER -->
     <!-- BEGIN CORE PLUGINS --> 
     <script src="/content/js/jquery.min.js" type="text/javascript"></script>

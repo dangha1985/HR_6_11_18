@@ -11,7 +11,8 @@ Manager.prototype = {
             $('.divAdd').show();
             $('.divButtomAdd').show();
             $('.divButtomEdit').hide();
-            $('#zp_form_headerdisp').html(' <span class="ssp-un" id="zp_form_header_name">Add&nbsp;'+nameForm+'</span>');
+            $('#zp_form_headerdisp').html(' <span class="ssp-un" id="zp_form_header_name">Add&nbsp;' + nameForm + '</span>');
+            $('#div_hidden').show();//div làm mờ để không thao tác dc trong trang
         }
         else if (mode == "Edit") {
             $('.divDS').hide();
@@ -19,17 +20,26 @@ Manager.prototype = {
             $('.divButtomAdd').hide();
             $('.divButtomEdit').show();
             $('#zp_form_headerdisp').html(' <span class="ssp-un" id="zp_form_header_name">Edit&nbsp;' + nameForm + '</span>');
+            $('#div_hidden').show();//div làm mờ để không thao tác dc trong trang
         }
         else {
+            //dùng cho buttom back lại trang danh sách
             $('.divDS').show();
             $('.divAdd').hide();
+            $('#div_hidden').hide();//div làm mờ để không thao tác dc trong trang
         }
+      
     },
     //ẩn hiện form ở trang home
-    fnHideShow: function (divHide, divShow) {
+    fnHideShow: function (divHide, divShow,div_hidden) {
         $('#'+ divHide).hide();
         $('#' + divShow).show();
-        $('#div_hide').show();
+        if (div_hidden == 'show') {
+            $('#div_hidden').show();//div làm mờ để không thao tác dc trong trang
+        }
+        else {
+            $('#div_hidden').hide();//div làm mờ để không thao tác dc trong trang
+        }
     },
     //ẩn hiện form add, edit cua view
     fnFormView: function (mode) {
@@ -43,7 +53,7 @@ Manager.prototype = {
     //close form
     fnClose:function(divhide){
         $('#' + divhide).hide();
-        $('#div_hide').hide();
+        $('#div_hidden').hide();//div làm mờ để không thao tác dc trong trang
     },
     //ẩn hiện filter
     filterPopup: function () {

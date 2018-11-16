@@ -27,7 +27,7 @@ Version: v1
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <!--  <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />-->
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
@@ -80,7 +80,7 @@ Version: v1
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
                         <div class="ZPPimg dropdown">
-                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user')">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user', 'show')">
                         </div>
                         <ul class="nav top-nav ZPaddPopOver">
                             <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
@@ -327,7 +327,6 @@ Version: v1
         <div class="page-content-wrapper">
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content  " style="min-height: 1434px;">
-
                 <div class="ZPcontwrap dvToppos" id="admin-organization-Role">
                     <!--Danh sách-->
                     <div class="deptsettings divDS dvRole" id="deptParent">
@@ -370,7 +369,6 @@ Version: v1
                                 </div>
                             </div>
                         </div>
-
                         <!--end tìm kiếm-->
                         <div class="ZPTscrlcont">
                             <div class="clearfix MT30 ML15 MR15" id="listOfRoles">
@@ -383,7 +381,8 @@ Version: v1
                                                 </div>
                                                 <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035631','Admin','1',this)">
                                                     <label class="lblcount">1 <span></span></label>
-                                                </a><span>All locations</span>
+                                                </a>
+                                                <span>All locations</span>
                                             </div>
                                         </div>
                                     </div>
@@ -398,9 +397,11 @@ Version: v1
                                                     </a>
                                                     <ul class="dropdown-menu bullet pull-right droprht" role="menu"><li data-toggle="modal" data-target="#editRolePopUp"><a name="edit_role">Edit</a></li><li><a name="delete_role">Delete</a></li></ul>
                                                 </div>
-                                            </div><div class="col-md-12">
-                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Director</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035643','Director','0',this)"><label class="lblcount">0 <span></span></label></a>
-                                                <a value="467269000000035643" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Director</span></div>
+                                                <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035643','Director','0',this)"><label class="lblcount">0 <span></span></label></a>
+                                                <a value="467269000000035643" onclick="frm.fnHideShow('', 'div_Permissions','show')" class="btn btn-default btnpermission">Configure Permissions</a>
                                             </div>
                                         </div>
                                     </div>
@@ -409,9 +410,10 @@ Version: v1
                                     <div class="bgwhite">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Manager</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035639','Manager','3',this)">
+                                                <div class="MB5 ZPbold"><span class="depthead" name="rolename">Manager</span></div>
+                                                <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035639','Manager','3',this)">
                                                     <label class="lblcount">3 <span></span></label>
-                                                </a><a value="467269000000035639" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                                </a><a value="467269000000035639" onclick="frm.fnHideShow('', 'div_Permissions','show')" class="btn btn-default btnpermission">Configure Permissions</a>
                                             </div>
                                         </div>
                                     </div>
@@ -428,95 +430,29 @@ Version: v1
                                             <div class="col-md-12">
                                                 <div class="MB5 ZPbold"><span class="depthead" name="rolename">Team Incharge</span></div>
                                                 <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035647','Team%20Incharge','0',this)"><label class="lblcount">0 <span></span></label></a>
-                                                <a value="467269000000035647" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a>
+                                                <a value="467269000000035647" onclick="frm.fnHideShow('', 'div_Permissions','show')" class="btn btn-default btnpermission">Configure Permissions</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3" id="listRoleId-467269000000035635" name="roleBlock" roleid="467269000000035635" count="6">
-                                    <div class="bgwhite"><div class="row"><div class="col-md-12"><div class="MB5 ZPbold"><span class="depthead" name="rolename">Team member</span></div><a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035635','Team%20member','6',this)"><label class="lblcount">6 <span></span></label></a><a value="467269000000035635" onclick="AccessControl.Roles.configPermissions(this)" class="btn btn-default btnpermission">Configure Permissions</a></div></div></div>
+                                    <div class="bgwhite">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="MB5 ZPbold">
+                                                    <span class="depthead" name="rolename">Team member</span>
+                                                </div>
+                                                <a class="spncount MT20" onclick="Organization.ManageOrgs.redirectToItsProfile('467269000000035635','Team%20member','6',this)">
+                                                    <label class="lblcount">6 <span></span></label>
+                                                </a>
+                                                <a value="467269000000035635" onclick="frm.fnHideShow('', 'div_Permissions','show')" class="btn btn-default btnpermission">Configure Permissions</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="ZPTscrlcont" id="scrollContent" onscroll="User.userListfireScroll(this,&quot;4&quot;)">
 
-                            <div id="dvListview" class="dvListview " style="display: block;">-->
-                        <!--Tạo bảng-->
-                        <!--<table id="listOf_Roles" class="table table-hover table-responsive tbldepart">
-                            <thead>
-                                <tr>
-                                    <th class="text-center" width="2%"></th>
-                                    <th width="25%"><span class="CP ZPbold">Role Name</span></th>
-                                    <th><span class="ZPbold">Description</span></th>
-
-                                    <th width="12%"><span class="ZPbold">Actions</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr recpkid="467269000000136133" formid="467269000000035681">
-                                    <td class="text-center"></td>
-                                    <td>
-                                        <div>Admin</div>
-                                    </td>
-
-                                    <td><div></div></td>
-
-                                    <td>
-                                        <div class="dvlist-action ">
-                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick="frm.showForm('Edit','Role')"></a>
-                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr recpkid="467269000000136213" formid="467269000000035681">
-                                    <td class="text-center"></td>
-                                    <td>
-                                        <div>Team member</div>
-                                    </td>
-                                    <td><div>Thành viên trong đội</div></td>
-                                    <td><div class="dvlist-action ">
-                                        <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                        <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
-                                </tr>
-                                <tr >
-                                    <td class="text-center"></td>
-                                    <td><div>Director</div></td>
-                                    <td><div>Giám đốc</div></td>
-                                    <td><div class="dvlist-action "><a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                        <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a></div></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center"></td>
-                                    <td><div>Manager</div></td>
-                                    <td><div>Quản lý</div></td>
-                                    <td>
-                                        <div class="dvlist-action ">
-                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center"></td>
-                                    <td><div>Team Incharge</div></td>
-                                    <td><div>Đội phụ trách</div></td>
-                                    <td>
-                                        <div class="dvlist-action ">
-                                            <a class="IC-pen ZPtitle" data-original-title="Edit" title="Edit" onclick=""></a>
-                                            <a class="IC-delete ML20 ZPtitle" data-original-title="Delete" title="Delete" onclick=""></a>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>-->
-                        <!--end Tạo bảng-->
-                        <!--</div>
-                        </div>
-                        <div class="well ZPAct DN" id="zp_view_pagination" style="display: block;">
-                            <div class="RecCnt">Total Record Count&nbsp;:&nbsp;<a href="javascript:;" id="zp_views_recordcount">#</a></div>-->
-                        <!--  <div class="Recrd" id="zp_view_rec_perpage_cont"><div class="select2-container" id="s2id_zp_view_rec_perpage"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span>50</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a><input class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3"><div class="select2-drop select2-with-searchbox" style="display:none">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="zp_view_rec_perpage" class="select2-offscreen" tabindex="-1"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="40">40</option><option value="50">50</option><option value="75">75</option><option value="100">100</option><option value="200">200</option></select><span>Records per page</span></div><div class="navi" id="zp_views_navi"><div class="IC-ar-lft S16 gry FL" id="zp_view_pageprev"></div><span id="zp_view_page_cnt">1&nbsp;-&nbsp;4</span> <div class="IC-ar-rgt S16 FL gry" id="zp_view_pagenext"></div></div>-->
-                        <!--</div>-->
                     </div>
                     <!--end Danh sách-->
                     <!--thêm| sửa bản ghi-->
@@ -611,13 +547,16 @@ Version: v1
                     </div>
                     <!--end thêm| sửa bản ghi-->
                     <!-- config permission -->
-                    <div id="ZP-PermissionsSlider" class="modal PopMdModel popRgtModel modal-right in" style="display: block;" aria-hidden="false">
+                    <div id="div_Permissions" class="modal PopMdModel popRgtModel modal-right in" style="display: none;" aria-hidden="false">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <a data-dismiss="modal" class="close"><span class="IC-cls-1px red"></span></a>
+                                    <a data-dismiss="modal" class="close">
+                                        <span class="IC-cls-1px red" onclick="frm.fnClose('div_Permissions')"></span>
+                                    </a>
                                     <h6 class="modal-title">Permissions</h6>
-                                </div><div class="modal-body">
+                                </div>
+                                <div class="modal-body">
                                     <div class="ctable" id="zp_page_loading" style="display: none;">
                                         <div class="ctcell">
                                             <div class="loader-inner line-scale">
@@ -633,17 +572,18 @@ Version: v1
                                                     <label class="control-label MT5">Form</label>
                                                 </div>
                                                 <div class="col-md-4">
-                                                        <select class="select " aria-hidden="false" tabindex="-1">
-                                                            <option value="467269000000035681" tabname="P_Department">Department</option>
-                                                            <option value="467269000000035683" tabname="P_Designation">Designation</option>
-                                                            <option value="467269000000035679" tabname="P_Employee">Employee</option>
-                                                            <option value="467269000000067015" tabname="P_EmployeeSalary">Employee Salary</option>
-                                                        </select>
+                                                    <select class="select " aria-hidden="false" tabindex="-1">
+                                                        <option value="467269000000035681" tabname="P_Department">Department</option>
+                                                        <option value="467269000000035683" tabname="P_Designation">Designation</option>
+                                                        <option value="467269000000035679" tabname="P_Employee">Employee</option>
+                                                        <option value="467269000000067015" tabname="P_EmployeeSalary">Employee Salary</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-2">
-                                                <label class="control-label MT5">Role</label></div>
+                                                    <label class="control-label MT5">Role</label>
+                                                </div>
                                                 <div class="col-md-4">
-                                                    <select class="select" >
+                                                    <select class="select">
                                                         <option value="467269000000035643" isprofile="false">Director</option>
                                                         <option value="467269000000035639" isprofile="false">Manager</option>
                                                         <option value="467269000000152003" isprofile="false">role1</option>
@@ -651,13 +591,15 @@ Version: v1
                                                         <option value="467269000000035647" isprofile="false">Team Incharge</option>
                                                         <option value="467269000000035635" isprofile="false">Team member</option>
                                                     </select>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tabpills MT5">
                                             <ul class="nav nav-tabs PL15" role="tablist" id="dvPermission">
-                                                <li role="presentation" class="active PT10" id="Recordperm">
-                                                <a href="#dvRecordperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Recordperm')" aria-expanded="true">Record Permissions</a></li>
-                                                <li role="presentation" id="Fieldperm" class="PT10">
+                                                <li role="presentation" class="active" id="Recordperm">
+                                                    <a href="#dvRecordperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Recordperm')" aria-expanded="true">Record Permissions</a>
+                                                </li>
+                                                <li role="presentation" id="Fieldperm" class="">
                                                     <a href="#dvFieldperm" role="tab" data-toggle="tab" onclick="AccessControl.Permissions.FormPerm.switchSliderTab('Fieldperm')" aria-expanded="false">Field Permissions</a>
                                                 </li>
                                             </ul>
@@ -667,7 +609,10 @@ Version: v1
                                                 <ul class="panel-group chgpanel clearfix">
                                                     <li>
                                                         <div class="clearfix MT35">
-                                                            <div class="col-md-2"><div class="subhead MT15">View</div></div><div class="col-md-8">
+                                                            <div class="col-md-2">
+                                                                <div class="subhead MT15">View</div>
+                                                            </div>
+                                                            <div class="col-md-8">
                                                                 <div class="clearfix">
                                                                     <ul class="step-nav icons" name="viewPermissions">
                                                                         <li class="0" istooltip="true" title="" data-original-title="No data">
@@ -679,10 +624,10 @@ Version: v1
                                                                         <li class="4" istooltip="true" title="" data-original-title="Subordinates' Data">
                                                                             <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
                                                                         </li>
-                                                                        <li class="2" istooltip="true" title="" data-original-title="Subordinates+My Data">
+                                                                        <li class="2 active" istooltip="true" title="" data-original-title="Subordinates+My Data">
                                                                             <a class="IC-per-submy" value="2" onclick="AccessControl.Permissions.FormPerm.RecordPerm.setView(this)"></a>
                                                                         </li>
-                                                                        <li class="3 active" istooltip="true" title="" data-original-title="All Data">
+                                                                        <li class="3" istooltip="true" title="" data-original-title="All Data">
                                                                             <a class="IC-per-all" value="3" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
                                                                         </li>
                                                                     </ul>
@@ -698,10 +643,10 @@ Version: v1
                                                                         <li class="0" istooltip="true" title="" data-original-title="No data">
                                                                             <a class="IC-per-my nodata" value="0" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
                                                                         </li>
-                                                                        <li class="1 active" istooltip="true" title="" data-original-title="My Data">
+                                                                        <li class=" 1" istooltip="true" title="" data-original-title="My Data">
                                                                             <a class="IC-per-my" value="1" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
                                                                         </li>
-                                                                        <li class=" 4" istooltip="true" title="" data-original-title="Subordinates' Data">
+                                                                        <li class="4 active" istooltip="true" title="" data-original-title="Subordinates' Data">
                                                                             <a class="IC-per-sub" value="4" onclick="AccessControl.Permissions.FormPerm.RecordPerm.set(this)"></a>
                                                                         </li>
                                                                         <li class=" 2" istooltip="true" title="" data-original-title="Subordinates+My Data">
@@ -766,16 +711,135 @@ Version: v1
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            </div><div role="tabpanel" class="tab-pane fade" id="dvFieldperm"><ul class="panel-group"><li><div class="dvformperm"><div class="dvfieldsection clearfix"><div class="dvfieldrht"><div class="clearfix" id="fieldsList"></div></div></div></div></li></ul></div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade  in" id="dvFieldperm">
+                                                <ul class="panel-group">
+                                                    <li>
+                                                        <div class="dvformperm">
+                                                            <div class="dvfieldsection clearfix">
+                                                                <div class="dvfieldrht">
+                                                                    <div class="clearfix" id="fieldsList">
+                                                                        <ul class="list-group">
+                                                                            <li class="list-group-item clearfix list-head">
+                                                                                <div class="col-md-4 PL0"><span>Field Name</span></div>
+                                                                                <div class="col-md-4"><span>View Permission</span></div>
+                                                                                <div class="col-md-4"><span>Edit Permission</span></div>
+                                                                            </li>
+                                                                            <li class="list-group-item clearfix list-head" id="setPermissionsButton" style="display:none">
+                                                                                <a class="btn btn-primary dvSetpemission" data-target="#permissionsInnerSlider" data-toggle="modal" nclick="AccessControl.Permissions.FormPerm.FieldPerm.selectedFieldTags()">Set permission</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="clearfix">
+                                                                            <div class="panel-heading list-head active ZPbold" id="fieldpermissions_sectionid-467269000000036007">
+                                                                                <div class="form-group MB0">
+                                                                                    <div class="checkbox checkbox-primary DI txttrim" iscolapse="false">
+                                                                                        <input class="secinput" id="label_checkBox" type="checkbox" onchange="AccessControl.Permissions.FormPerm.FieldPerm.toggleSectionSelect(this)">
+                                                                                        <label></label>
+                                                                                    </div>
+                                                                                    <div class="input-group DI">
+                                                                                        <span class="sName">Department Details</span>
+                                                                                    </div>
+                                                                                </div><div class="dvswitch" iscolapse="false">
+                                                                                    <input id="togglesection-467269000000036007" checked="checked" class="cmn-toggle-small cmn-toggle-round-small" type="checkbox" onclick=" AccessControl.Permissions.FormPerm.FieldPerm.toggleSection(this)">
+                                                                                    <label for="togglesection-467269000000036007"></label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <ul id="lstsec0" class="list-group BL0 collapse in" aria-expanded="true" style="">
+                                                                                <li class="list-group-item clearfix" id="fieldpermissions_fcid-467269000000036121" isdisp="true">
+                                                                                    <div class="col-md-4 PL0">
+                                                                                        <div class="checkbox checkbox-primary">
+                                                                                            <input value="467269000000036121" class="fieldinput" type="checkbox" onchange="AccessControl.Permissions.FormPerm.FieldPerm.toggleFieldSelect(this)"><label class="FL"></label>
+                                                                                            <div class="fName txttrim">Department Name</div>
+                                                                                        </div>
+                                                                                    </div><div class="col-md-4 view">
+                                                                                        <div>
+                                                                                            <a value="3" isview="true" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="All Data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-all"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div><div class="col-md-4 edit">
+                                                                                        <div>
+                                                                                            <a value="0" isview="false" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="No data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-my nodata"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="list-group-item clearfix" id="fieldpermissions_fcid-467269000000036123" isdisp="true">
+                                                                                    <div class="col-md-4 PL0">
+                                                                                        <div class="checkbox checkbox-primary">
+                                                                                            <input value="467269000000036123" class="fieldinput" type="checkbox" onchange="AccessControl.Permissions.FormPerm.FieldPerm.toggleFieldSelect(this)"><label class="FL"></label>
+                                                                                            <div class="fName txttrim">Mail Alias</div>
+                                                                                        </div>
+                                                                                    </div><div class="col-md-4 view">
+                                                                                        <div>
+                                                                                            <a value="3" isview="true" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="All Data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-all"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 edit">
+                                                                                        <div>
+                                                                                            <a value="0" isview="false" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="No data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-my nodata"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="list-group-item clearfix" id="fieldpermissions_fcid-467269000000036125" isdisp="true">
+                                                                                    <div class="col-md-4 PL0">
+                                                                                        <div class="checkbox checkbox-primary">
+                                                                                            <input value="467269000000036125" class="fieldinput" type="checkbox" onchange="AccessControl.Permissions.FormPerm.FieldPerm.toggleFieldSelect(this)"><label class="FL"></label><div class="fName txttrim">Department Lead</div>
+                                                                                        </div>
+                                                                                    </div><div class="col-md-4 view">
+                                                                                        <div>
+                                                                                            <a value="3" isview="true" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="All Data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-all"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 edit">
+                                                                                        <div>
+                                                                                            <a value="0" isview="false" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="No data" isfldtitle="true" data-original-title="" title=""><span class="IC-per-my nodata"></span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="list-group-item clearfix" id="fieldpermissions_fcid-467269000000036127" isdisp="true">
+                                                                                    <div class="col-md-4 PL0">
+                                                                                        <div class="checkbox checkbox-primary">
+                                                                                            <input value="467269000000036127" class="fieldinput" type="checkbox" onchange="AccessControl.Permissions.FormPerm.FieldPerm.toggleFieldSelect(this)"><label class="FL"></label><div class="fName txttrim">Parent Department</div>
+                                                                                        </div>
+                                                                                    </div><div class="col-md-4 view">
+                                                                                        <div>
+                                                                                            <a value="3" isview="true" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="All Data" isfldtitle="true" data-original-title="" title="">
+                                                                                                <span class="IC-per-all"></span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-md-4 edit">
+                                                                                        <div><a value="0" isview="false" data-trigger="manual" class="selPerm dvShwperm" data-toggle="popover" data-placement="bottom" onclick="AccessControl.Permissions.FormPerm.FieldPerm.getPopOver(this)" fldtitle="No data" isfldtitle="true" data-original-title="" title=""><span class="IC-per-my nodata"></span></a></div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
                                         </div>
                                     </div>
-                                </div><div class="modal-footer"><a data-dismiss="modal" class="btn btn-primary">Close</a></div>
+                                    <div class="modal-footer"><a data-dismiss="modal" class="btn btn-primary">Close</a></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- ennd config permission -->
-                </div>
 
+                    </div>
+                    <!-- end config permission -->
+                </div>
             </div>
             <!-- END CONTENT BODY -->
         </div>
@@ -784,10 +848,11 @@ Version: v1
         <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
         </a>
-
         <!-- END QUICK SIDEBAR -->
     </div>
     <!-- END CONTAINER -->
+    <!-- div dùng để làm mờ không thao tác dc lên trang hiện tại khi đang gọi popup  -->
+    <div style="position:fixed;width:100%; height:100%;background-color:black;top:0; display:none;z-index:9;opacity:0.1" id="div_hidden"></div>
     <!-- BEGIN CORE PLUGINS -->
     <script src="/content/js/jquery.min.js" type="text/javascript"></script>
     <script src="/content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -799,34 +864,7 @@ Version: v1
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src="/content/js/moment.min.js" type="text/javascript"></script>
     <script src="/content/js/daterangepicker.min.js" type="text/javascript"></script>
-    <!--<script src="../assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/horizontal-timeline/horizontal-timeline.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-    <script src="../assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>-->
+   
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL SCRIPTS -->
     <script src="/content/js/app.min.js" type="text/javascript"></script>
@@ -846,17 +884,17 @@ Version: v1
     <!-- END THEME LAYOUT SCRIPTS -->
     <script src="../../../content/js/form.js"></script>
     <script>
-        var frm = new Manager();
-        $(document).ready(function () {
-            frm.InitForm();
-            //$('.divDS').show();
-            //$('.divAdd').hide();
-            $('#clickmewow').click(function () {
-                $('#radio1003').attr('checked', 'checked');
-            });
+            var frm = new Manager();
+            $(document).ready(function () {
+                frm.InitForm();
+                //$('.divDS').show();
+                //$('.divAdd').hide();
+                $('#clickmewow').click(function () {
+                    $('#radio1003').attr('checked', 'checked');
+                });
 
 
-        })
+            })
     </script>
 
 </body>

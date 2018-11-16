@@ -80,7 +80,7 @@ Version: v1
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
                         <div class="ZPPimg dropdown">
-                            <img data-toggle="dropdown" id="zpeople_userimage" src="" empid="467269000000133005" imgtype="thumb">
+                            <img data-toggle="dropdown" id="zpeople_userimage" src="/content/images/avatar1.jpg" empid="467269000000133005" imgtype="thumb" onclick="frm.fnHideShow('', 'div_user','show')">
                         </div>
                         <ul class="nav top-nav ZPaddPopOver">
                             <li><a class="u-link" id="zpversion_lnk" href="javascript:;">Older Version</a> </li>
@@ -107,6 +107,79 @@ Version: v1
                         </ul>
                     </ul>
                 </div>
+                <!-- user info -->
+                <div id="div_user" class="modal popRgtModel ZPAdpop PopXmModel in" role="dialog" aria-labelledby="modal" tabindex="-1" aria-hidden="false" style="display: none; z-index:100">
+                    <div class="modal-dialog ZPRMpnl ZPPopProVw">
+                        <div class="modal-content">
+                            <div class="modal-body Nomdlhead" id="zp_modal_body">
+                                <div class="ZPUserAcc">
+                                    <i data-dismiss="modal" class="IC-cls-1px red S21 CP ZPUclse" onclick="frm.fnClose('div_user');"></i>
+                                    <div class="ZPprofdt">
+                                        <img src="/content/images/avatar1.jpg"><h4>1&nbsp;-&nbsp;trangnth</h4><span>
+                                            <a href="mailto:trangnth@kstsolution.com.vn">trangnth@kstsolution.com.vn</a>
+                                        </span><span>Trưởng phòng</span>
+                                        <div class="ZPMyacc">
+                                            <a class="btn btn-default btn-myAcc" target="_blank" href="">My Account</a><a href="/people/Logout.do" class="ZPSOut">Sign Out</a>
+                                        </div>
+                                    </div><div class="ZPMultiOrg">
+                                        <div id="orgListView">
+                                            <a>
+                                                <span id="ZPChangeOrg">Công ty cổ phần giải pháp KST<i class="IC-Setting-02"></i></span>
+                                            </a> <ul id="ZPChangeOrgUL" class="dropdown-menu" style="display: none;">
+                                                <li><a href="/kstcompany/hr" id="Công ty cổ phần giải pháp KST">Công ty cổ phần giải pháp KST</a></li>
+                                                <li class="manage">
+                                                    <span id="ZPManageOrg">
+                                                        <a href="/organizations" target="_blank">
+                                                            <i>Manage Organization</i>
+                                                        </a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="ZPSelthemes">
+                                        <h4>Themes</h4><div class="ZPdeftheme">
+                                            <span>Menu Color</span>
+                                            <div class="ZPThemeOpt"><div class="onoffswitch"><input name="onoffswitch" class="onoffswitch-checkbox" id="toggle_theme" type="checkbox" checked="checked"><label class="onoffswitch-label" for="toggle_theme"><span class="onoffswitch-inner"><i></i><i></i><i></i></span><span class="onoffswitch-switch"></span></label></div></div>
+                                        </div>
+                                        <div class="ZPdeftheme"><span>Theme Color</span><div class="ZPThemeOpt"><ul class="ZPClists" id="zp_selection_theme"><li class="ZPTC1 active" theme="0"><a><b class="IC-tick"></b></a></li><li class="ZPTC2" theme="1"></li><li class="ZPTC3" theme="2"></li><li class="ZPTC4" theme="3"></li></ul></div></div>
+                                        <div class="ZPdeftheme"><a href="javascript:;" id="zp_organizetab"></a></div>
+                                    </div><div class="ZSPlinks">
+                                        <ul>
+                                            <li> <i class="CR-getstart S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a onclick="GettingStarted.init()" id="gettingStartedbtn" href="#admin/gettingStarted" target="_blank">Getting Started</a> </li>
+                                            <li> <i class="CR-refer S18"> <i class="path1"></i><i class="path2"></i><i class="path3"></i> </i> <a href="https://www.zoho.com/people/referral.html" target="_blank">Refer a friend</a> </li>
+                                            <li>
+                                                <i class="CR-help S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i>
+                                                <a target="_blank" href="//www.zoho.com/people/help/adminguide/overview.html">Help</a>
+                                            </li>
+                                            <li> <i class="CR-support S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> <a href="javascript:;" onclick="ZPUtil.feedBackAlert('contactsupport');"> Contact Support</a> </li>
+                                            <li> <i class="CR-wnew S18"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i><a target="_blank" href="//www.zoho.com/people/whats-new.html">What's New</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div><div class="modal-footer">
+                                <ul class="ZPMFlinks">
+                                    <li> <a target="_blank" href="//play.google.com/store/apps/details?id=com.zoho.people"> <i class="CR-android"><i class="path1"></i><i class="path2"></i></i></a></li>
+                                    <li>
+                                        <a target="_blank" href="//itunes.apple.com/in/app/zoho-people-smartest-way-to/id680525956?mt=8" ;="">
+                                            <i class="CR-apple">
+                                                <i class="path1"></i>
+                                                <i class="path2"></i>
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="//www.zoho.com/people/free-webinar.html">
+                                            <i class="CR-video"><i class="path1"></i><i class="path2"></i><i class="path3"></i><i class="path4"></i></i>
+                                        </a>
+                                    </li>
+                                    <li> <a target="_blank" href="//youtube.com/channel/UCvBTxIHDnBW8ip1cdB0x8zg"> <i class="CR-ytube"><i class="path1"></i><i class="path2"></i><i class="path3"></i></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end user info -->
                 <!-- END TOP NAVIGATION MENU -->
             </div>
             <!-- END PAGE TOP -->
