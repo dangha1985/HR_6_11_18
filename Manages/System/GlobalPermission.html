@@ -27,7 +27,7 @@ Version: v1
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
-   <!-- <link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />-->
+    <!--<link href="/content/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />-->
     <link href="/content/css/plugins.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
@@ -194,7 +194,6 @@ Version: v1
     <div class="page-container">
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar-wrapper">
-            <!-- END SIDEBAR -->
             <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
             <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
             <div class="page-sidebar navbar-collapse collapse">
@@ -315,121 +314,165 @@ Version: v1
                                     <span class="title">Function Permissions</span>
                                 </a>
                             </li>
+                            <!--<li class="nav-item  ">
+                                <a href="page_system_500_1.html" class="nav-link ">
+                                    <span class="title">500 Page 1</span>
+                                </a>
+                            </li>
+                            <li class="nav-item  ">
+                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
+                                    <span class="title">Users</span>
+                                </a>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>
-            <!-- END SIDEBAR -->
         </div>
         <!-- END SIDEBAR -->
         <!-- BEGIN CONTENT -->
         <div class="page-content-wrapper">
             <!-- BEGIN CONTENT BODY -->
             <div class="page-content  " style="min-height: 1434px;">
-
-                <div class="ZPcontwrap dvToppos" id="">
-
+                <div class="ZPcontwrap dvToppos" id="admin-organization-Permission">
                     <!-- menu top1 -->
                     <div class="cont-wrap" id="zp-contwrap-organization-department">
                         <nav id="zp-tlevel-organization-department" class="navbar navbar-default ZPSnav">
                             <div class="container-fluid">
                                 <ul class="nav navbar-nav">
-                                    <li id="zp_subtab_organization_department" tab="true">
-                                        <a href="/Manages/Organization/EmployeeTree.html">Employee Tree</a>
+                                    <li id="" tab="true" class="">
+                                        <a href="/Manages/System/FunctionPermission.html">Function Permission</a>
                                     </li>
-                                    <li id="zp_subtab_organization_department_searchdepts" tab="true" class="active">
-                                        <a href="/Manages/Organization/DepartmentTree.html">Department Tree</a>
+                                    <li id="" tab="true" class="active">
+                                        <a href="/Manages/System/GlobalPermission.html">Global Permission</a>
                                     </li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
-                    <!-- menu top1 -->
-                    <!-- content -->
-                    <div class="ZPTscrlcont top40" style="overflow: hidden;">
-                        <i class="IC-ar-top ZPemptop" style="display: none; left: 468px;"></i>
-                        <div class="ZPemptree">
-                            <div class="ZPet" tree="true" id="zp_deprtment_tree" loaded="true">
-                                <div class="emtdiv ETexp" id="zp_tree_level_1" level="1">
-                                    <div class="abdiv">
-                                        <ul>
-                                            <li id="tree_content_467269000000136133" subcount="6" parentid="" class="ecot sel">
-                                                <div class="conta">
-                                                    <div class="dpcnt">PG</div>
-                                                    <div class="det"><b>Phòng GĐ</b><span>-</span></div>
-                                                </div>
-                                                <div class="lin"></div>
-                                                <div class="ecount">6</div>
-                                                <div class="Hlinetop"></div>
-                                                <div class="Hlinebot"></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div><div class="emtdiv ETexp" id="zp_tree_level_2" level="2">
-                                    <div class="abdiv">
-                                        <ul>
-                                            <li id="tree_content_467269000000133005" parentid="467269000000136133" user="true" subcount="0" class="">
-                                                <div class="conta" user="true">
-                                                    <img class="" id="zp_emptree_oripho" src="viewPhoto?filename=6325165000000014003">
-                                                    <div class="det"><b>trangnth</b><span>Trưởng phòng</span></div>
-                                                </div>
-                                                <div class="lin"></div><div class="Hlinetop"></div>
-                                            </li>
-                                            <li id="tree_content_467269000000138001" subcount="5" parentid="467269000000136133" class="ecot sel">
-                                                <div class="conta"><div class="dpcnt">PP</div><div class="det"><b>Phòng phó GĐ</b><span>-</span></div></div>
-                                                <div class="lin"></div><div class="ecount">5</div><div class="Hlinebot"></div>
-                                                <div class="Clinebot" style="height: 71px; bottom: 33px;"></div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div><div class="emtdiv ETexp" id="zp_tree_level_3" level="3">
-                                    <div class="abdiv">
-                                        <ul>
-                                            <li id="tree_content_467269000000136137" subcount="4" parentid="467269000000138001" class="ecot">
-                                                <div class="conta">
-                                                    <div class="dpcnt">PL</div>
-                                                    <div class="det"><b>Phong LT</b><span>-</span></div>
-                                                </div>
-                                                <div class="lin"></div>
-                                                <div class="ecount">4</div>
-                                                <div class="Hlinetop"></div>
-                                                <div class="Glinetop" style="height: 69px; top: 33px;"></div>
-                                            </li>
-                                            <li id="tree_content_467269000000136213" subcount="1" parentid="467269000000138001" class="ecot">
-                                                <div class="conta">
-                                                    <div class="dpcnt">PH</div>
-                                                    <div class="det">
-                                                        <b>Phòng HC</b><span>ha2@gmail.com</span>
-                                                    </div>
-                                                </div>
-                                                <div class="lin"></div>
-                                                <div class="ecount">1</div>
-                                                <div class="Hlinebot"></div>
-                                            </li>
-                                        </ul>
+                    <!--end menu top1 -->
+                    <div id="dvGlobalPerm">
+                        <div class="securesettings globalset">
+                            <div class="mainhead">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-5">
+                                            <label class="control-label ZPbold MT3">Assign permissions for the role</label> <!-- NO I18N -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="select">
+                                                <option value="467269000000035643" isprofile="false">Director</option>
+                                                <option value="467269000000035639" isprofile="false">Manager</option>
+                                                <option value="467269000000152003" isprofile="false">role1</option>
+                                                <option value="467269000000155007" isprofile="true">role2</option>
+                                                <option value="467269000000035647" isprofile="false">Team Incharge</option>
+                                                <option value="467269000000035635" isprofile="false">Team member</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div><i class="IC-ar-dwn ZPempdwn" style="display: none; left: 468px;"></i>
+                            <div class="ZPTscrlcont top100">
+                                <div class="clearfix MT30 ML15 MR15 dvglobalperm">
+                                    <div class="col-md-3">
+                                        <div class="panel panel-default active" id="global_panel_self">
+                                            <div class="panel-heading ZPbold CP"><div class="dvswitch FR"><input type="checkbox" id="global_panel_switch_self" class="cmn-toggle-small cmn-toggle-round-small" checked="checked" value="self" onclick=" AccessControl.Permissions.GlobalPerm.toggleSection(this)"><label for="global_panel_switch_self" class="MB0"></label></div>Self-service function</div><ul class="list-group PT10 PB10">
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI">
+                                                        <input id="global_operid_467269000000038861" type="checkbox" checked="checked" value="467269000000038861" onclick="AccessControl.Permissions.GlobalPerm.set(this,'SEARCH_EMPLOYEE','self')" class="check"><label for="global_operid_467269000000038861">Search employee</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038865" type="checkbox" checked="checked" value="467269000000038865" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_PENDINGAPPROVAL','self')" class="check"><label for="global_operid_467269000000038865">View Pending Request</label></div></li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI">
+                                                        <input id="global_operid_467269000000055007" type="checkbox" checked="checked" value="467269000000055007" onclick="AccessControl.Permissions.GlobalPerm.set(this,'ATTENDANCE_WIDGET','self')" class="check"><label for="global_operid_467269000000055007">Attendance widget</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000132001" type="checkbox" value="467269000000132001" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DELEGATION','self')" class="check"><label for="global_operid_467269000000132001">Delegation</label></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="panel panel-default active" id="global_panel_info">
+                                            <div class="panel-heading ZPbold CP">
+                                                <div class="dvswitch FR"><input type="checkbox" id="global_panel_switch_info" class="cmn-toggle-small cmn-toggle-round-small" checked="checked" value="info" onclick=" AccessControl.Permissions.GlobalPerm.toggleSection(this)"><label for="global_panel_switch_info" class="MB0"></label></div>Information based functions
+                                            </div><ul class="list-group PT10 PB10">
+                                                <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038879" type="checkbox" checked="checked" value="467269000000038879" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_QUICKLINKS','info')" class="check"><label for="global_operid_467269000000038879">Quick Links</label></div></li>
+                                                <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000083001" type="checkbox" checked="checked" value="467269000000083001" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_TAGS','info')" class="check"><label for="global_operid_467269000000083001">Tags</label></div></li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI"><input id="global_operid_announcement" type="checkbox" checked="checked" onclick="AccessControl.Permissions.GlobalPerm.setAnnouncementGlobalPerm(this, false, 'ANNOUNCEMENT_ADMIN','info')" class="check" name="global_announcementperm"><label for="global_operid_announcement"> Announcement </label></div><ul class="PT10">
+                                                        <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038867" type="checkbox" checked="checked" name="global_annviewperm" value="467269000000038867" onclick="AccessControl.Permissions.GlobalPerm.setAnnouncementGlobalPerm(this,false, 'ANNOUNCEMENT_ADMIN','info')"><label for="global_operid_ann_viewperm" onclick="AccessControl.Permissions.GlobalPerm.setAnnouncementGlobalPerm('global_annviewperm',false)"> View </label></div></li>
+                                                        <li class="list-group-item">
+                                                            <div class="checkbox checkbox-primary DI">
+                                                                <input id="global_operid_467269000000128001" type="checkbox" name="global_annallperm" value="467269000000128001" onclick="AccessControl.Permissions.GlobalPerm.setAnnouncementGlobalPerm(this,true, 'ANNOUNCEMENT_ADMIN','info')">
+                                                                <label for="global_operid_ann_allperm" onclick="AccessControl.Permissions.GlobalPerm.setAnnouncementGlobalPerm('global_annallperm',true)"> Add/Edit/Delete </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div><div class="col-md-3">
+                                        <div class="panel panel-default active" id="global_panel_hierarchy">
+                                            <div class="panel-heading ZPbold CP">
+                                                <div class="dvswitch FR"><input type="checkbox" id="global_panel_switch_hierarchy" class="cmn-toggle-small cmn-toggle-round-small" checked="checked" value="hierarchy" onclick=" AccessControl.Permissions.GlobalPerm.toggleSection(this)"><label for="global_panel_switch_hierarchy" class="MB0"></label></div>Hierarchy functions
+                                            </div><ul class="list-group PT10 PB10">
+                                                <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038863" type="checkbox" checked="checked" value="467269000000038863" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DEPT_TREE','hierarchy')" class="check"><label for="global_operid_467269000000038863">Department Tree</label></div></li>
+                                                <li class="list-group-item"><div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038873" type="checkbox" checked="checked" value="467269000000038873" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_TEAM','hierarchy')" class="check"><label for="global_operid_467269000000038873">Department data</label></div></li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI"><input id="global_operid_467269000000038881" type="checkbox" checked="checked" value="467269000000038881" onclick="AccessControl.Permissions.GlobalPerm.set(this,'EMP_TREE','hierarchy')" class="check"><label for="global_operid_467269000000038881">Employee Tree</label></div><ul class="PT10">
+                                                        <li class="list-group-item"><div class="radio radio-primary DI"><input id="global_operid_emptree_orgtree" type="radio" name="global_emptree" value="467269000000038881" onclick="AccessControl.Permissions.GlobalPerm.setGlobalPermissionsEmpTree(this,true)"><label for="global_operid_emptree_orgtree"> Organization Tree </label></div></li>
+                                                        <li class="list-group-item"><div class="radio radio-primary DI"><input id="global_operid_emptree_subtree" type="radio" name="global_emptree" value="467269000000038881" onclick="AccessControl.Permissions.GlobalPerm.setGlobalPermissionsEmpTree(this,false)"><label for="global_operid_emptree_subtree"> Subordinate Tree </label></div></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div><div class="col-md-3">
+                                        <div class="panel panel-default active" id="global_panel_collobarative">
+                                            <div class="panel-heading ZPbold CP">
+                                                <div class="dvswitch FR">
+                                                    <input type="checkbox" id="global_panel_switch_collobarative" class="cmn-toggle-small cmn-toggle-round-small" checked="checked" value="collobarative" onclick=" AccessControl.Permissions.GlobalPerm.toggleSection(this)">
+                                                    <label for="global_panel_switch_collobarative" class="MB0"></label>
+                                                </div>Collaborative functions
+                                            </div><ul class="list-group PT10 PB10">
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI">
+                                                        <input id="global_operid_467269000000038869" type="checkbox" checked="checked" value="467269000000038869" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_BDAY','collobarative')" class="check"><label for="global_operid_467269000000038869">Birthday Buddy</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI">
+                                                        <input id="global_operid_467269000000038871" type="checkbox" checked="checked" value="467269000000038871" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_NEWJOINEE','collobarative')" class="check"><label for="global_operid_467269000000038871">New joinee list</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="checkbox checkbox-primary DI">
+                                                        <input id="global_operid_467269000000055005" type="checkbox" checked="checked" value="467269000000055005" onclick="AccessControl.Permissions.GlobalPerm.set(this,'DASHBOARD_FAVORITES','collobarative')" class="check"><label for="global_operid_467269000000055005">Favorites</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
-                    <!-- end content -->
+                    <script>
+                        $(document).ready(function () {
+                            ZPUtil.noDataSVG("noRoleFormPerm", "newzp/images/svg/no-permission.svg");//NO I18N
+                        });</script>
                 </div>
-
             </div>
             <!-- END CONTENT BODY -->
         </div>
         <!-- END CONTENT -->
-        <!-- BEGIN QUICK SIDEBAR -->
-        <a href="javascript:;" class="page-quick-sidebar-toggler">
-            <i class="icon-login"></i>
-        </a>
-
-        <!-- END QUICK SIDEBAR -->
     </div>
     <!-- END CONTAINER -->
+    <!-- div dùng để làm mờ không thao tác dc lên trang hiện tại khi đang gọi popup  -->
+    <div style="position:fixed;width:100%; height:100%;background-color:black;top:0; display:none;z-index:9;opacity:0.1" id="div_hidden"></div>
     <!-- BEGIN CORE PLUGINS -->
     <script src="/content/js/jquery.min.js" type="text/javascript"></script>
     <script src="/content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -447,11 +490,13 @@ Version: v1
     <script src="/content/js/app.min.js" type="text/javascript"></script>
     <!-- END THEME GLOBAL SCRIPTS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <!-- <script src="../assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>-->
     <!-- END PAGE LEVEL SCRIPTS -->
     <!-- BEGIN THEME LAYOUT SCRIPTS -->
     <script src="/content/js/layout.min.js" type="text/javascript"></script>
-    <script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
-    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>
+    <!-- <script src="../assets/layouts/layout2/scripts/demo.min.js" type="text/javascript"></script>-->
+    <!--<script src="/content/js/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="/content/js/quick-nav.min.js" type="text/javascript"></script>-->
     <!--<script src="/content/js/tp.1.min.js"></script>
     <script src="/content/js/form.1.min.js"></script>
     <script src="/content/js/form.2.min.js"></script>
